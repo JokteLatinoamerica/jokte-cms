@@ -464,11 +464,15 @@ class JArchiveZip extends JObject
 			{
 				if (JPATH_ISWIN)
 				{
-					@dl('php_bz2.dll');
+					if (function_exists( 'dl')) {
+						@dl('php_bz2.dll');
+					}
 				}
 				else
 				{
-					@dl('bz2.so');
+					if (function_exists( 'dl')) {
+						@dl('bz2.so');
+					}
 				}
 			}
 

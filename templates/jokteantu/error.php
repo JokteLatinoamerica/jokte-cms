@@ -103,7 +103,7 @@ font-family:'<?php echo $typoespecial; ?>',gargi,Verdana, Geneva, sans-serif;}
 			<p><?php echo $this->error->getMessage(); ?></p>
 	</div>
 
-			<div id="copyleft-error"style="text-align: center;"><a target="_blank" href="http://juuntos.org"><img border="0" title="Sistema licenciado bajo el espiritu COPYLEFT" alt="Copyleft latinoamericano" src="/jokte/images/copyleft.png"></a>
+			<div id="copyleft-error"style="text-align: center;"><a target="_blank" href="http://juuntos.org"><img border="0" title="Sistema licenciado bajo el espiritu COPYLEFT" alt="Copyleft latinoamericano" src="/images/copyleft.png"></a>
 		<p>JOKTE! es Software Libre distribuido bajo la Licencia GPL. El nombre y el logo de Jokte! se pueden usar sin restricciones.</p>
 
 <p>Jokte! es mantenido por la Comunidad de usuarios <a target="_blank" href="http://juuntos.org">Juuntos.org</a></p>	</div>

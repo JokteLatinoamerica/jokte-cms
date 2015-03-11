@@ -19,13 +19,8 @@ class plgContentJokteadjuntos extends JPlugin {
         // ejecución para traer los archivos arjuntos
         // TODO: Buscar una forma más elegante para estas validaciones
         if(!$params->get('enabled', 1)) return;
-        if ($context != 'com_content.article') return;
+        if($context != 'com_content.article') return;
         if(!$params->get('show_attachments')) return;
-
-        $app = JFactory::getApplication();
-        $jinput = $app->input;
-
-        $id = $jinput->get('id');
 
         $article->text .= JHtml::_('adjuntos.lista', $article->id, $article->text, $params);
     }

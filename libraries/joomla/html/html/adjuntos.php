@@ -58,7 +58,12 @@ abstract class JHtmlAdjuntos {
         $html .= "                  ".$adjunto->nombre_archivo;
         $html .= "              </a>";
         $html .= "          </td>";
-        $html .= "          <td>info</td>";
+        $html .= "          <td>";
+        $html .= "              <a href='#'>";
+        $html .= "                  <img src='".JURI::root()."media/adjuntos/file-info-icon.png'";
+        $html .= "                       title='Información'/>";
+        $html .= "              </a>";
+        $html .= "          </td>";
         $html .= "      </tr>";
 
         }
@@ -67,6 +72,15 @@ abstract class JHtmlAdjuntos {
         $html .= "</table>";
 
         return $html;
+    }
+
+    private function obtenerRutaArchivo($hash, $nombre) {
+
+        $dir = "/uploads";
+
+        $src = $dir . DS . $hash . '-' . $nombre;
+
+        return $src;
     }
 }
 

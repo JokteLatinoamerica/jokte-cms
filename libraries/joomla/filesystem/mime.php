@@ -74,7 +74,7 @@ class JMime
         }
 
         $path = JPATH_ROOT . '/media/system/images/mime/'.$name.'.png';
-        $uri = JURI::root() . '/media/system/images/mime';
+        $uri = JURI::root() . 'media/system/images/mime';
 
         $src = $uri . DS . $name . '.png';
         $srcUnknown = $uri . DS . 'unknown.png';

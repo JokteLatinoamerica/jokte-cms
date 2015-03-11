@@ -9,6 +9,7 @@
 defined('_JEXEC') or die('Acceso directo a este archivo no permitido');
 
 jimport('joomla.html.html');
+jimport('joomla.filesystem.mime');
 
 abstract class JHtmlAdjuntos {
 
@@ -46,7 +47,11 @@ abstract class JHtmlAdjuntos {
         foreach($adjuntos as $adjunto) {
 
         $html .= "      <tr>";
-        $html .= "          <td>".$adjunto->mime_type."</td>";
+        $html .= "          <td>";
+        $html .= "              <img src=".JMime::checkIcon($adjunto->mime_type);
+        $html .= "                   alt=".$adjunto->mime_type;
+        $html .= "                   title=".$adjunto->mime_type."/>";
+        $html .= "          </td>";
         $html .= "          <td>".$adjunto->nombre_archivo."</td>";
         $html .= "          <td>info</td>";
         $html .= "      </tr>";

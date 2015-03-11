@@ -14,9 +14,21 @@ abstract class JHtmlAdjuntos {
 
     static function lista($id, $text, $params) {
 
-        // TODO: verificar que el artículo tenga archivos adjuntos
-        
-        // TODO: obtener el objeto con la lista de adjuntos
+        $db = JFactory::getDbo();
+
+        $query = $db->getQuery(true);
+
+        $columnas = array('propietario_id', 'nombre_archivo','hash','ruta', 'mime_type');
+        $query
+            ->select($db->quoteName($columnas))
+            ->from($db->quoteName('#__adjuntos'))
+            ->where($db->quoteName('propietario_id') . ' = ' . $id);
+
+        $db->setQuery($query);
+        $adjuntos = $db->loadObjectList();
+
+        // verificar que el artículo tenga archivos adjuntos
+        if (empty($adjuntos)) return;
         
         // TODO: construir la tabla html
 
@@ -29,6 +41,19 @@ abstract class JHtmlAdjuntos {
         $html .= "          <td>Info</td>";
         $html .= "      </tr>";
         $html .= "  </thead>";
+        $html .= "  <tbody>";
+
+        foreach($adjuntos as $adjunto) {
+
+        $html .= "      <tr>";
+        $html .= "          <td>".$adjunto->mime_type."</td>";
+        $html .= "          <td>".$adjunto->nombre_archivo."</td>";
+        $html .= "          <td>info</td>";
+        $html .= "      </tr>";
+
+        }
+
+        $html .= "  </tbody>";
         $html .= "</table>";
 
         return $html;

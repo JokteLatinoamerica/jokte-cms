@@ -30,8 +30,8 @@ abstract class JHtmlAdjuntos {
 
         // verificar que el artículo tenga archivos adjuntos
         if (empty($adjuntos)) return;
-        
-        // TODO: construir la tabla html
+
+        // construir la tabla html
 
         $html = "";
         $html .= "<table>";
@@ -48,11 +48,16 @@ abstract class JHtmlAdjuntos {
 
         $html .= "      <tr>";
         $html .= "          <td>";
-        $html .= "              <img src=".JMime::checkIcon($adjunto->mime_type);
-        $html .= "                   alt=".$adjunto->mime_type;
-        $html .= "                   title=".$adjunto->mime_type."/>";
+        $html .= "              <img src='".JMime::checkIcon($adjunto->mime_type)."'";
+        $html .= "                   alt='".$adjunto->mime_type."'";
+        $html .= "                   title='".$adjunto->mime_type."'/>";
         $html .= "          </td>";
-        $html .= "          <td>".$adjunto->nombre_archivo."</td>";
+        $html .= "          <td>";
+        $html .= "              <a href='".self::obtenerRutaArchivo($adjunto->hash, $adjunto->nombre_archivo)."'";
+        $html .= "                 title='".$adjunto->nombre_archivo."'>";
+        $html .= "                  ".$adjunto->nombre_archivo;
+        $html .= "              </a>";
+        $html .= "          </td>";
         $html .= "          <td>info</td>";
         $html .= "      </tr>";
 

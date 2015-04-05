@@ -142,20 +142,6 @@ class plgSystemJokte_Adjuntos extends JPlugin {
         $doc->setBuffer($newBuffer,'component');
     }
 
-    function onAfterRender () {
-
-        $app = self::$app;
-        $reqParams = self::$reqParams;
-        $id = $reqParams['id'];
-
-        if ($app->isAdmin()) return;
-
-        JPluginHelper::importPlugin('content', 'jokteadjuntos');
-
-        $dispatcher = JDispatcher::getInstance();
-
-    }
-
     private function getAttachmentsData ($id) {
 
         // carga el subcontrolador para ejecutar la tarea mostrar

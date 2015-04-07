@@ -154,7 +154,19 @@ class JFormFieldAdjuntos extends JFormField
         $script[] = '       event.preventDefault();';
         $script[] = '       var el = $$(el);';
         $script[] = '       console.log(el);';
-        $script[] = '       SqueezeBox.fromElement(el)';
+        $script[] = '       var file = el.get("data-file");';
+        $script[] = '       var hash = el.get("data-hash");';
+        $script[] = '       var size = el.get("data-size");';
+        $script[] = '       var mime = el.get("data-mime");';
+
+        $script[] = '       info = new Element("div");';
+
+        $script[] = '       info.appendText(el.get("data-file"));';
+        $script[] = '       info.appendText(el.get("data-hash"));';
+        $script[] = '       info.appendText(el.get("data-size"));';
+        $script[] = '       info.appendText(el.get("data-mime"));';
+
+        $script[] = '       SqueezeBox.setContent("adopt", info)';
         $script[] = '}';
 
         $script[] = 'function eliminarAdjunto(el, event) {';

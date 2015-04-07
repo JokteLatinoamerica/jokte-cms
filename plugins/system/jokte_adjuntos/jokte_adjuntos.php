@@ -70,12 +70,6 @@ class plgSystemJokte_Adjuntos extends JPlugin {
         // selecciona elemento del DOM  que contendrá los registros de los archivos adjuntos
         $contenedor = $dom->getElementById("adjuntos");
 
-        // Markup para mostrar información en modal
-        $modal = $dom->createElement("div");
-        $modal->setAttribute("id", "oculto");
-        $modal->setAttribute("style", "display: none");
-        $contenedor->appendChild($modal);
-
         // realiza la construcción de la tabla con el listado de adjuntos
         $wrap = $dom->createElement("div");
         $wrap->setAttribute("class", "wrap");
@@ -114,8 +108,11 @@ class plgSystemJokte_Adjuntos extends JPlugin {
             $infoBtn->setAttribute('onclick', 'mostrarInfo(this, event)');
             $infoBtn->setAttribute('title', 'Información');
             $infoBtn->setAttribute('class', 'modal');
-            $infoBtn->setAttribute('href', 'http://jokte.org');
-            $infoBtn->setAttribute('rel', '{handler: "iframe"}');
+            $infoBtn->setAttribute('href', 'javascript:void(0)');
+            $infoBtn->setAttribute('data-file', 'file');
+            $infoBtn->setAttribute('data-hash', 'hash');
+            $infoBtn->setAttribute('data-size', 'size');
+            $infoBtn->setAttribute('data-mime', 'mime');            
             $infoImg = $dom->createElement("img");
             $infoImg->setAttribute('src', JURI::root() . '/media/adjuntos/file-info-icon.png');
             $infoBtn->appendChild($infoImg);

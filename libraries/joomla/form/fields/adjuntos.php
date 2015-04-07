@@ -150,6 +150,13 @@ class JFormFieldAdjuntos extends JFormField
 
         $script[] = '}';
 
+        $script[] = 'function mostrarInfo(el, event) {';
+        $script[] = '       event.preventDefault();';
+        $script[] = '       var el = $$(el);';
+        $script[] = '       console.log(el);';
+        $script[] = '       SqueezeBox.fromElement(el)';
+        $script[] = '}';
+
         $script[] = 'function eliminarAdjunto(el, event) {';
 
         $script[] = '   if(!confirm("Está a punto de eliminar el archivo XXX")) {';

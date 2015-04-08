@@ -153,7 +153,7 @@ class JFormFieldAdjuntos extends JFormField
         $script[] = 'function mostrarInfo(el, event) {';
         $script[] = '       event.preventDefault();';
         $script[] = '       var el = $$(el);';
-        $script[] = '       console.log(el);';
+
         $script[] = '       var file = el.get("data-file");';
         $script[] = '       var hash = el.get("data-hash");';
         $script[] = '       var size = el.get("data-size");';
@@ -161,11 +161,26 @@ class JFormFieldAdjuntos extends JFormField
 
         $script[] = '       info = new Element("div");';
 
-        $script[] = '       info.appendText(el.get("data-file"));';
-        $script[] = '       info.appendText(el.get("data-hash"));';
-        $script[] = '       info.appendText(el.get("data-size"));';
-        $script[] = '       info.appendText(el.get("data-mime"));';
+        $script[] = '       info.appendHTML("<h2>Información de Archivo</h2>")';
+        $script[] = '       info.appendHTML("<hr />")';
+        
+        $script[] = '       info.appendHTML("<h3>Nombre:</h3>")';
+        $script[] = '       info.appendHTML("<p>"+el.get("data-file")+"</p>");';
 
+        $script[] = '       info.appendHTML("<h3>Hash:</h3>")';
+        $script[] = '       info.appendHTML("<p>"+el.get("data-hash")+"</p>");';
+
+
+        $script[] = '       info.appendHTML("<h3>Tamaño:</h3>")';
+        $script[] = '       info.appendHTML("<p>"+el.get("data-size")+"</p>");';
+
+        $script[] = '       info.appendHTML("<h3>Tipo Mime:</h3>")';
+        $script[] = '       info.appendHTML("<p>"+el.get("data-mime")+"</p>");';
+
+        $script[] = '       info.appendHTML("<h3>Icono:</h3>")';
+        $script[] = '       info.appendHTML("<img src="+el.get("data-mimeIcon")+" />")';
+
+        $script[] = '       SqueezeBox.resize({x:320, y:380});';
         $script[] = '       SqueezeBox.setContent("adopt", info)';
         $script[] = '}';
 

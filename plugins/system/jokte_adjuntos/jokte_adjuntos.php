@@ -109,10 +109,11 @@ class plgSystemJokte_Adjuntos extends JPlugin {
             $infoBtn->setAttribute('title', 'Información');
             $infoBtn->setAttribute('class', 'modal');
             $infoBtn->setAttribute('href', 'javascript:void(0)');
-            $infoBtn->setAttribute('data-file', 'file');
-            $infoBtn->setAttribute('data-hash', 'hash');
+            $infoBtn->setAttribute('data-file', $item->nombre_archivo);
+            $infoBtn->setAttribute('data-mimeIcon', $iconSrc);
+            $infoBtn->setAttribute('data-hash', $item->hash);
             $infoBtn->setAttribute('data-size', 'size');
-            $infoBtn->setAttribute('data-mime', 'mime');            
+            $infoBtn->setAttribute('data-mime', $item->mime_type);            
             $infoImg = $dom->createElement("img");
             $infoImg->setAttribute('src', JURI::root() . '/media/adjuntos/file-info-icon.png');
             $infoBtn->appendChild($infoImg);

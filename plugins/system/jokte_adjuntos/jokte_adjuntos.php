@@ -13,6 +13,7 @@ jimport('joomla.form.form');
 jimport('joomla.form.helper');
 jimport('joomla.utilities.simplexml');
 jimport('joomla.filesystem.mime');
+jimport('joomla.filesystem.file');
 
 class plgSystemJokte_Adjuntos extends JPlugin {
 
@@ -81,7 +82,10 @@ class plgSystemJokte_Adjuntos extends JPlugin {
 
             $itemId = 'item-'.$c;
 
+            $rutaArchivo = '/uploads'.DS.$item->hash.'-'.$item->nombre_archivo;
+
             $iconSrc = JMime::checkIcon($item->mime_type);
+            $fileSize = JFile::getSize(JPATH_ROOT.$rutaArchivo);
 
             $row = $dom->createElement("tr");
             $row->setAttribute('id', $itemId);
@@ -98,7 +102,7 @@ class plgSystemJokte_Adjuntos extends JPlugin {
 
             $name = $dom->createElement("span");
             $nameAnchor = $dom->createElement("a");
-            $nameAnchor->setAttribute('href', '/uploads/'.$item->hash.'-'.$item->nombre_archivo);
+            $nameAnchor->setAttribute('href', $rutaArchivo);
             $nameAnchor->setAttribute('target','_blank');
             $nameAnchor->nodeValue = $item->nombre_archivo;
             $name->appendChild($nameAnchor);
@@ -112,7 +116,7 @@ class plgSystemJokte_Adjuntos extends JPlugin {
             $infoBtn->setAttribute('data-file', $item->nombre_archivo);
             $infoBtn->setAttribute('data-mimeIcon', $iconSrc);
             $infoBtn->setAttribute('data-hash', $item->hash);
-            $infoBtn->setAttribute('data-size', 'size');
+            $infoBtn->setAttribute('data-size', $fileSize);
             $infoBtn->setAttribute('data-mime', $item->mime_type);            
             $infoImg = $dom->createElement("img");
             $infoImg->setAttribute('src', JURI::root() . '/media/adjuntos/file-info-icon.png');

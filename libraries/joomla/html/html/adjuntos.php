@@ -10,6 +10,7 @@ defined('_JEXEC') or die('Acceso directo a este archivo no permitido');
 
 jimport('joomla.html.html');
 jimport('joomla.filesystem.mime');
+jimport('joomla.filesystem.file');
 
 abstract class JHtmlAdjuntos {
 
@@ -78,6 +79,7 @@ abstract class JHtmlAdjuntos {
 
         $mimeIcon = JMime::checkIcon($adjunto->mime_type);
         $rutaArchivo = self::obtenerRutaArchivo($adjunto->hash, $adjunto->nombre_archivo);
+        $fileSize = JFile::getSize(self::obtenerRutaArchivo($adjunto->hash, $adjunto->nombre_archivo, true));
 
         $html .= "      <tr>";
         $html .= "          <td>";
@@ -92,7 +94,7 @@ abstract class JHtmlAdjuntos {
         $html .= "              </a>";
         $html .= "          </td>";
         $html .= "          <td>";
-        $html .= "              <a href='javascript:void(0)' class='modal' onClick='mostrarInfo(this, event)' data-file='".$adjunto->nombre_archivo."' data-mime-icon='".$mimeIcon."' data-hash='".$adjunto->hash."' data-size='size' data-mime='".$adjunto->mime_type."'>";
+        $html .= "              <a href='javascript:void(0)' class='modal' onClick='mostrarInfo(this, event)' data-file='".$adjunto->nombre_archivo."' data-mime-icon='".$mimeIcon."' data-hash='".$adjunto->hash."' data-size='".$fileSize."' data-mime='".$adjunto->mime_type."'>";
         $html .= "                  <img src='".JURI::root()."media/adjuntos/file-info-icon.png'";
         $html .= "                       title='Información'/>";
         $html .= "              </a>";
@@ -107,11 +109,13 @@ abstract class JHtmlAdjuntos {
         return $html;
     }
 
-    private function obtenerRutaArchivo($hash, $nombre) {
-
+    private function obtenerRutaArchivo($hash, $nombre, $absolute=false) {
         $dir = "/uploads";
-
         $src = $dir . DS . $hash . '-' . $nombre;
+
+        if ($absolute) {
+            $src = JPATH_ROOT . $src;
+        }
 
         return $src;
     }

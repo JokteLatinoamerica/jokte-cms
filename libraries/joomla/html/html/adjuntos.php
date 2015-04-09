@@ -79,7 +79,7 @@ abstract class JHtmlAdjuntos {
 
         $mimeIcon = JMime::checkIcon($adjunto->mime_type);
         $rutaArchivo = self::obtenerRutaArchivo($adjunto->hash, $adjunto->nombre_archivo);
-        $fileSize = JFile::getSize(self::obtenerRutaArchivo($adjunto->hash, $adjunto->nombre_archivo));
+        $fileSize = JFile::getSize(self::obtenerRutaArchivo($adjunto->hash, $adjunto->nombre_archivo, true));
 
         $html .= "      <tr>";
         $html .= "          <td>";

@@ -15,12 +15,15 @@ class plgContentJokteadjuntos extends JPlugin {
 
     public function onContentBeforeDisplay ($context, &$article, &$params, $offset = 0 ) {
 
+        JHTML::_('behavior.modal');
+
         // Realiza algunas validaciones antes de continuar con la
         // ejecución para traer los archivos arjuntos
         // TODO: Buscar una forma más elegante para estas validaciones
         if($context != 'com_content.article') return;
         if(!$params->get('show_attachments', '1')) return;
 
+        $article->text .= "<h3>Archivos adjuntos</h3>";
         $article->text .= JHtml::_('adjuntos.lista', $article->id, $article->text, $params);
     }
 }

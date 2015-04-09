@@ -556,4 +556,18 @@ class JFile
 			return $file;
 		}
 	}
+
+    /**
+     * Retorna el tamaño del archivo
+     * Nuevo método API Jokte! comunidad juuntos.org
+     *
+     * @param   string  $file Ruta al archivo
+     * @return  string  tamaño en bytes
+     *
+     * @since   11.1
+     */
+    public static function getSize($file)
+    {
+        return filesize($file);
+    }
 }

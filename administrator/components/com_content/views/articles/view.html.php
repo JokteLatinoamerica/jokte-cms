@@ -112,8 +112,8 @@ class ContentViewArticles extends JViewLegacy
 			JToolBarHelper::divider();
 		}
 
-		if ($canDo->get('core.admin')) {
-			JToolBarHelper::preferences('com_content');
+		if ($canDo->get('core.admin')) {			
+			JToolBarHelper::preferences('com_content', JText::_('AYUDA_GENERAL_COM_CONTENT'));
 			JToolBarHelper::divider();
 		}
 

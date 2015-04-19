@@ -43,6 +43,14 @@
 			view="article"
 		/>
 
+        <field
+            name="a-titulo"
+            type="separador"
+            class="fulltext"
+            fielname="sepia"
+            value="JGLOBAL_SEPARADOR_TITULO_DESC"
+            default="JGLOBAL_SEPARADOR_TITULO_TITLE"
+        />
 		<field
 			name="show_title"
 			type="radio"
@@ -66,12 +74,15 @@
 			<option
 				value="1">JYES</option>
 		</field>
-		
-		<field
-			name="spacer20"
-			type="spacer"
-			hr="true"
-			/>
+
+        <field
+            name="a-subtitulo"
+            type="separador"
+            class="fulltext"
+            fielname="sepia"
+            value="JGLOBAL_SEPARADOR_SUBTITULO_DESC"
+            default="JGLOBAL_SEPARADOR_SUBTITULO_TITLE"
+        />
 		
 		<field
 			name="show_subtitle"
@@ -98,12 +109,15 @@
 				<option
 					value="article">SB_SHOW_ARTICLE</option>	
 		</field>
-		
-		<field
-			name="spacer21"
-			type="spacer"
-			hr="true"
-			/>
+
+        <field
+            name="a-copete"
+            type="separador"
+            class="fulltext"
+            fielname="sepia"
+            value="JGLOBAL_SEPARADOR_EPIGRAFE_DESC"
+            default="JGLOBAL_SEPARADOR_EPIGRAFE_TITLE"
+        />
 			
 		<field
 			name="show_copete"
@@ -130,6 +144,15 @@
 				<option	
 					value="article">SB_SHOW_ARTICLE</option>	
 		</field>
+
+        <field
+            name="a-textos"
+            type="separador"
+            class="fulltext"
+            fielname="sepia"
+            value="JGLOBAL_SEPARADOR_TEXTOS_DESC"
+            default="JGLOBAL_SEPARADOR_TEXTOS_TITLE"
+        />
 		
 		<field
 			name="spacer22"
@@ -197,11 +220,14 @@
 				value="1">JYes</option>
 		</field>
 
-		<field
-			name="spacer1"
-			type="spacer"
-			hr="true"
-			/>
+        <field
+            name="a-autor"
+            type="separador"
+            class="fulltext"
+            fielname="sepia"
+            value="JGLOBAL_SEPARADOR_AUTOR_DESC"
+            default="JGLOBAL_SEPARADOR_AUTOR_TITLE"
+        />
 
 		<field
 			name="show_author"
@@ -226,41 +252,36 @@
 			<option
 				value="1">JYES</option>
 		</field>
-		
+
 		<field
-			name="spacerx1"
-			type="spacer"
-			hr="true"
-			/>
-		<field
-		  name="show_avatar"
-		  type="list"
-		  label="JGLOBAL_AVATAR_AUTHOR_LABEL"
-		  description="JGLOBAL_AVATAR_AUTHOR_DESC"
-		  default="0">
-		  <option
-			value="0">SIN_IMAGEN</option>
-		  <option
-			value="1">IMAGEN_PERFIL</option>
-		  <option
-			value="2">IMAGEN_GRAVATAR</option>
-		  </field>
+		    name="show_avatar"
+		    type="list"
+		    label="JGLOBAL_AVATAR_AUTHOR_LABEL"
+		    description="JGLOBAL_AVATAR_AUTHOR_DESC"
+		    default="0">
+            <option
+			    value="0">SIN_IMAGEN</option>
+		    <option
+			    value="1">IMAGEN_PERFIL</option>
+		    <option
+			    value="2">IMAGEN_GRAVATAR</option>
+        </field>
 		
 		<field name="ayuda-gravatar" type="spacer" class="text"
 		 label="AYUDA_GRAVATAR"
 		 />
 		
 		<field
-		  name="avatar_link"
-		  type="radio"
-		  label="JGLOBAL_LINK_AVATAR_LABEL"
-		  description="JGLOBAL_LINK_AVATAR_DESC"
-		  default="0">
-		  <option
-			value="0">JNO</option>
-		  <option
-			value="1">JYES</option>
-		  </field>
+		    name="avatar_link"
+		    type="radio"
+		    label="JGLOBAL_LINK_AVATAR_LABEL"
+		    description="JGLOBAL_LINK_AVATAR_DESC"
+		    default="0">
+		    <option
+			    value="0">JNO</option>
+		    <option
+			    value="1">JYES</option>
+        </field>
 		
 		<field
 			name="show_avatar_view"
@@ -268,12 +289,12 @@
 			default="article"
 			label="JGLOBAL_SHOW_AVATAR_VIEW_LABEL"
 			description="JGLOBAL_SHOW_AVATAR_VIEW_DESC">
-				<option	
-					value="frontpage">SB_SHOW_FRONTPAGE</option>	
-				<option	
-					value="category">SB_SHOW_CATEGORY</option>
-				<option	
-					value="article">SB_SHOW_ARTICLE</option>
+			<option
+				value="frontpage">SB_SHOW_FRONTPAGE</option>
+			<option
+				value="category">SB_SHOW_CATEGORY</option>
+			<option
+				value="article">SB_SHOW_ARTICLE</option>
 		</field>
 		
 		<field
@@ -303,12 +324,15 @@
 			<option
 				value="2">INTEXT_FLOAT_RIGHT</option>			
 		</field>
-		
-		<field
-			name="spacerx2"
-			type="spacer"
-			hr="true"
-			/>
+
+        <field
+            name="a-fechas"
+            type="separador"
+            class="fulltext"
+            fielname="sepia"
+            value="JGLOBAL_SEPARADOR_FECHAS_DESC"
+            default="JGLOBAL_SEPARADOR_FECHAS_TITLE"
+        />
 				
 		<field
 			name="show_create_date"
@@ -401,11 +425,14 @@
 			default="100"
 		/>
 
-		<field
-			name="spacer2"
-			type="spacer"
-			hr="true"
-			/>
+        <field
+            name="a-iconos"
+            type="separador"
+            class="fulltext"
+            fielname="sepia"
+            value="JGLOBAL_SEPARADOR_ICONOS_DESC"
+            default="JGLOBAL_SEPARADOR_ICONOS_TITLE"
+        />
 			
 		<field
 			name="show_icons"
@@ -475,12 +502,15 @@
 			<option value="0">COM_CONTENT_FIELD_OPTION_ABOVE</option>
 			<option value="1">COM_CONTENT_FIELD_OPTION_BELOW</option>
 		</field>
-		
-		<field
-			name="spacer30"
-			type="spacer"
-			hr="true"
-			/>
+
+        <field
+            name="a-etiquetas"
+            type="separador"
+            class="fulltext"
+            fielname="sepia"
+            value="JGLOBAL_SEPARADOR_ETIQUETAS_DESC"
+            default="JGLOBAL_SEPARADOR_ETIQUETAS_TITLE"
+        />
 		
 		<field name="show_simpletags"
 				type="radio"
@@ -523,7 +553,15 @@
 			<option
 				value="1">JYES</option>
 		</field>
-		
+
+        <field
+            name="a-disponible"
+            type="separador"
+            class="fulltext"
+            fielname="sepia"
+            value="JGLOBAL_SEPARADOR_DISQUS_DESC"
+            default="JGLOBAL_SEPARADOR_DISQUS_TITLE"
+        />
 		<field
 			name="show_disqus"
 			type="radio"
@@ -555,13 +593,15 @@
 			<option
 				value="1">JYES</option>
 		</field>
-		
-		<field
-			name="spacerz2"
-			type="spacer"
-			hr="true"
-		/>
-		
+
+        <field
+            name="a-redesociales"
+            type="separador"
+            class="fulltext"
+            fielname="sepia"
+            value="JGLOBAL_SEPARADOR_BOTONESREDES_DESC"
+            default="JGLOBAL_SEPARADOR_BOTONESREDES_TITLE"
+        />
 		<field
 			name="show_socialbuttons"
 			type="checkboxes"

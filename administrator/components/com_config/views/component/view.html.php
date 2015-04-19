@@ -21,7 +21,7 @@ class ConfigViewComponent extends JViewLegacy
 	{
 		$form		= $this->get('Form');
 		$component	= $this->get('Component');
-
+		$ayuda		= JRequest::getVar('ayuda');
 		// Check for errors.
 		if (count($errors = $this->get('Errors'))) {
 			JError::raiseError(500, implode("\n", $errors));
@@ -35,6 +35,7 @@ class ConfigViewComponent extends JViewLegacy
 
 		$this->assignRef('form',		$form);
 		$this->assignRef('component',	$component);
+		$this->assignRef('ayuda',	$ayuda);
 
 		$this->document->setTitle(JText::_('JGLOBAL_EDIT_PREFERENCES'));
 

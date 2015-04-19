@@ -1,82 +1,96 @@
 /**
- * @package     Jokte.Site
- * @subpackage	jokteantu
- * @author 	Equipo de desarrollo juuntos.
- * @copyright   Copyleft (Comparte igual) Open Jokte.
- * @license     GNU General Public License version 3 or later; see LICENSE.txt
- * This version may have been modified pursuant to the GNU General Public License, 
- * and as distributed it includes or is derivative of works licensed under 
- * the GNU General Public License or other free or open source software licenses.
-*/
+ * @version		$Id: offline.css 21331 2011-05-11 04:28:32Z eddieajau $
+ * @copyright	Copyright (C) 2005 - 2011 Open Source Matters, Inc. All rights reserved.
+ * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ */
 
-/*******
- * ****OFFLINE*/
- 
- 
- body{
- font-family: FreeSans,Verdana, Geneva,Helvetica,Arial,Sans-Serif;
-    font-size: 14px;    
-       color: #333;
-    padding: 0px;
-    text-align: justify;}
-    
-    #margen.outline{
-box-shadow: -1px -2px 3px #FFFFFF, 3px 5px 10px #CCCCCC, 6px 0 25px #EEEEEE;
-  -moz-box-shadow: -1px -2px 3px #FFFFFF, 3px 5px 10px #CCCCCC, 6px 0 25px #EEEEEE;
-  -webkit-box-shadow: -1px -2px 3px #FFFFFF, 3px 5px 10px #CCCCCC, 6px 0 25px #EEEEEE;
-  background:#fff;
-  padding:20px;
-
-width:40%;
-margin: 5px 25px 15px;}
-
-#bodyBg {
-    background: url("../images/jokte-logo.png") no-repeat scroll 85% 70% transparent;
-    width: 450px;
-    margin: 15px auto 15px auto;
-    overflow: hidden;
-    padding: 15px;
-  box-shadow:-1px -2px 3px #FFFFFF, 3px 5px 10px #CCCCCC, 6px 0 25px #EEEEEE;
-  -moz-box-shadow:-1px -2px 3px #FFFFFF, 3px 5px 10px #CCCCCC, 6px 0 25px #EEEEEE;
-  -webkit-box-shadow:-1px -2px 3px #FFFFFF, 3px 5px 10px #CCCCCC, 6px 0 25px #EEEEEE;
+body {
+	margin: 0; padding: 0;
+	font-family: Arial, Helvetica, Sans Serif; font-size: 78%;
+	color: #333333;
+	background: #FAFAFA;
+	text-align: center;
 }
-#mensaje {
-    text-align: center;
+
+img  {
+	border: 0 none;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* -- id styles ------------------------------------- */
+
+#frame {
+	margin: 40px auto;
+	width: 400px;
+	padding: 20px;
+	-moz-border-radius: 18px;
+	-webkit-border-radius: 18px;
+	border-radius: 18px;
+	/*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
+	-moz-box-shadow: 0px 0px 20px #000000;
+	-webkit-box-shadow: 0px 0px 20px #000000;
+	box-shadow: 0px 0px 20px #000000;
+	/*IE 7 AND 8 DO NOT SUPPORT BLUR PROPERTY OF SHADOWS*/
+	filter: progid: DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#e8e5dc');
+	/*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
+	/*Element must have a height (not auto)*/
+	/*All filters must be placed together*/
+	-ms-filter: "progid: DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#e8e5dc')";
+	/*Element must have a height (not auto)*/
+	/*All filters must be placed together*/
+	background-image: -moz-linear-gradient(top, #ffffff, #e8e5dc);
+	background-image: -ms-linear-gradient(top, #ffffff, #e8e5dc);
+	background-image: -o-linear-gradient(top, #ffffff, #e8e5dc);
+	background-image: -webkit-gradient(linear, center top, center bottom, from(#ffffff), to(#e8e5dc));
+	background-image: -webkit-linear-gradient(top, #ffffff, #e8e5dc);
+	background-image: linear-gradient(top, #ffffff, #e8e5dc);
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	/*Use "background-clip: padding-box" when using rounded corners to avoid the gradient bleeding through the corners*/
+	/*--IE9 WILL PLACE THE FILTER ON TOP OF THE ROUNDED CORNERS--*/
+}
+
+#frame form {
+	text-align: left;
 }
 
 /* -- class styles ---------------------------------- */
 
 .outline {
- 
+  border: 1px solid #cccccc;
   background: #ffffff;
   padding: 2px;   
 }
 
 /* -- form styles ----------------------------------- */
 
-.outline  form    { margin: auto; }
-.outline  form p  { margin: 0; padding: 0; }
-.outline  form fieldset { border: 0 none; margin: 0em; padding: 0.2em;}
-.outline  label         { display: block; float: left; }
+form    { margin: auto; }
+form p  { margin: 0; padding: 0; }
+form fieldset { border: 0 none; margin: 0em; padding: 0.2em;}
+label         { display: block; float: left; }
+input 		  { padding: 1px; }
+input.button  { width: auto; height: 1.8em; cursor: pointer; }
 
-.outline  input.button  { width: auto; height: 1.8em; cursor: pointer; }
+label   { margin: 5px 0px 2px 0px; width: 10em;}
+form p  { padding: 0.2em 0 0.2em 0; }
+form br  { display: none; }
+input    { border: 1px solid #0E67A1; }
+input.button 		 { background-color: white; }
+input.button:hover { border-color:  #FC902E; }
 
-.outline label   { margin: 5px 0px 2px 0px; width: 10em;}
-.outline form p  { padding: 0.2em 0 0.2em 0; }
-.outline form br  { display: none; }
-.outline input    {border: none;background: #ddd;border: 1px solid #eee;padding:1px; max-width:80%; }
-.outline input.button 		 { background-color: #ddd; }
-.outline input.button:hover { border-color:  #666;background:#333;color:#fff; }
-
-.outline input:hover{background:#fff;border:1px solid #ccc;}
-.outline input:focus{background:#fff;border:1px solid #ccc;}
+input:hover{background:#FFFFAA;border:1px solid red;}
+input:focus{background:#FFFFAA;border:1px solid red;}
 
 
-
+#frmlogin	      { margin: 0 10px 0 10px;  }
+#frmlogin fieldset.button { text-align: right; }
 
 .joktetop{
-text-align:center;
-
+height: 210px;
+background:#ececec url(../images/gentelatam.png) center no-repeat;
+border-bottom:1px solid #727272;
 }
 .joktetop2{
 line-height:1px;
@@ -84,8 +98,16 @@ height:1px;
 background:#888888;
 }
 
-#remember {
-    margin-top: 7px;
+.joktetop3{
+line-height:1px;
+height:1px;
+background:#A0A0A0;
+}
+
+.joktetop4{
+line-height:1px;
+height:1px;
+background:#B8B8B8;
 }
 
 .joktetop img{padding-top:30px;}
@@ -93,19 +115,20 @@ background:#888888;
 .joktepie{
 display:block; 
 bottom:0px; 
-height:30px;
-width:96%; 
+height:73px;
+width:100%; 
+position:fixed;  
 padding:10px; 
 text-align:center; 
 font-weight:bold; 
 color:#fff; 
-background:#333;
+background:black;
 }
 
 .joktepie a:link,
 .joktepie a:visited,
 .joktepie a:active{
-text-decoration: underline;
+text-decoration:none;
 color:#FAFAFA;
 }
 
@@ -113,6 +136,16 @@ color:#FAFAFA;
 color:#ccc;
 }
 
-
-
+.login-img-back {
+	width: 250px;
+	height: 250px;
+	position: absolute;
+	bottom:  120px; 
+	right: 50px;
+	text-align:center;
+}
+.login-img-text{
+	font-size:200%;
+	text-shadow:#CCCCCC 2px 1px 2px; 
+}
 

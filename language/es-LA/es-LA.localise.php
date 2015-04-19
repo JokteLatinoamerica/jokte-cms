@@ -12,7 +12,7 @@
  * @package		Joomla.Site
  * @since		1.6
  */
-abstract class es_ESLocalise {
+abstract class es_LALocalise {
 	/**
 	 * Returns the potential suffixes for a specific number of items
 	 *

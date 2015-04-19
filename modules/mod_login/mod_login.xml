@@ -33,6 +33,7 @@
 					filter="safehtml"
 					cols="30"
 					rows="5"
+					placeholder="MOD_LOGIN_PRE_TEXT_PLACEHOLDER"
 					label="MOD_LOGIN_FIELD_PRE_TEXT_LABEL"
 					description="MOD_LOGIN_FIELD_PRE_TEXT_DESC" />
 				<field
@@ -41,6 +42,7 @@
 					filter="safehtml"
 					cols="30"
 					rows="5"
+					placeholder="MOD_LOGIN_POST_TEXT_PLACEHOLDER"
 					label="MOD_LOGIN_FIELD_POST_TEXT_LABEL"
 					description="MOD_LOGIN_FIELD_POST_TEXT_DESC" />
 				<field

@@ -668,9 +668,10 @@ dl#content-pane.tabs {
 div.current label,
 div.current span.faux-label {
 	display: block;
-	min-width: 150px;
+	min-width: 250px;
 	float: left;
 	clear: left;
+    border-bottom: 1px #D3D3D3 dotted;
 	margin-top: 8px;
 }
 
@@ -1127,8 +1128,7 @@ fieldset.panelform {
 fieldset.panelform label,
 fieldset.panelform div.paramrow label,
 fieldset.panelform span.faux-label {
-	min-width: 145px;
-	max-width: 250px;
+	width: 25%;
 	padding: 0 5px 0 0;
 }
 
@@ -3401,7 +3401,8 @@ float:none;
 	color:#000;
 	padding:0 2px;
 	text-align:justify;
-	font-size:90%
+	font-size:100%;
+    margin-left:0px;
 }
 .separador-about{
 	color:#000053;
@@ -3413,8 +3414,10 @@ float:none;
 	padding:4px;
 }
 
-/* System - Adjuntos */
-
-.adjuntos-label {
-    float:none;
+.ayudaConfig{
+    background:#FAFAFA;
+    color: darkred;
+    font-variant: small-caps;
+    border: 1px solid #000000;
+    padding: 4px;
 }

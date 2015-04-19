@@ -25,6 +25,13 @@ abstract class JFormField
 	 * @since  11.1
 	 */
 	protected $description;
+	/**
+	 * The description text for the form field.  Usually used in tooltips.
+	 *
+	 * @var    string
+	 * @since  11.1
+	 */
+	protected $placeholder;	
 
 	/**
 	 * The SimpleXMLElement object of the <field /> XML element that describes the form field.
@@ -73,6 +80,14 @@ abstract class JFormField
 	 * @since  11.1
 	 */
 	protected $translateDescription = true;
+	
+	/**
+	 * True to translate the field placeholder string.
+	 *
+	 * @var    boolean
+	 * @since  11.1
+	 */
+	protected $translatePlaceholder = true;
 
 	/**
 	 * The document id for the form field.
@@ -235,6 +250,7 @@ abstract class JFormField
 		{
 			case 'class':
 			case 'description':
+			case 'placeholder':
 			case 'formControl':
 			case 'hidden':
 			case 'id':
@@ -359,16 +375,20 @@ abstract class JFormField
 		}
 
 		// Set the field description text.
-		$this->description = (string) $element['description'];
+		$this->description = (string) $element['description'];	
+		
+		// Set the field placeholder text.
+		$this->placeholder = (string) $element['placeholder'];
+		
+		$ph = str_replace(JText::_($this->placeholder),$this->placeholder,JText::_($this->placeholder));
 
 		// Set the visibility.
 		$this->hidden = ((string) $element['type'] == 'hidden' || (string) $element['hidden'] == 'true');
 
 		// Determine whether to translate the field label and/or description.
 		$this->translateLabel = !((string) $this->element['translate_label'] == 'false' || (string) $this->element['translate_label'] == '0');
-		$this->translateDescription = !((string) $this->element['translate_description'] == 'false'
-			|| (string) $this->element['translate_description'] == '0');
-
+		$this->translateDescription = !((string) $this->element['translate_description'] == 'false' || (string) $this->element['translate_description'] == '0');
+		
 		// Set the group of the field.
 		$this->group = $group;
 

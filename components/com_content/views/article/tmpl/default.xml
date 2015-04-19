@@ -143,6 +143,8 @@
 		  label="JGLOBAL_AVATAR_AUTHOR_LABEL"
 		  description="JGLOBAL_AVATAR_AUTHOR_DESC"
 		  default="0">
+          <option
+            value="">JGLOBAL_USE_GLOBAL</option>
 		  <option
 			value="0">JNO</option>
 		  <option

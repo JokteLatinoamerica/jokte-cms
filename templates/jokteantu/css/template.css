@@ -978,7 +978,13 @@ color:#333;}
 
 #contact-form dt {
     float: none;
+    clear: both;
 }
+
+#contact-form input[name="jform[contact_email]"] {
+    margin-top: 8px;
+}
+
 /****Articulos archivados*/
 #archive-items li {
     list-style: none outside none;

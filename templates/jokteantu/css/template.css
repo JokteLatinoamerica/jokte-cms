@@ -960,8 +960,8 @@ color:#333;}
 }
 .contact-links ul, ol .contact-articles,.contact-miscinfo {
     clear: both;
-    display: block;
-    line-height: 1.6em;
+    display: inline;
+    line-height: 1em;
     list-style: none outside none;
     padding: 15px 0;
 }
@@ -971,6 +971,11 @@ color:#333;}
     float: left;
     margin: 15px -20px 0 -30px;
 }
+
+.contact .jicons-icons {
+    margin: 0 10px 0 0;
+}
+
 #contact-form dt {
     float: none;
 }

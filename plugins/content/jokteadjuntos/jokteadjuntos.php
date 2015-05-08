@@ -17,13 +17,18 @@ class plgContentJokteadjuntos extends JPlugin {
 
         JHTML::_('behavior.modal');
 
-        // Realiza algunas validaciones antes de continuar con la
-        // ejecución para traer los archivos arjuntos
+        // Realiza algunas validaciones de cocnfiguración antes de
+        // continuar con la ejecución para traer los archivos arjuntos
         // TODO: Buscar una forma más elegante para estas validaciones
         if($context != 'com_content.article') return;
         if(!$params->get('show_attachments', '1')) return;
 
-        $article->text .= "<h3>Archivos adjuntos</h3>";
-        $article->text .= JHtml::_('adjuntos.lista', $article->id, $article->text, $params);
+        // Verifica que el artículo tenga archivos adjuntos
+        $totalAdjuntos = JHtml::_('adjuntos.contar', $article->id);
+        if ($totalAdjuntos == 0) return;
+
+        // Incluye los archivos adjuntos dentro del texto del artículo
+        $article->text .= "<h3>Archivos adjuntos</h3>";        
+        $article->text .= JHtml::_('adjuntos.listar', $article->id, $article->text, $params);
     }
 }

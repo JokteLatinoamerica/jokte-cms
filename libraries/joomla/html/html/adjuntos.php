@@ -14,7 +14,26 @@ jimport('joomla.filesystem.file');
 
 abstract class JHtmlAdjuntos {
 
-    static function lista($id, $text, $params) {
+    static function contar($id) {
+        $db = JFactory::getDbo();
+
+        $query = $db->getQuery(true);
+
+        $columnas = array('propietario_id');
+        $query
+            ->select($db->quoteName($columnas))
+            ->from($db->quoteName('#__adjuntos'))
+            ->where($db->quoteName('propietario_id') . ' = ' . $id);
+
+        $db->setQuery($query);
+        $adjuntos = $db->loadObjectList();
+
+        $count = count($adjuntos);
+
+        return $count;
+    }
+
+    static function listar($id, $text, $params) {
 
         $doc = JFactory::getDocument();
         $doc->addScriptDeclaration('

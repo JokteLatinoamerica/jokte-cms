@@ -179,7 +179,9 @@ body.contentpane {
 }
 
 img { border: 0 none;
-float:none !important; }
+      float:none; }
+
+
 
 div#content div div.cols-3 div.item {
     float: left;

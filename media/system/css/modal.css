@@ -75,7 +75,7 @@
 }
 
 .sbox-content-iframe#sbox-content {
-	overflow: visible;
+	overflow: hidden;
 }
 
 /* Hides scrollbars */

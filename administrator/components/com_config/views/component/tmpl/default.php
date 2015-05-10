@@ -37,7 +37,9 @@ JHtml::_('behavior.formvalidation');
 			<?php echo JText::_($this->component->option.'_configuration') ?>
 		</div>
 	</fieldset>
-
+	<?php if ($this->ayuda) : ?>
+		<div class="ayudaConfig"><?php echo base64_decode($this->ayuda); ?></div>
+	<?php endif;?>
 	<?php
 	echo JHtml::_('tabs.start', 'config-tabs-'.$this->component->option.'_configuration', array('useCookie'=>1));
 		$fieldSets = $this->form->getFieldsets();

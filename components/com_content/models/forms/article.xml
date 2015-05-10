@@ -305,24 +305,4 @@
 			type="hidden"
 			 />
 	</fields>
-	<fields name="attachments">
-	  <field
-		name="adjunto1"
-		type="media"
-		label="COM_CONTENT_ADJUNTO_1"
-		preview="false"
-		description="COM_CONTENT_ADJUNTO_DESC" />
-	  <field
-		name="adjunto2"
-		type="media"
-		label="COM_CONTENT_ADJUNTO_2"
-		preview="false"
-		description="COM_CONTENT_ADJUNTO_DESC" />
-	  <field
-		name="adjunto3"
-		type="media"
-		label="COM_CONTENT_ADJUNTO_3"
-		preview="false"
-		description="COM_CONTENT_ADJUNTO_DESC" />
-	  </fields> 
 </form>

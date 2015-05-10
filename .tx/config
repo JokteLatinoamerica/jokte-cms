@@ -1,0 +1,9 @@
+[main]
+host = https://www.transifex.com
+lang_map = es_VE: es-VE
+type = INI
+
+[jokte-sitio.es-lacom_contactini]
+file_filter = language/<lang>/<lang>.com_contact.ini
+source_file = languaje/es-VE/es-LA.com_contact.ini
+source_lang = es_VE

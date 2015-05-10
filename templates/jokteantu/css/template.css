@@ -179,7 +179,9 @@ body.contentpane {
 }
 
 img { border: 0 none;
-float:none !important; }
+      float:none; }
+
+
 
 div#content div div.cols-3 div.item {
     float: left;
@@ -960,8 +962,8 @@ color:#333;}
 }
 .contact-links ul, ol .contact-articles,.contact-miscinfo {
     clear: both;
-    display: block;
-    line-height: 1.6em;
+    display: inline;
+    line-height: 1em;
     list-style: none outside none;
     padding: 15px 0;
 }
@@ -971,9 +973,20 @@ color:#333;}
     float: left;
     margin: 15px -20px 0 -30px;
 }
+
+.contact .jicons-icons {
+    margin: 0 10px 0 0;
+}
+
 #contact-form dt {
     float: none;
+    clear: both;
 }
+
+#contact-form input[name="jform[contact_email]"] {
+    margin-top: 8px;
+}
+
 /****Articulos archivados*/
 #archive-items li {
     list-style: none outside none;

@@ -556,4 +556,43 @@ class JFile
 			return $file;
 		}
 	}
+
+    /**
+     * Retorna el tamaño del archivo
+     * Nuevo método API Jokte! comunidad juuntos.org
+     *
+     * @param   string  $file Ruta al archivo
+     * @return  string  tamaño en bytes
+     *
+     * @since   11.1
+     */
+    public static function getSize($file)
+    {
+        return self::formatBytes(filesize($file));
+    }
+
+    /**
+     *  Obtiene el valor del tamaño del archivo en
+     *  formato legible para humanos
+     *  Gracias a: http://stackoverflow.com/questions/2510434/format-bytes-to-kilobytes-megabytes-gigabytes#answer-2510459
+     *
+     *  @bytes     integer tamaño en bytes
+     *  @precision integer resolución para el calculo
+     *
+     *  @return    string valor legible por humanos
+     *  @since     11.1
+     */
+    private function formatBytes($bytes, $precision = 2) {
+        $units = array('B', 'KB', 'MB', 'GB', 'TB');
+
+        $bytes = max($bytes, 0);
+        $pow = floor(($bytes ? log($bytes) : 0) / log(1024));
+        $pow = min($pow, count($units) - 1);
+
+        // Uncomment one of the following alternatives
+        // $bytes /= pow(1024, $pow);
+        $bytes /= (1 << (10 * $pow));
+
+        return round($bytes, $precision) . ' ' . $units[$pow];
+    }
 }

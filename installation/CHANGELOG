@@ -28,6 +28,15 @@ $ -> Idioma corrección o cambio
 - -> Eliminado
 ! -> Nota
 
+19-04-2015
+ + Nuevo sistema de adjuntos
+ + Nuevas ayudas contextuales en parámetros
+ # Cambios en algunas URL por fijación del dominio de Juuntos.org
+ # Fallos menores en vista previa de artículos
+ # Fallos menores en marcadores de campos (placeholders)
+ + Nuevo formato (preparando Rayen) plantilla fuera de línea
+ # Estilizado mejorado de presentación de parámetros
+
 03-Nov-2014
  ^ Arreglo botones componente Checkin
  ^ Filtro URL en campos de Contacto 

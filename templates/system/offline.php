@@ -1,55 +1,32 @@
 <?php
 /**
- * @package     Jokte.Site
- * @subpackage	jokteantu
- * @author 	Equipo de desarrollo juuntos.
- * @copyright   Copyleft (Comparte igual) Open Jokte.
- * @license     GNU General Public License version 3 or later; see LICENSE.txt
- * 
-*/
+ * @version		$Id: offline.php 22507 2011-12-13 20:44:45Z github_bot $
+ * @package		Jokte.Site
+ * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ */
 
 defined('_JEXEC') or die;
 $app = JFactory::getApplication();
-
-$params = JFactory::getApplication()->getTemplate(true)->params;
-$logo =  $params->get('logo');
-$typobody 	= $params->get('typobody');			
-$typoespecial 	= $params->get('typoespecial');	
-
-
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 <head>
 	<jdoc:include type="head" />
-	<link rel="stylesheet" href="<?php echo $this->baseurl ;?>/templates/<?php echo $this->template ;?>/css/general.css" type="text/css" />  
-	<link rel="stylesheet" href="<?php echo $this->baseurl ;?>/templates/<?php echo $this->template ;?>/css/offline.css" type="text/css" /> 
-	   
-	 
-	 
-	 <?php if ($typobody != "no-google") { ?>
-<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=<?php echo $typobody; ?>" />
-<?php } ?>
-<?php if ( $typoespecial != "no-google") { ?>
-<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=<?php echo $typoespecial; ?>" />
-<?php } ?>
-
-<style type="text/css"> 
-<?php if ($typobody != "no-google") { ?>
-body {font-family: '<?php echo $typobody; ?>',FreeSans,Verdana, Geneva,Helvetica,Arial,Sans-Serif;
-} 
-<?php } ?>
-<?php if ($typoespecial != "no-google") { ?>
-h1 {
-font-family:'<?php echo $typoespecial; ?>',gargi,Verdana, Geneva, sans-serif;}
-<?php } ?>
-</style> 
+	<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/offline.css" type="text/css" />
+	<?php if ($this->direction == 'rtl') : ?>
+	<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/offline_rtl.css" type="text/css" />
+	<?php endif; ?>
+	<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/general.css" type="text/css" />
 </head>
 <body>
 <jdoc:include type="message" />
-<div id="bodyBg">
-<div id="mensaje">
-	
+	<div class="joktetop">
+		<a href="http://www.jokte.org" target="_blank" title="Proyecto Jokte!">
+			<img src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/images/logo.png" alt="<?php echo $app->getCfg('sitename'); ?>" title="<?php echo $app->getCfg('sitename'); ?>" />
+		</a>
+	</div>
+	<div class="joktetop2"></div><div class="joktetop3"></div><div class="joktetop4"></div>
+	<div id="frame" class="outline">
 		<?php if ($app->getCfg('offline_image')) : ?>
 		<img src="<?php echo $app->getCfg('offline_image'); ?>" alt="<?php echo $app->getCfg('sitename'); ?>" />
 		<?php endif; ?>
@@ -65,9 +42,6 @@ font-family:'<?php echo $typoespecial; ?>',gargi,Verdana, Geneva, sans-serif;}
 			<?php echo JText::_('JOFFLINE_MESSAGE'); ?>
 		</p>
 	<?php  endif; ?>
-	</div>
-	
-	<div id="margen" class="outline">
 	<form action="<?php echo JRoute::_('index.php', true); ?>" method="post" id="form-login">
 	<fieldset class="input">
 		<p id="form-login-username">
@@ -90,11 +64,13 @@ font-family:'<?php echo $typoespecial; ?>',gargi,Verdana, Geneva, sans-serif;}
 	</fieldset>
 	</form>
 	</div>
-	<div class="joktepie">
-		<a href="http://www.jokte.org" title="Visitar Proyecto Jokte!" target="_blank">Jokte! </a> es un proyecto con licencia GNU/GPL v2 hecho por la 
-		<a href="http://www.juuntos.org" title="Visitar la Comunidad Latinoamericana Juuntos" target="_blank">Comunidad Lationamericana Juuntos</a> <br />
-		
+	<div class="login-img-back">
+		<img src="<?php echo $this->baseurl.'/templates/'.$this->template.'/images/back-jeyuu.png' ?>" alt="rayen" title="Jokte! Rayen" />	
 	</div>
+	<div class="joktepie">
+		<a href="http://www.juuntos.org" title="Visitar la Comunidad Latinoamericana Juuntos" target="_blank">
+			<img src="<?php echo $this->baseurl.'/templates/'.$this->template.'/images/juuntos-logo.png' ?>" alt="juuntos-logo" title="Comunidad Juuntos Latioamérica" />
+		</a> 
 	</div>
 </body>
 </html>

@@ -1858,13 +1858,16 @@ div.button2-left button {
 }
 
 /* -- TOOLTIP STYLES ----------------------------- */
+.tip-wrap {
+    z-index: 9999;
+}
 .tip {
-	float: left;
+        float: left;
 	background: #ffc;
 	border: 1px solid #D4D5AA;
 	padding: 5px;
 	max-width: 400px;
-	z-index: 50;
+	z-index: 150;
 }
 
 .tip-title {

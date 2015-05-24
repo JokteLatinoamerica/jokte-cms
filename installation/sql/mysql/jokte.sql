@@ -6,12 +6,14 @@
 --
 
 CREATE TABLE IF NOT EXISTS `#__adjuntos` (
-  `id` int(255) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Clave primaria',
-  `propietario_id` int(255) NOT NULL COMMENT 'FK para la tabla #__content',
-  `nombre_archivo` varchar(1024) NOT NULL,
-  `ruta` varchar(1024) NOT NULL,
-  `hash` varchar(1024) NOT NULL,
-  `mime_type` varchar(80) NOT NULL
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Clave primaria',
+  `propietario_id` int(10) NOT NULL DEFAULT '0' COMMENT 'FK para la tabla #__content',
+  `nombre_archivo` varchar(255) NOT NULL DEFAULT '',
+  `ruta` varchar(255) NOT NULL NOT NULL DEFAULT '',
+  `hash` varchar(255) NOT NULL NOT NULL DEFAULT '',
+  `mime_type` varchar(255) NOT NULL DEFAULT '',
+
+  PRIMARY KEY (`id`)
 ) DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --
@@ -537,6 +539,8 @@ INSERT INTO `#__extensions` (`extension_id`, `name`, `type`, `element`, `folder`
 (444, 'plg_finder_content', 'plugin', 'content', 'finder', 0, 1, 1, 0, '{"legacy":false,"name":"plg_finder_content","type":"plugin","creationDate":"August 2011","author":"Joomla! Project","copyright":"(C) 2005 - 2012 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"2.5.0","description":"PLG_FINDER_CONTENT_XML_DESCRIPTION","group":""}', '{}', '', '', 0, '0000-00-00 00:00:00', 3, 0),
 (445, 'plg_finder_newsfeeds', 'plugin', 'newsfeeds', 'finder', 0, 1, 1, 0, '{"legacy":false,"name":"plg_finder_newsfeeds","type":"plugin","creationDate":"August 2011","author":"Joomla! Project","copyright":"(C) 2005 - 2012 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"2.5.0","description":"PLG_FINDER_NEWSFEEDS_XML_DESCRIPTION","group":""}', '{}', '', '', 0, '0000-00-00 00:00:00', 4, 0),
 (446, 'plg_finder_weblinks', 'plugin', 'weblinks', 'finder', 0, 1, 1, 0, '{"legacy":false,"name":"plg_finder_weblinks","type":"plugin","creationDate":"August 2011","author":"Joomla! Project","copyright":"(C) 2005 - 2012 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"2.5.0","description":"PLG_FINDER_WEBLINKS_XML_DESCRIPTION","group":""}', '{}', '', '', 0, '0000-00-00 00:00:00', 5, 0),
+(447, 'plg_system_adjuntos', 'plugin', 'jokte_adjuntos', 'system', 0, 1, 1, 0, '{"legacy":false,"name":"plg_system_adjuntos","type":"plugin","creationDate":"8 Diciembre 2014","author":"Fabián Hernández","copyright":"CopyLeft Comparte Igual!","authorEmail":"fhernandezn@gmail.com","authorUrl":"","version":"0.1.0","description":"PLG_SYSTEM_ADJUNTOS_XML_DESCRIPTION","group":""}', '{}', '', '', 0, '0000-00-00 00:00:00', 1 , 0),
+(448, 'plg_content_adjuntos', 'plugin', 'jokteadjuntos', 'content', 0, 1, 1, 0, '{"legacy":false,"name":"plg_content_adjuntos","type":"plugin","creationDate":"6 Febrero 2014","author":"Fabián Hernández","copyright":"CopyLeft Comparte Igual!","authorEmail":"fhernandezn@gmail.com","authorUrl":"","version":"0.1.0","description":"PLG_CONTENT_ADJUNTOS_XML_DESCRIPTION","group":""}', '{}', '', '', 0, '0000-00-00 00:00:00', 1 , 0),
 (500, 'storkantu', 'template', 'storkantu', '', 1, 1, 1, 0, '{"legacy":false,"name":"storkantu","type":"template","creationDate":"19\\/01\\/12","author":"Juuntos - Jokte \\/ Equipo de desarrollo juuntos.org","copyright":"Template Bluestork (obra base)Copyright (C) 2005 - 2011 Open Source Matters, Inc. All rights reserved.","authorEmail":"admin@jokte.org","authorUrl":"www.jokte.org","version":"1.7.0","description":"TPL_STORKANTU_XML_DESCRIPTION","group":""}', '{"showSiteName":"0","colourChoice":"0","boldText":"0"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (501, 'hathor', 'template', 'hathor', '', 1, 1, 1, 0, '{"legacy":false,"name":"hathor","type":"template","creationDate":"May 2010","author":"Andrea Tarr","copyright":"Copyright (C) 2005 - 2012 Open Source Matters, Inc. All rights reserved.","authorEmail":"hathor@tarrconsulting.com","authorUrl":"http:\\/\\/www.tarrconsulting.com","version":"2.5.0","description":"TPL_HATHOR_XML_DESCRIPTION","group":""}', '{"showSiteName":"0","colourChoice":"0","boldText":"0"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (502, 'jokteantu', 'template', 'jokteantu', '', 0, 1, 1, 0, '{"legacy":false,"name":"jokteantu","type":"template","creationDate":"16 Enero 2012","author":"Equipo de desarrollo Jokte","copyright":"CopyLeft 2012 - 2014 Jokte, todos los derechos compartidos.","authorEmail":"info@jokte.org","authorUrl":"http:\\/\\/www.jokte.org","version":"1.0.0","description":"TPL_JOKTE_XML_DESCRIPTION","group":""}', '{"logo":"templates\\/joktebasic\\/images\\/joktelogo.png","logourl":"index.php","slogan":"El CMS Latinoameric\\u00e1no"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),

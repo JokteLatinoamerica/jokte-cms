@@ -6,12 +6,14 @@
 --
 
 CREATE TABLE IF NOT EXISTS `#__adjuntos` (
-  `id` int(255) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Clave primaria',
-  `propietario_id` int(255) NOT NULL COMMENT 'FK para la tabla #__content',
-  `nombre_archivo` varchar(1024) NOT NULL,
-  `ruta` varchar(1024) NOT NULL,
-  `hash` varchar(1024) NOT NULL,
-  `mime_type` varchar(80) NOT NULL
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Clave primaria',
+  `propietario_id` int(10) NOT NULL DEFAULT '0' COMMENT 'FK para la tabla #__content',
+  `nombre_archivo` varchar(255) NOT NULL DEFAULT '',
+  `ruta` varchar(255) NOT NULL NOT NULL DEFAULT '',
+  `hash` varchar(255) NOT NULL NOT NULL DEFAULT '',
+  `mime_type` varchar(255) NOT NULL DEFAULT '',
+
+  PRIMARY KEY (`id`)
 ) DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --

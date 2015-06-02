@@ -65,7 +65,7 @@ $app = JFactory::getApplication();
 	</form>
 	</div>
 	<div class="login-img-back">
-		<img src="<?php echo $this->baseurl.'/templates/'.$this->template.'/images/back-jeyuu.png' ?>" alt="rayen" title="Jokte! Rayen" />	
+		<img src="<?php echo $this->baseurl.'/templates/'.$this->template.'/images/back-jeyuu.png' ?>" alt="jeyuu" title="Jokte! Jeyuu" />
 	</div>
 	<div class="joktepie">
 		<a href="http://www.juuntos.org" title="Visitar la Comunidad Latinoamericana Juuntos" target="_blank">

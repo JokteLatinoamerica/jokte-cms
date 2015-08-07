@@ -60,6 +60,8 @@ JHtml::_('behavior.modal');
 					<?php $this->form->setFieldAttribute('link', 'readonly', 'false');?>
 					<li><?php echo $this->form->getLabel('link'); ?>
 					<?php echo $this->form->getInput('link'); ?></li>
+					<li><?php echo $this->form->getLabel('alias'); ?>
+					<?php echo $this->form->getInput('alias'); ?></li>
 				<?php endif; ?>
 
 				<?php if ($this->item->type == 'alias'): ?>

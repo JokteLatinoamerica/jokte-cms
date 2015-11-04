@@ -124,7 +124,7 @@ margin: 15px 0;
     width: 50%;
 }
 #derecha {    
-    margin-left: 1.68%px;
+    margin-left: 1.68%;
     float:right;
 }
 #izq-ini, #centroizqr, #izq-fin,#d-ini,#centroder,#d-fin  {
@@ -593,7 +593,7 @@ a.pagenav:hover,.pagination li a:hover {
 	color: #fff;
    box-shadow:.9px .5px 1px .3px #333;
    -moz-box-shadow:.9px .5px 1px .3px #333;
-   -webkit- -moz-box-shadow:.9px .5px 1px .3px #333;
+   -webkit-box-shadow:.9px .5px 1px .3px #333;
 	transition: all 1s ease-in-out .1s;
 	-moz-transition: all 1s ease-in-out .1s;
 	-webkit-transition: all 1s ease-in-out .1s;

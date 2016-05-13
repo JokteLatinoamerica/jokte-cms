@@ -28,6 +28,10 @@ $ -> Idioma corrección o cambio
 - -> Eliminado
 ! -> Nota
 
+23-05-2016
+ $ Agrega botón para agregar metadescripción
+ $ Nueva funcionalidad en Mootools p/agregar contenidos de campos
+
 17-03-2016
  # Eliminación de error de codificación de php
  # Corrección simple de texto

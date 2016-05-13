@@ -28,6 +28,11 @@ $ -> Idioma corrección o cambio
 - -> Eliminado
 ! -> Nota
 
+17-03-2016
+ # Eliminación de error de codificación de php
+ # Corrección simple de texto
+ $ Agrega traducciones de etiquetas del gestor de contenidos y otras faltantes
+
 19-04-2015
  + Nuevo sistema de adjuntos
  + Nuevas ayudas contextuales en parámetros

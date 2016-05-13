@@ -367,6 +367,26 @@ function getSelectedValue(frmName, srcListName) {
 	}
 }
 
+
+/**
+ * NEW: para utilizar en intercambios de datos de formularios
+ * @param frmName : Nombre del formulario
+ * @param destField: Campo de destino
+ * @param oriField: Campo de origen
+ * @return
+ */
+function getValue(frmName, destField, oriField) {
+	var form = document[frmName];
+	var destField = form[destField];
+	var data = form[oriField].value
+	if (data != null && data.length > 0) {
+		return destField.value = data;
+	} else {
+		return null;
+	}
+}
+
+
 /**
  * USED IN: all list forms.
  *

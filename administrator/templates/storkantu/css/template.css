@@ -1862,10 +1862,12 @@ div.button2-left button {
     z-index: 9999;
 }
 .tip {
+	float: left;
 	background: #ffc;
 	border: 1px solid #D4D5AA;
 	padding: 5px;
 	max-width: 400px;
+	z-index: 50;
 }
 
 .tip-title {

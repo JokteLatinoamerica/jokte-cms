@@ -431,6 +431,17 @@ class ContentModelArticle extends JModelAdmin
 		}
 
 		if (parent::save($data)) {
+            /* Forzar SEO */
+            if (JRequest::getVar('forzar_seo') == '1') {
+                if (strlen($data['metadesc']) == 0) {
+                    $this->setError(JText::_('COM_CONTENT_NO_ITEM_METADESC'));
+                    return false;
+                }
+                if (strlen($data['metakey']) == 0) {
+                    $this->setError(JText::_('COM_CONTENT_NO_ITEM_METAKEY'));
+                    return false;
+                }
+            }
 
 			if (isset($data['featured'])) {
 				$this->featured($this->getState($this->getName().'.id'), $data['featured']);
@@ -579,6 +590,33 @@ class ContentModelArticle extends JModelAdmin
             $db->setQuery(
                 'UPDATE #__content' .
                 ' SET hits = 0 '.
+                ' WHERE id = '.$pk
+            );
+            $db->query();
+        } catch (Exception $e) {
+            $this->setError($e->getMessage());
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * Poner meta descripcion desde el epígrafe
+     * @param epígrafe
+     * @return bool
+     */
+    public function copiarEpigrafe($pk, $txt)
+    {
+        if (empty($pk)) {
+            $this->setError(JText::_('COM_CONTENT_NO_ITEM_SELECTED'));
+            return false;
+        }
+        try {
+            $db = $this->getDbo();
+            $db->setQuery(
+                'UPDATE #__content' .
+                ' SET metadesc ="'. $txt .'", ' .
+                ' copete = "'. $txt .'"'.
                 ' WHERE id = '.$pk
             );
             $db->query();

@@ -827,8 +827,36 @@
 	</fieldset>
 	
 	<fieldset name="editinglayout" label="COM_CONTENT_EDITING_LAYOUT"
-				description="COM_CONTENT_CONFIG_EDITOR_LAYOUT">	
-		<field
+				description="COM_CONTENT_CONFIG_EDITOR_LAYOUT">
+        <field
+                name="a-forzarseo"
+                type="separador"
+                class="fulltext"
+                fielname="sepia"
+                value="JGLOBAL_SEPARADOR_FORZARSEO_DESC"
+                default="JGLOBAL_SEPARADOR_FORZARSEO_TITLE"
+                />
+        <field
+                name="forzar_seo"
+                type="radio"
+                default="1"
+                label="COM_CONTENT_FORZAR_SEO_OPTIONS_LABEL"
+                description="COM_CONTENT_FORZAR_SEO_OPTIONS_DESC"
+                >
+            <option
+                    value="0">JNO</option>
+            <option
+                    value="1">JYES</option>
+        </field>
+        <field
+                name="a-otros"
+                type="separador"
+                class="fulltext"
+                fielname="sepia"
+                value="JGLOBAL_SEPARADOR_OTROS_DESC"
+                default="JGLOBAL_SEPARADOR_OTROS_TITLE"
+                />
+        <field
 			name="show_publishing_options"
 			type="radio"
 			default="1"

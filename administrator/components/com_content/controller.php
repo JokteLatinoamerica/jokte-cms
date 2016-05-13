@@ -52,6 +52,7 @@ class ContentController extends JControllerLegacy
 
 		return $this;
 	}
+
     /*
      * Reinicio de Hits
      * Desde Jokte v1.3.5
@@ -59,13 +60,31 @@ class ContentController extends JControllerLegacy
     public function resetHits()
     {
         $id = JRequest::getInt('id');
-        var_dump($id);
         $model = $this->getModel('article');
         $result= $model->resetHits($id);
         If ($result) {
             $this->setRedirect(JRoute::_('index.php?option=com_content&task=article.edit&id='.$id, false));
         } else {
             $this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_RESETHITS_ID', $id));
+        }
+
+    }
+
+    /*
+    * Copiar epígrafe como meta data
+    * Desde Jokte v1.3.6
+    */
+    public function copiarEpigrafe()
+    {
+        $id = JRequest::getInt('id');
+        $ep = JRequest::get('post');
+        $txt = $ep['jform']['copete'];
+        $model = $this->getModel('article');
+        $result= $model->copiarEpigrafe($id, $txt);
+        If ($result) {
+            $this->setRedirect(JRoute::_('index.php?option=com_content&task=article.edit&id='.$id, false));
+        } else {
+            $this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_PUT_EPIGRAFE_ID', $id));
         }
 
     }

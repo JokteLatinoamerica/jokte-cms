@@ -11,6 +11,10 @@ defined('_JEXEC') or die;
 <ul class="adminformlist">
 	<li><?php echo $this->form->getLabel('metadesc'); ?>
 	<?php echo $this->form->getInput('metadesc'); ?></li>
+    <?php
+    if (strlen($this->item->articletext) > 0): ?>
+        <input name="copiar_epigrafe" type="button" class="button" value="<?php echo JText::_( 'ARTICLE_COPIAR_EPIGRAFE' ); ?>" onclick="getValue('adminForm', 'jform[metadesc]', 'jform[copete]');" />
+    <?php endif; ?>
 
 	<li><?php echo $this->form->getLabel('metakey'); ?>
 	<?php echo $this->form->getInput('metakey'); ?></li>

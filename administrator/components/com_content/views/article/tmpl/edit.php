@@ -283,6 +283,7 @@ endif;
 	<div>
 		<input type="hidden" name="task" value="" />
 		<input type="hidden" name="return" value="<?php echo JRequest::getCmd('return');?>" />
+        <input type="hidden" name="forzar_seo" value="<?php echo $params['forzar_seo']; ?>" />
 		<?php echo JHtml::_('form.token'); ?>
 	</div>
 </form>

@@ -150,8 +150,6 @@ class JokteupdateModelDefault extends JModelLegacy
 		$update = new JUpdate;
 		$update->loadFromXML($updateObject->detailsurl);
 		
-		//var_dump($update);	
-		
 		// Paso el objeto a actualizar
 		if($ret['latest'] == VJOKTE) {
 			$ret['object'] = null;

@@ -24,12 +24,12 @@ Rojo:                                   #AE0C0C
 
 ----------------------------------------------------------*/
 html {
-	overflow-y: scroll;
+
 }
 
 body {
-	margin: 10px;
-	padding: 0;
+	margin: 0 auto;
+    padding: 0;
 	background: #fff;
 	padding-bottom: 1px;
 	font-size: 68.8%; /* Set base to 11px */
@@ -201,7 +201,7 @@ span.unwritable  {
 
 /* Header */
 #border-top.h_blue {
-	background: url(../images/j_header_middle.png) repeat-x;
+    background: url(../images/backhead.png) repeat;
 	height: 54px;
 	-webkit-border-top-right-radius: 8px;
 	-webkit-border-top-left-radius: 8px;
@@ -252,18 +252,26 @@ p.footer-tip {
 	margin-bottom: 5px;
 }
 
-#element-box-login {
+/*#element-box-login {
 	box-shadow:1px 6px 12px #1C1C1C;
 	margin-bottom: 11px;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	border-radius: 10px;	
-}
+}*/
 
 #element-box,
 #toolbar-box,
 #submenu-box {
 	padding: 10px 10px 0 10px;
+}
+#element-box-disc{
+    border: 1px dotted #4d4d4d;
+}
+#submenu-box {
+    border-top: 1px dashed #919B9C;
+    border-bottom: 1px dashed #919B9C;
+    padding-bottom: 10px;
 }
 
 #toolbar-box {
@@ -876,7 +884,9 @@ div.width-70 fieldset,
 div.width-80 fieldset,
 div.width-100 fieldset	{
 	background-color: #fff;
-	padding: 5px 17px 17px 17px;
+	padding: 17px 17px 17px 17px;
+    border-radius: 5px;
+    border: 1px dashed #919B9C;
 }
 
 /* Administrator forms, lists */
@@ -887,7 +897,10 @@ fieldset.adminform {
 
 fieldset.adminform legend {
 	margin: 0;
-	padding: 0;
+	padding: 5px;
+    background-color: #888888;
+    color: white;
+    border-radius: 5px;
 }
 
 ul.adminformlist,
@@ -1023,8 +1036,9 @@ input.required {
 }
 
 .star {
-	color:#EB8207;
+	color: #a20000;
 	font-size:1.2em;
+	font-weight: bold;
 }
 
 /* -------- Batch Section ---------- */
@@ -1132,6 +1146,10 @@ fieldset.panelform span.faux-label {
 	padding: 0 5px 0 0;
 }
 
+fieldset.panelform label:hover{
+	font-weight: bold;
+}
+
 /* One-offs */
 /* Field label widths - medium label */
 label#userparamsallowUserRegistration-lbl,
@@ -1147,7 +1165,7 @@ label#paramsusermode-lbl,
 label#paramsphishing-resistant-lbl,
 label#paramsmulti-factor-lbl,
 label#paramsmulti-factor-physical-lbl,
-paramslang_mode-lbl {
+label.paramslang_mode-lbl {
 	min-width: 200px;
 }
 
@@ -1480,11 +1498,20 @@ table.adminlist {
 	border-spacing: 1px;
 	background-color: #f3f3f3;
 	color: #666;
+    border-radius: 5px;
+    border: 1px dashed #4d4d4d;
 }
 
 table.adminlist td,
 table.adminlist th {
 	padding: 4px;
+}
+table.adminlist td{
+    border-top: 1px dashed #4d4d4d;
+}
+
+table.adminlist th{
+    border-bottom: 1px dashed #4d4d4d;
 }
 
 table.adminlist td {padding-left: 8px;}
@@ -1493,8 +1520,6 @@ table.adminlist thead th {
 	text-align: center;
 	background: #f7f7f7;
 	color: #666;
-	border-bottom: 1px solid #CCC;
-	border-left: 1px solid #fff;
 }
 
 table.adminlist thead th.left {
@@ -1725,6 +1750,10 @@ a.saveorder.inactive {
 	background: url(../images/j_button1_next.png) 100% 0 no-repeat;
 }
 
+.button1 .next:hover {
+    background: url(../images/j_buttonc_next.png) 100% 0 no-repeat;
+}
+
 .button1 a {
 	display: block;
 	height: 26px;
@@ -1927,7 +1956,7 @@ color:#AE0C0C;}
 
 .login {
 	margin: 30px auto !important;
-	width: 520px;
+	width: 400px;
 }
 
 form#form-login {
@@ -1935,15 +1964,15 @@ form#form-login {
 	padding: 10px 0 10px 0;
 }
 #Jkcontent-login h1 {
-    text-transform: uppercase;
-    width: 320px;
+    font-variant: small-caps;
+    text-align: center;
 }
 h1 {
-	margin: 10px 0 5px 10px;
+	margin: 10px 0;
 }
 
 p {
-	margin: 0 0 15px 10px;
+	margin: 0 0 15px 0;
 	padding: 0;
 	font-size: 1em;
 }
@@ -1954,23 +1983,6 @@ p {
 	margin-left: 10px;
 	margin-right: 10px;
 	background-color: #fff;
-}
-
-#section-box .m {
-	padding: 5px;
-}
-
-#section-box .padding {
-	background: none;
-	padding: 0;
-}
-
-#lock {
-	background: url(../images/jokte-logo.png) 50% 100% no-repeat;
-	width: 137px;
-	height: 186px;
-	float:right;
-	padding-right:20px;
 }
 
 fieldset.loginform {
@@ -2028,9 +2040,9 @@ a.jgrid:hover {	text-decoration: none;}
 .jgrid span.notdefault				{ background-image: url(../images/menu/icon-16-notdefault.png); }
 .jgrid span.checkedout				{ background-image: url(../images/admin/checked_out.png); }
 .jgrid span.downarrow				{ background-image: url(../images/admin/downarrow.png); }
-.jgrid span.downarrow_disabled		{ background-image: url(../images/admin/downarrow0.png); background-position: 0 -12px; }
+.jgrid span.downarrow_disabled		{ background-image: url(../images/admin/downarrow.png); background-position: 0 -12px; }
 .jgrid span.uparrow					{ background-image: url(../images/admin/uparrow.png); }
-.jgrid span.uparrow_disabled		{ background-image: url(../images/admin/uparrow0.png); background-position: 0 -12px; }
+.jgrid span.uparrow_disabled		{ background-image: url(../images/admin/uparrow.png); background-position: 0 -12px; }
 .jgrid span.published				{ background-image: url(../images/admin/publish_g.png); }
 .jgrid span.expired					{ background-image: url(../images/admin/publish_r.png); }
 .jgrid span.pending					{ background-image: url(../images/admin/publish_y.png); }
@@ -2095,8 +2107,6 @@ a.jgrid:hover {	text-decoration: none;}
 .icon-16-redirect					{	background-image: url(../images/menu/icon-16-redirect.png);	}
 .icon-16-search						{	background-image: url(../images/menu/icon-16-search.png);	}
 .icon-16-finder						{	background-image: url(../images/menu/icon-16-search.png);	}
-.icon-16-section					{	background-image: url(../images/menu/icon-16-section.png);	}
-.icon-16-static						{	background-image: url(../images/menu/icon-16-static.png);	}
 .icon-16-stats						{	background-image: url(../images/menu/icon-16-stats.png);	}
 .icon-16-themes						{	background-image: url(../images/menu/icon-16-themes.png);	}
 .icon-16-trash						{	background-image: url(../images/menu/icon-16-trash.png);	}
@@ -2190,7 +2200,6 @@ a.jgrid:hover {	text-decoration: none;}
 .icon-48-user-profile					{	background-image: url(../images/header/icon-48-user-profile.png);	}
 .icon-48-inbox						{	background-image: url(../images/header/icon-48-inbox.png);	}
 .icon-48-new-privatemessage			{	background-image: url(../images/header/icon-48-new-privatemessage.png);	}
-.icon-48-msgconfig					{	background-image: url(../images/header/icon-48-message_config.png);	}
 .icon-48-langmanager				{	background-image: url(../images/header/icon-48-language.png);	}
 .icon-48-mediamanager				{	background-image: url(../images/header/icon-48-media.png);	}
 .icon-48-plugin						{	background-image: url(../images/header/icon-48-plugin.png);	}
@@ -2209,9 +2218,6 @@ a.jgrid:hover {	text-decoration: none;}
 .icon-48-content-category-edit		{	background-image: url(../images/header/icon-48-category.png);	}
 .icon-48-content-category-add		{	background-image: url(../images/header/icon-48-category-add.png);	}
 .icon-48-install					{	background-image: url(../images/header/icon-48-extension.png);	}
-.icon-48-dbbackup					{	background-image: url(../images/header/icon-48-backup.png);	}
-.icon-48-dbrestore					{	background-image: url(../images/header/icon-48-dbrestore.png);	}
-.icon-48-dbquery					{	background-image: url(../images/header/icon-48-query.png);	}
 .icon-48-systeminfo					{	background-image: url(../images/header/icon-48-info.png);	}
 .icon-48-massmail					{	background-image: url(../images/header/icon-48-massmail.png);	}
 .icon-48-redirect					{	background-image: url(../images/header/icon-48-redirect.png);	}
@@ -2387,12 +2393,12 @@ a.icon-16-menu span img {
 #submenu li a,
 #submenu span.nolink {
 	cursor: pointer;
-	padding: 0 15px;
+	padding: 10px 15px;
 	border-right: 1px solid #ccc;
 	font-size: 1.1em;
 	font-weight: bold;
-	color: #808080;
 	line-height: 14px;
+    color: #808080;
 	height: 12px;
 }
 
@@ -2403,8 +2409,8 @@ a.icon-16-menu span img {
 #submenu a:hover,
 #submenu a.active,
 #submenu span.nolink.active {
-	color: #333;
-	background: #FFF;
+    background-color: #4d4d4d;
+    color: white;
 }
 
 
@@ -2748,7 +2754,7 @@ a.grid_true {
 }
 
 a.grid_trash {
-	background-image: url('../images/admin/icon-16-trash.png');
+	background-image: url('../images/menu/icon-16-trash.png');
 	display: inline-block;
 	height: 16px;
 	text-indent: -1000em;
@@ -3196,21 +3202,6 @@ div#element-box div.section-box div.m {
 	background: #fbfbfb;
 }
 
-.submenu-box, div.m {
-	padding: 10px 8px;
-	background-color: #fff;
-	
-}
-
-.submenu-box, #submenu-box div.m {
-	border:1px solid #ccc;
-	padding: 6px 8px;
-}
-
-.wbg {
-	background-color: #fff!important;
-}
-
 div#toolbar-box div.m {
 	padding: 5px 0 10px;
 }
@@ -3318,20 +3309,21 @@ div#cslStyles {
 #Jkcontent-login a, #Jkfooter a {
     color: #888;
 }
-p.text {
-    width: 320px;
+.text {
     float: left;
     padding: 5px 3px 10px 3px;
+    text-align: center;
 }
-p.text2 {
+.text2 {
     padding: 10px 3px 10px 3px;
+    text-align: center;
 }
 /* Error */
 
 #content-box.Jkerror {
 border:1px solid #ccc;
 width:50%;
-margin: 20px auto 30px auto;
+margin: 5px auto 5px auto;
 float:none;
  text-align: center;
 }
@@ -3343,7 +3335,7 @@ float:none;
 #content-box.Jkerror p a {
     background: #eee;
     padding: 5px 35px 5px 10px;
-    bAckground: URL(../images/j_button1_next.png)#ccc no-repeat 100%;
+    bAckground: url(../images/j_button1_next.png) no-repeat 100%;
     text-transform: uppercase;
 }
 
@@ -3370,7 +3362,7 @@ float:none;
 }
 .separador-title{
 	width:100%;
-	border:1px solid red;
+	border:1px dashed #4d4d4d;
 	line-height:15px;
 	color:#FFF;
 	font-weight:bold;
@@ -3386,9 +3378,9 @@ float:none;
 .separador-full-title{
 	width:100%;
 	margin:0;
-	border-top:1px solid red;
-	border-left:1px solid red;
-	border-right:1px solid red;
+	border-top: 1px dashed #4d4d4d;
+	border-left: 1px dashed #4d4d4d;
+	border-right: 1px dashed #4d4d4d;
 	line-height:15px;
 	color:#FFF;
 	font-weight:bold;
@@ -3399,13 +3391,14 @@ float:none;
 }
 .separador-full-textdesc{
 	width:100%;
-	border:1px solid red;
+	border: 1px dashed #4d4d4d;
 	background:#ECECEC;
 	color:#000;
-	padding:0 2px;
+	padding:5px 2px;
 	text-align:justify;
-	font-size:100%;
+	font-size:105%;
     margin-left:0px;
+    font-style: italic;
 }
 .separador-about{
 	color:#000053;
@@ -3423,4 +3416,159 @@ float:none;
     font-variant: small-caps;
     border: 1px solid #000000;
     padding: 4px;
+}
+
+/* -- id styles ------------------------------------- */
+
+#frame{
+	margin: 40px auto;
+	width: 400px;
+	padding: 20px;
+	-moz-border-radius: 18px;
+	-webkit-border-radius: 18px;
+	border-radius: 18px;
+	/*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
+	-moz-box-shadow: 0px 0px 20px #000000;
+	-webkit-box-shadow: 0px 0px 20px #000000;
+	box-shadow: 0px 0px 20px #000000;
+	/*IE 7 AND 8 DO NOT SUPPORT BLUR PROPERTY OF SHADOWS*/
+	filter: progid: DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#e8e5dc');
+	/*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
+	/*Element must have a height (not auto)*/
+	/*All filters must be placed together*/
+	-ms-filter: "progid: DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#e8e5dc')";
+	/*Element must have a height (not auto)*/
+	/*All filters must be placed together*/
+	background-image: -moz-linear-gradient(top, #ffffff, #e8e5dc);
+	background-image: -ms-linear-gradient(top, #ffffff, #e8e5dc);
+	background-image: -o-linear-gradient(top, #ffffff, #e8e5dc);
+	background-image: -webkit-gradient(linear, center top, center bottom, from(#ffffff), to(#e8e5dc));
+	background-image: -webkit-linear-gradient(top, #ffffff, #e8e5dc);
+	background-image: linear-gradient(top, #ffffff, #e8e5dc);
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	/*Use "background-clip: padding-box" when using rounded corners to avoid the gradient bleeding through the corners*/
+	/*--IE9 WILL PLACE THE FILTER ON TOP OF THE ROUNDED CORNERS--*/
+}
+
+#frame form {
+	text-align: left;
+    background-image: -moz-linear-gradient(top, #ffffff, #e8e5dc);
+    background-image: -ms-linear-gradient(top, #ffffff, #e8e5dc);
+    background-image: -o-linear-gradient(top, #ffffff, #e8e5dc);
+    background-image: -webkit-gradient(linear, center top, center bottom, from(#ffffff), to(#e8e5dc));
+    background-image: -webkit-linear-gradient(top, #ffffff, #e8e5dc);
+    background-image: linear-gradient(top, #ffffff, #e8e5dc);
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    padding: 5px;
+    text-align: center;
+}
+
+/* -- class styles ---------------------------------- */
+
+.outline {
+	border: 1px solid #cccccc;
+	background: #ffffff;
+	padding: 2px;
+}
+
+/* -- form styles ----------------------------------- */
+
+form    { margin: auto; }
+form p  { margin: 0; padding: 0; }
+form fieldset { border: 0 none; margin: 0em; padding: 0.2em;}
+label         { display: block; float: left; }
+input 		  { padding: 1px; }
+input.button  { width: auto; height: 1.8em; cursor: pointer; }
+
+label   { margin: 5px 0px 2px 0px; width: 10em;}
+form p  { padding: 0.2em 0 0.2em 0; }
+form br  { display: none; }
+input    { border: 1px solid #0E67A1; }
+input.button 		 { background-color: white; }
+input.button:hover { border-color:  #FC902E; }
+
+input:hover{background:#FFFFAA;border:1px solid red;}
+input:focus{background:#FFFFAA;border:1px solid red;}
+
+
+#frmlogin	      { margin: 0 10px 0 10px;  }
+#frmlogin fieldset.button { text-align: right; }
+
+.joktetop{
+	height: 180px;
+	background:#ececec url(../images/gentelatam.png) center no-repeat;
+	border-bottom:1px solid #727272;
+    text-align: center;
+}
+.joktetop2{
+	line-height:1px;
+	height:1px;
+	background:#888888;
+}
+
+.joktetop3{
+	line-height:1px;
+	height:1px;
+	background:#A0A0A0;
+}
+
+.joktetop4{
+	line-height:1px;
+	height:1px;
+	background:#B8B8B8;
+}
+
+.joktetop img{padding-top:10px;}
+
+.joktepie{
+	display:block;
+	bottom:0px;
+	height:73px;
+	width:100%;
+	position:fixed;
+	padding:10px;
+	text-align:center;
+	font-weight:bold;
+	color:#fff;
+	background:black;
+}
+
+.joktepie a:link,
+.joktepie a:visited,
+.joktepie a:active{
+	text-decoration:none;
+	color:#FAFAFA;
+}
+
+.joktepie a:hover{
+	color:#ccc;
+}
+
+.login-img-back {
+	width: 250px;
+	height: 250px;
+	position: absolute;
+	bottom:  120px;
+	right: 50px;
+	text-align:center;
+}
+.login-img-text{
+	font-size:200%;
+	text-shadow:#CCCCCC 2px 1px 2px;
+}
+
+label.hasTip{
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+}
+
+.advert_tip{
+    color: #4d4d4d;
+    font-style: italic;
+    text-align: left;
+    font-size: 90%;
+    padding-bottom: 5px;
 }

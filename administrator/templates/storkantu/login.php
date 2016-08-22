@@ -48,37 +48,33 @@ JHtml::_('behavior.noframes');
 </script>
 </head>
 <body>
-<div id="mainlogin">
-	<div id="Jkcontent-login">
+	<div class="joktetop">
+		<a href="http://www.jokte.org" target="_blank" title="Proyecto Jokte!">
+			<img src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/images/logo2.png" alt="<?php echo $app->getCfg('sitename'); ?>" title="<?php echo $app->getCfg('sitename'); ?>" />
+		</a>
+	</div>
+	<div class="joktetop2"></div><div class="joktetop3"></div><div class="joktetop4"></div>
+	<div id="frame" class="outline">
+		<div id="Jkcontent-login">
 			<div id="element-box-login" class="login">
-			<jdoc:include type="message" />
-				<div class="m wbg">
-				
+				<jdoc:include type="message" />
 				<h1><?php echo JText::_('COM_LOGIN_JOOMLA_ADMINISTRATION_LOGIN') ?></h1>
-					<div id="lock"></div>
-					
-					<jdoc:include type="component" />
-					<p class="text"><?php echo JText::_('COM_LOGIN_VALID') ?></p>
-					<p class="text2"><a href="<?php echo JURI::root(); ?>"><?php echo JText::_('COM_LOGIN_RETURN_TO_SITE_HOME_PAGE') ?></a></p>
-					
-				</div>
-				
+				<jdoc:include type="component" />
+				<p class="text"><?php echo JText::_('COM_LOGIN_VALID') ?></p><br />
+				<p class="text2"><a href="<?php echo JURI::root(); ?>"><?php echo JText::_('COM_LOGIN_RETURN_TO_SITE_HOME_PAGE') ?></a></p>
 			</div>
 			<noscript>
 				<?php echo JText::_('JGLOBAL_WARNJAVASCRIPT') ?>
 			</noscript>
-	</div>	
-	<div id="Jkfooter-login">
-		<p class="copyright">
-			<a href="http://www.jokte.org" target="_blank" title="Jokte! se libera bajo licencia GNU/GPL v3.0 y su nombre y logo tienen licencia Copyleft">JOKTE!</a> es un proyecto de software Libre para Latinoamérica de la <a href="http://juuntos.net" target=_"blank" title="Comunidad Latinoamericana de Tecnología Web">Comunidad Juuntos</a>
-		</p>
-		<p>
-		<p>
+		</div>
 	</div>
 	<div class="login-img-back">
-		<span class="login-img-text">Jokte! Jeyuu</span>
-		<img src="<?php echo $this->baseurl.'/templates/'.$this->template.'/images/back-jeyuu.png' ?>" alt="jeyuu" />	
+		<img src="<?php echo $this->baseurl.'/templates/'.$this->template.'/images/back-jeyuu.png' ?>" alt="jeyuu" title="Jokte! Jeyuu" />
 	</div>
-</div>
+	<div class="joktepie">
+		<a href="http://www.juuntos.org" title="Visitar la Comunidad Latinoamericana Juuntos" target="_blank">
+			<img src="<?php echo $this->baseurl.'/templates/'.$this->template.'/images/juuntos-logo.png' ?>" alt="juuntos-logo" title="Comunidad Juuntos Latioamérica" />
+		</a>
+	</div>
 </body>
 </html>

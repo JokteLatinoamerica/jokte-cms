@@ -46,7 +46,7 @@ class JFormFieldModules extends JFormField
 			$div[$i] = array();
 			$cell_css = $i % 2 == 0 ? 'even':'odd';
 			$div[$i][] = '<div class="'.$cell_css.'"><label for="'.$labels[$i].'">'.$labels[$i].'</label></div>';		
-			$div[$i][] = '<div class="'.$cell_css.'"><input type="text" id="'.$labels[$i].'" class="'.$css_class.' jokteantu '.$unique_id.'" name="'.$this->name.'[]" value="'.( isset($values[$i]) ? $values[$i] : $default[$i] ).'" size="'.$size.'" '.$disableme.'/></div>';		
+			$div[$i][] = '<div class="'.$cell_css.'"><input type="text" id="'.$labels[$i].'" class="'.$css_class.' jokteantu '.$unique_id.'" name="'.$this->name.'[]" value="'.( isset($values[$i]) ? $values[$i] : $default[$i] ).'" size="'.$size.'" /></div>';
 			
 		}
 
@@ -60,7 +60,7 @@ class JFormFieldModules extends JFormField
 
 		$output = '<div class="mbox_jokteantu" sytle="clear:right;margin-bottom:20px;"><div class="jokteantu_multiple"><div id="'.$unique_id.'">';
 		$output.= implode("\n", $new_div);		
-		$output.= '</div>'.$disabletext.'</div></div>';
+		$output.= '</div></div></div>';
 		
 		// Retorna HTML
 		return $output; 		

@@ -28,9 +28,20 @@ $ -> Idioma corrección o cambio
 - -> Eliminado
 ! -> Nota
 
+22-08-2016
+ + Protección de IPs desde la configuración global
+ + Nueva plantilla para IP bloqueadas
+ + Nueva plantilla de ingreso
+ $ Nuevas línes por funcionalides agregadas
+ # Actualización de scripts para PHP 5.6
+ + Posibilidad de obligar al usuario a indicar metad escripciones y palabras claves
+ # Cambios de estilos apuntando a Jokte Rayen responsivo
+ + Manifiesto y Pacto Social Juuntos en la administración
+
 23-05-2016
  $ Agrega botón para agregar metadescripción
  $ Nueva funcionalidad en Mootools p/agregar contenidos de campos
+ $ Opciones de Seguridad en la Configuración General
 
 17-03-2016
  # Eliminación de error de codificación de php

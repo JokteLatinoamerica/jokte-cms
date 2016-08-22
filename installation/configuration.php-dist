@@ -100,4 +100,14 @@ class JConfig {
 	/* Feed Settings */
 	public $feed_limit = 10;
 	public $feed_email = 'author';
+	
+	/* Security settings */
+	public $ip_block = '';
+	public $blocktype = '';
+	public $ip_allow = '';
+	public $ip_allowtype = '';
+	public $block_message = '<b>Acceso prohibido</b>';
+	public $blocktemplate = '0';
+	public $blocktpl = '0';
+	public $blockip = '0';
 }

@@ -88,26 +88,74 @@ switch ($config->error_reporting)
 		break;
 }
 
+define('JBLOCK', $config->blockip);
+
+define('JBLOCKIP', $config->ip_block);
+
+define('JBLOCKTYPE', $config->blocktype);
+
+define('JBLOCKMESSG', $config->block_message);
+
+define('JBLOCKTPL', $config->blocktpl);
+
+define('JIPALLOW', $config->ip_allow);
+
+define('JIPALLOWTYPE', $config->ip_allowtype);
+
 define('JDEBUG', $config->debug);
 
 unset($config);
 
-//
-// Joomla framework loading.
-//
-
-// System profiler.
-if (JDEBUG) {
-	jimport('joomla.error.profiler');
-	$_PROFILER = JProfiler::getInstance('Application');
-}
-
-//
-// Joomla library imports.
-//
-
-jimport('joomla.application.menu');
+// Load URI applicatión
 jimport('joomla.environment.uri');
-jimport('joomla.utilities.utility');
-jimport('joomla.event.dispatcher');
-jimport('joomla.utilities.arrayhelper');
+
+/*
+ * Check bloqued IP and loading Joomla! framework
+*/
+
+// Get remote IP
+$input = JFactory::getApplication('site')->input;
+$ip_re = $input->server->get('REMOTE_ADDR', '', 'string');
+
+$ip_alw = explode(',', JIPALLOW);
+if (JBLOCK and in_array($ip_re, $ip_alw) and (JIPALLOWTYPE == "all" or JIPALLOWTYPE == "site"))
+{
+    // Joomla! framework loading.
+
+    // System profiler.
+    if (JDEBUG) {
+        jimport('joomla.error.profiler');
+        $_PROFILER = JProfiler::getInstance('Application');
+    }
+
+    // Joomla! library imports.
+    jimport('joomla.application.menu');
+    jimport('joomla.utilities.utility');
+    jimport('joomla.event.dispatcher');
+    jimport('joomla.utilities.arrayhelper');
+}
+else
+{
+    if (JBLOCK and (JBLOCKTYPE == 'all' or JBLOCKTYPE == 'site'))
+    {
+        if (JBLOCKIP)
+        {
+            $ips = explode(',', JBLOCKIP);
+            if (!empty($ips))
+            {
+                foreach ($ips as $ipcheck)
+                {
+                    $pos = strpos($ip_re, $ipcheck);
+                    if ($pos !== false)
+                    {
+                        if (!JBLOCKTPL) {
+                            echo JBLOCKMESSG;
+                            exit();
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// end of file

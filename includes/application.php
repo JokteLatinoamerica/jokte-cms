@@ -243,7 +243,12 @@ final class JSite extends JApplication
 					$file = 'offline';
 					JResponse::setHeader('Status', '503 Service Temporarily Unavailable', 'true');
 				}
-				if (!is_dir(JPATH_THEMES . '/' . $template->template) && !$this->getCfg('offline')) {
+
+				if ($this->getCfg('blockip') && $this->getCfg('blocktpl')) {
+                    $file = 'blocktpl';
+                }
+
+                if (!is_dir(JPATH_THEMES . '/' . $template->template) && !$this->getCfg('offline') && !$this->getCfg('blockip')) {
 					$file = 'component';
 				}
 				$params = array(

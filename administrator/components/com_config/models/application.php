@@ -187,6 +187,12 @@ class ConfigModelApplication extends JModelForm
 			$cache->clean();
 		}
 
+		// Ip Bloquedas
+		if (isset($data['ip_block']))
+		{
+			$data['ip_block'] = JFilterOutput::ampReplace($data['ip_block']);
+		}
+
 		// Create the new configuration object.
 		$config = new JRegistry('config');
 		$config->loadArray($data);

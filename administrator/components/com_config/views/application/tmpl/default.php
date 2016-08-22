@@ -41,6 +41,7 @@ $this->document->setBuffer($this->loadTemplate('navigation'), 'modules', 'submen
 				<div class="width-40 fltrt">
 					<?php echo $this->loadTemplate('seo'); ?>
 					<?php echo $this->loadTemplate('cookie'); ?>
+					<?php echo $this->loadTemplate('security'); ?>
 				</div>
 			</div>
 		</div>

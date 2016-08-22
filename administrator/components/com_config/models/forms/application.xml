@@ -749,6 +749,7 @@
 	<fieldset
 		name="cookie"
 		label="CONFIG_COOKIE_SETTINGS_LABEL">
+
 		<field
 			name="cookie_domain"
 			type="text"
@@ -767,6 +768,122 @@
 			filter="string"
 			size="40" />
 	</fieldset>
+
+	<fieldset
+			name="ipblock"
+			label="CONFIG_SECURITY_SETTINGS_LABEL">
+
+        <field
+                name="a-general"
+                type="separador"
+                class="fulltext"
+                fielname="sepia"
+                value="COM_CONFIG_SEPARATOR_BLOCKIPGEN_DESC"
+                default="COM_CONFIG_SEPARATOR_BLOCKIPGEN"
+        />
+
+        <field
+            name="blockip"
+            type="radio"
+            default="0"
+            label="COM_CONFIG_FIELD_BLOCKIP_LABEL"
+            description="COM_CONFIG_FIELD_BLOCKIP_DESC"
+            filter="integer">
+            <option
+                    value="1">JYES</option>
+            <option
+                    value="0">JNO</option>
+        </field>
+
+        <field
+                name="a-blockip"
+                type="separador"
+                class="fulltext"
+                fielname="sepia"
+                value="COM_CONFIG_SEPARATOR_BLOCKIP_DESC"
+                default="COM_CONFIG_SEPARATOR_BLOCKIP"
+         />
+
+		<field
+				name="blocktype"
+				type="list"
+				default="all"
+				label="COM_CONFIG_FIELD_BLOCK_TYPE_LABEL"
+				description="COM_CONFIG_FIELD_BLOCK_TYPE_DESC">
+			<option
+					value="all">COM_CONFIG_FIELD_VALUE_ALL</option>
+			<option
+					value="site">COM_CONFIG_FIELD_VALUE_SITE</option>
+			<option
+					value="admin">COM_CONFIG_FIELD_VALUE_ADMIN</option>
+
+		</field>
+		<field
+				name="ip_block"
+				type="textarea"
+				label="COM_CONFIG_FIELD_IPBLOCK_LABEL"
+				description="COM_CONFIG_FIELD_IPBLOCK_DESC"
+				required="false"
+				filter="safehtml"
+				cols="60"
+                rows="3"/>
+		<field
+				name="block_message"
+				type="textarea"
+				label="COM_CONFIG_FIELD_BLOCK_MESSAGE_LABEL"
+				description="COM_CONFIG_FIELD_BLOCK_MESSAGE_DESC"
+				required="false"
+				filter="safehtml"
+				cols="60"
+				rows="3"/>
+
+        <field
+                name="blocktpl"
+                type="radio"
+                default="0"
+                label="COM_CONFIG_FIELD_BLOCKTEMPLATE_LABEL"
+                description="COM_CONFIG_FIELD_BLOCKTEMPLATE_DESC"
+                filter="integer">
+            <option
+                    value="1">JYES</option>
+            <option
+                    value="0">JNO</option>
+        </field>
+
+        <field
+                name="a-allow"
+                type="separador"
+                class="fulltext"
+                fielname="sepia"
+                value="COM_CONFIG_SEPARATOR_ALLOW_DESC"
+                default="COM_CONFIG_SEPARATOR_ALLOW"
+        />
+
+        <field
+				name="ip_allowtype"
+				type="list"
+				default="all"
+				label="COM_CONFIG_FIELD_IPALLOW_TYPE_LABEL"
+				description="COM_CONFIG_FIELD_IPALLOW_TYPE_DESC">
+			<option
+					value="all">COM_CONFIG_FIELD_VALUE_ALL</option>
+			<option
+					value="site">COM_CONFIG_FIELD_VALUE_SITE</option>
+			<option
+					value="admin">COM_CONFIG_FIELD_VALUE_ADMIN</option>
+
+		</field>
+		<field
+				name="ip_allow"
+				type="textarea"
+				label="COM_CONFIG_FIELD_IP_ALLOW_LABEL"
+				description="COM_CONFIG_FIELD_IP_ALLOW_DESC"
+				required="false"
+				filter="safehtml"
+				cols="60"
+				rows="3"/>
+
+    </fieldset>
 
 	<fieldset
 		name="permissions"

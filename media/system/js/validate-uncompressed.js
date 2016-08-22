@@ -55,6 +55,14 @@ var JFormValidator = new Class({
 				return regex.test(value);
 			}
 		);
+		
+		this.setHandler('ip',
+						function (value) {
+							regex=/^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$/;
+							return regex.test(value);
+						}
+		);
+		
 
 		// Attach to forms with class 'form-validate'
 		var forms = $$('form.form-validate');

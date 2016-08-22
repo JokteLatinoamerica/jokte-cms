@@ -24,16 +24,15 @@ if (extension_loaded('mbstring') || ((!strtoupper(substr(PHP_OS, 0, 3)) === 'WIN
 // Same for iconv
 if (function_exists('iconv') || ((!strtoupper(substr(PHP_OS, 0, 3)) === 'WIN' && dl('iconv.so'))))
 {
-	if (PHP_VERSION_ID < 50600) {
-		// These are settings that can be set inside code
-		iconv_set_encoding("internal_encoding", "UTF-8");
-		iconv_set_encoding("input_encoding", "UTF-8");
-		iconv_set_encoding("output_encoding", "UTF-8");
-	}
-	elseif (PHP_VERSION_ID >= 50600)
-	{
-		ini_set('default_charset', 'UTF-8');
-	}
+    if (version_compare(PHP_VERSION, '5.6', '>=')) {
+        @ini_set('default_charset', 'UTF-8');
+    }
+    else
+    {
+        iconv_set_encoding("internal_encoding", "UTF-8");
+        iconv_set_encoding("input_encoding", "UTF-8");
+        iconv_set_encoding("output_encoding", "UTF-8");
+    }
 }
 
 
@@ -987,4 +986,39 @@ abstract class JString
 
 		return $result;
 	}
+
+    /**
+     * Does a UTF-8 safe version of PHP parse_url function
+     *
+     * @param   string  $part_url  Part of URL to parse, without scheme
+     *
+     * @return  mixed  Associative array or false if badly formed URL.
+     *
+     * @see     http://us3.php.net/manual/en/function.parse-str.php
+     *
+     * @since   Jokte Rayen 1.0
+     */
+    public static function parse_str($part_url)
+    {
+        $result = false;
+
+        // Build arrays of values we need to decode before parsing
+        $entities = array('%21', '%2A', '%27', '%28', '%29', '%3B', '%3A', '%40', '%26', '%3D', '%24', '%2C', '%2F', '%3F', '%25', '%23', '%5B', '%5D');
+        $replacements = array('!', '*', "'", "(", ")", ";", ":", "@", "&", "=", "$", ",", "/", "?", "%", "#", "[", "]");
+
+        // Create encoded URL with special URL characters decoded so it can be parsed
+        // All other characters will be encoded
+        $encodedURL = str_replace($entities, $replacements, urlencode($part_url));
+
+        // Parse the encoded string
+        parse_str($encodedURL, $parts );
+
+        // Now, decode each value of the resulting array
+        if (is_array($parts))
+        {
+            $result = JArrayHelper::toObject($parts);
+        }
+
+        return $result;
+    }
 }

@@ -36,6 +36,7 @@ JFactory::getDocument()->addScriptDeclaration($script);
 	<div class="width-60 fltlft">
 		<fieldset class="adminform">
 			<legend><?php echo JText::_('JDETAILS'); ?></legend>
+			<p class="advert_tip"><?php echo JText::_('JGLOBAL_CAMPOS_OBLIGATORIOS'); ?></p>
 			<ul class="adminformlist">
 
 			<li><?php echo $this->form->getLabel('title'); ?>

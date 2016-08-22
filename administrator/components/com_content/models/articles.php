@@ -54,6 +54,7 @@ class ContentModelArticles extends JModelList
 				'hits', 'a.hits',
 				'publish_up', 'a.publish_up',
 				'publish_down', 'a.publish_down',
+                'attribs', 'a.attribs',
 			);
 		}
 
@@ -149,7 +150,7 @@ class ContentModelArticles extends JModelList
 				'list.select',
 				'a.id, a.title, a.subtitle, a.copete, a.alias, a.introtext, a.checked_out, a.checked_out_time, a.catid' .
 				', a.state, a.access, a.created, a.created_by, a.created_by_alias, a.ordering, a.featured, a.language, a.hits' .
-				', a.publish_up, a.publish_down'
+				', a.publish_up, a.publish_down, a.attribs'
 			)
 		);
 		$query->from('#__content AS a');

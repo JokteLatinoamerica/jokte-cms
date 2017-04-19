@@ -1,8 +1,8 @@
 <?php
 /**
  * @version		$Id$
- * @package		Joomla.Installation
- * @copyright	Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
+ * @package		Jokte.Installation
+ * @copyright	Copyleft 2012 - 2017 Comunidad Juuntos
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -98,7 +98,7 @@ $nfo = $this->getDataInstall();
 										<div>
 											<div class="icon">
 												<p>
-													<a href="http://jokte.org" target="_blank">
+													<a href="http://www.juuntos.net.ar" target="_blank">
 													<b><?php echo JText::_('INSTL_COMPLETE_LANGUAGE_1'); ?></b>
 													<br />
 													<?php echo JText::_('INSTL_COMPLETE_LANGUAGE_2'); ?>

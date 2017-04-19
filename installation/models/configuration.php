@@ -1,7 +1,7 @@
 <?php
 /**
  * @package		Joomla.Installation
- * @copyright	Copyright (C) 2005 - 2014 Open Source Matters. All rights reserved.
+ * @copyright	Copyright (C) 2005 - 2017 Open Source Matters. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -55,6 +55,8 @@ class JInstallationModelConfiguration extends JModelLegacy
 		$registry->set('captcha', '0');
 		$registry->set('list_limit', 20);
 		$registry->set('access', 1);
+        $registry->set('feed_limit', 10);
+        $registry->set('feed_email', 'autor');
 
 		/* Debug Settings */
 		$registry->set('debug', 0);
@@ -73,6 +75,7 @@ class JInstallationModelConfiguration extends JModelLegacy
 		$registry->set('secret', JUserHelper::genRandomPassword(16));
 		$registry->set('gzip', 0);
 		$registry->set('error_reporting', 'default');
+        $registry->set('force_ssl',0);
 		$registry->set('helpurl', 'index.php?option=com_ayuda&amp;task=ayuda&amp;format=raw&amp;tmpl=component&amp;lang={language}&amp;key={keyref}');
 		$registry->set('ftp_host', $options->ftp_host);
 		$registry->set('ftp_port', $options->ftp_port);
@@ -106,8 +109,9 @@ class JInstallationModelConfiguration extends JModelLegacy
 		$registry->set('MetaKeys', $options->site_metakeys);
 		$registry->set('MetaTitle', 1);
 		$registry->set('MetaAuthor', 1);
-		$registry->set('MetaVersion', 0);
+		$registry->set('MetaVersion', 0);        
 		$registry->set('robots', '');
+        $registry->set('MetaRights', '');
 
 		/* SEO Settings */
 		$registry->set('sef', 1);
@@ -115,14 +119,32 @@ class JInstallationModelConfiguration extends JModelLegacy
 		$registry->set('sef_suffix', 0);
 		$registry->set('unicodeslugs', 0);
 
-		/* Feed Settings */
-		$registry->set('feed_limit', 10);
+		/* Feed Settings */		
 		$registry->set('log_path', JPATH_ROOT . '/logs');
 		$registry->set('tmp_path', JPATH_ROOT . '/tmp');
 
 		/* Session Setting */
-		$registry->set('lifetime', 15);
+        $registry->set('cookie_domain', '');
+        $registry->set('cookie_path', '');            
+        $registry->set('lifetime', 15);
 		$registry->set('session_handler', 'database');
+        
+        /* Security Options */
+        $registry->set('blocktype', 'site');
+        $registry->set('ip_allow', '');
+        $registry->set('ip_allowtype', 'all');
+        $registry->set('block_message', '<b>Acceso prohibido</b>');
+        $registry->set('blocktemplate', 0);
+        $registry->set('blocktpl', 1);
+        $registry->set('blockip', 0);
+        $registry->set('protect_cljc', 0);
+        $registry->set('protect_type', 0);
+        $registry->set('MetaClicJ', '0');
+        $registry->set('MetaClicT', '');
+        $registry->set('allow_remote_h', 1);
+        $registry->set('allow_local_h', 1);
+        $registry->set('allow_video_h',1);
+        $registry->set('allow_foro_j', 1);
 
 		// Generate the configuration class string buffer.
 		$buffer = $registry->toString('PHP', array('class'=>'JConfig', 'closingtag' => false));

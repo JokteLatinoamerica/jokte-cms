@@ -1,7 +1,7 @@
 <?php
 /**
  * @package		Joomla.Installation
- * @copyright	Copyright (C) 2005 - 2012 Open Source Matters, Inc. All rights reserved.
+ * @copyright	Copyright (C) 2005 - 2017 Open Source Matters, Inc. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -9,6 +9,23 @@ defined('_JEXEC') or die;
 ?>
 
 -----Please save file as UTF8
+
+-------------------- Jokte! Credits -------------------------------
+Programadores, diseñadores, documentadores y difusores del proyecto:
+Hernán Roa Reyes
+Fabián Hernández Nieto
+Hugo Baronti
+Adrián José Prado Castro
+Miguel Tuyaré - Tux Merlín
+Lissa Gianini
+Patricio Byron Lopez Salgado
+Enrique Genaro Ramón Herrera Noya
+César Augusto Palacios Alarcón
+Majo Torres
+Rafael Enrique Torrealba Barrios
+Andrés Anselmo Osorio Parraguéz
+Bern Graybern
+.... etc.
 
 -------------------- Joomla! 1.6/1.7/2.5 Credits ---------------------
 

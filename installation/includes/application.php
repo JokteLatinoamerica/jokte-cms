@@ -2,10 +2,11 @@
 /**
  * @package		Joomla.Installation
  * @copyright	Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
+ *              Copyright (C) 2015 - 2017 Comunidad Juuntos
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  ***************************************************************************************
  * Warning: Some modifications and improved were made by the Community Juuntos for
- * the latinamerican Project Jokte! CMS
+ * the latinamerican project called Jokte! CMS
  ***************************************************************************************
  */
 

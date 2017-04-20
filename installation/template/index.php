@@ -76,6 +76,9 @@ JHtml::_('script', 'installation/template/js/installation.js', true, false, fals
 				<p class="stepBarrLnk">
 					<a href="http://www.juuntos.net.ar" target="_blank">Jokte CMS</a>
 				</p>
+                <p class="stepBarrRapid">
+                    <a rel="{handler: 'iframe', size: {x: 750, y: 600}}" href="clave.html" target="_blank" class="modal"><?php echo JText::_('INSTL_HELP_CLAVE'); ?></a>
+                </p>
 			</div>
 			<div id="warning">
 				<noscript>

@@ -20,10 +20,10 @@ final class JVjokte
 	public $PRODUCTO = 'Jokte!';
 
 	/** @var  string  Release version. */
-	public $LIBERACION = '1.3';
+	public $LIBERACION = '2017';
 
 	/** @var  string  Maintenance version. */
-	public $DESARROLLO = '7';
+	public $DESARROLLO = '1.0';
 
 	/** @var  string  Development STATUS. */
 	public $ESTADO = 'Estable';
@@ -32,10 +32,10 @@ final class JVjokte
 	public $COMPILACION = '';
 
 	/** @var  string  Code name. */
-	public $NOMBRECODIGO = 'Jeyuu';
+	public $NOMBRECODIGO = 'Rayen';
 
 	/** @var  string  Release date. */
-	public $LIBDIA = '28-Ago-2015';
+	public $LIBDIA = '30-Abr-2017';
 
 	/** @var  string  Release time. */
 	public $LIBHORA = '17:00';
@@ -44,10 +44,10 @@ final class JVjokte
 	public $LIBTZ = 'GMT';
 
 	/** @var  string  Copyright Notice. */
-	public $COPYR = 'Copyleft juuntos.org.';
+	public $COPYR = 'Copyleft Juuntos.net.ar.';
 
 	/** @var  string  Link text. */
-	public $URLJ = '<a href="http://www.jokte.org">Jokte!</a> is Free Software released under the GNU General Public License.';
+	public $URLJ = '<a href="http://www.juuntos.net.ar">Jokte!</a> is Free Software released under the GNU General Public License.';
 
 	/**
 	 * Compares two a "PHP standardized" version number against the current Joomla version.

@@ -171,7 +171,7 @@ $file = 'language/'.$lang->getTag().'/'.$lang->getTag().'.css';
 	<div id="footer">
 		<jdoc:include type="modules" name="footer" style="none"  />
 		<p class="copyright">
-			<?php $joomla= '<a href="http://www.jokte.org">Jokte!</a>';
+			<?php $joomla= '<a href="http://www.juuntos.net.ar">Jokte!</a>';
 			echo JText::sprintf('JGLOBAL_ISFREESOFTWARE', $joomla) ?>
 		</p>
 	</div>

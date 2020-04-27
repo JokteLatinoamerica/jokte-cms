@@ -373,19 +373,60 @@ function getSelectedValue(frmName, srcListName) {
  * @param frmName : Nombre del formulario
  * @param destField: Campo de destino
  * @param oriField: Campo de origen
- * @return
+ * @return Nada o datos de origen
  */
 function getValue(frmName, destField, oriField) {
 	var form = document[frmName];
 	var destField = form[destField];
-	var data = form[oriField].value
-	if (data != null && data.length > 0) {
+	var data = form[oriField].value;
+	if (data !== null && data.length > 0) {
 		return destField.value = data;
 	} else {
 		return null;
 	}
 }
 
+/**
+ * Nuevo: para contar palabras repetidas en un texto
+ * @param frmName : Nombre del formulario
+ * @param texto : Campo con el texto a evaluar
+ * @param destField: Campo de destino 
+ * @param corte: Tamaño de la palabra
+ * @return palabras anidadas con una coma
+ */
+function getFrequency(frmName, texto, destField, wsize) {
+    var form = document[frmName];
+    var destField = form[destField];    
+    var string = form[texto].value;    
+    var wsize = wsize || ( wsize = 3 );
+    // Limpiar texto
+    s = string.replace(/(^\s*)|(\s*$)/gi,"");//excluir espacios al comienzo y al final
+    s = string.replace(/[ ]{2,}/gi," ");//Convertir 2 o más espacios en 1
+    s = string.replace(/\n /,"\n"); // excluir nuevas lineas con línea en blanco al comienzo
+    s = s.replace(/(<([^>]+)>)/ig,"");
+    // Validar tamaño de la palabra
+    if (isNaN(wsize)){
+        var wsize = 3; // Si no es número
+    } else {        
+        if (wsize % 1 !== 0) {
+            wsize = 3;
+        }
+    }     
+    var frequency = s.split(' ').reduce(function(previous, current) {
+        if (!previous.hasOwnProperty(current)) {
+            previous[current] = 0;
+        }
+        previous[current] += 1;
+        return previous;
+    }, {});
+    var repeatedWords = Object.keys(frequency).filter(function(element) {
+        if (element.length > wsize){
+            return frequency[element] > 1;
+        }
+    });
+    form.aviso.value="Revise";
+    return destField.value = repeatedWords;
+};  
 
 /**
  * USED IN: all list forms.

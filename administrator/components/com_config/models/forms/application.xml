@@ -722,7 +722,7 @@
 			<option
 				value="none">COM_CONFIG_FIELD_VALUE_NO_EMAIL</option>
 
-		</field>
+		</field>        
 	</fieldset>
 
 	<fieldset
@@ -743,9 +743,150 @@
 			type="helpsite"
 			label="COM_CONFIG_FIELD_HELP_SERVER_LABEL"
 			description="COM_CONFIG_FIELD_HELP_SERVER_DESC"
-			required="true" />
+			required="true" />        
 	</fieldset>
-
+    <fieldset
+		name="helps"
+		label="CONFIG_HELPERBACKEND_SETTINGS_LABEL">
+        <field 
+            name="a-helps" 
+            type="separador" 
+            class="fulltext"            
+            fielname="sepia"
+            logo="/banners/juuntos-120x90-negro.png"
+            value="COM_CONFIG_HELPS_DESC" 
+            default="COM_CONFIG_HELPS_TITLE"/>                           
+        <field
+			name="allow_helps"
+			type="checkboxes"
+			default="1"
+			label="COM_CONFIG_FIELD_ALLOW_HELP_LABEL"
+			description="COM_CONFIG_FIELD_ALLOW_HELP_DESC">
+            <option
+				value="-1">JNOBODY</option>
+			<option
+				value="0">JALL</option>
+			<option
+				value="8">JSADMINISTRATOR</option>
+            <option
+				value="7">JADMINISTRATOR</option>
+            <option
+				value="6">JMANAGER</option>
+            <option
+				value="5">JPUBLISHER</option>
+            <option
+				value="4">JEDITOR</option>
+            <option
+				value="3">JAUTHOR</option>
+		</field>
+		<field
+				name="allow_foro_j"
+				type="radio"
+				default="1"
+				label="COM_CONFIG_FIELD_FORO_HELP_LABEL"
+				description="COM_CONFIG_FIELD_FORO_HELP_DESC"
+				filter="integer">
+			<option
+					value="0">JNO</option>
+			<option
+					value="1">JYES</option>
+		</field>
+		<field
+				name="allow_oficial_h"
+				type="radio"
+				default="1"
+				label="COM_CONFIG_FIELD_OFICIAL_HELP_LABEL"
+				description="COM_CONFIG_FIELD_OFICIAL_HELP_DESC"
+				filter="integer">
+			<option
+					value="0">JNO</option>
+			<option
+					value="1">JYES</option>
+		</field>
+		<field
+			name="allow_remote_h"
+			type="radio"
+			default="1"
+			label="COM_CONFIG_FIELD_REMOTE_HELP_LABEL"
+			description="COM_CONFIG_FIELD_REMOTE_HELP_DESC"
+			filter="integer">
+			<option
+				value="0">JNO</option>
+			<option
+				value="1">JYES</option>		
+		</field>
+        <field
+			name="allow_local_h"
+			type="radio"
+			default="1"
+			label="COM_CONFIG_FIELD_LOCAL_HELP_LABEL"
+			description="COM_CONFIG_FIELD_LOCAL_HELP_DESC"
+			filter="integer">
+			<option
+				value="0">JNO</option>
+			<option
+				value="1">JYES</option>		
+		</field>
+		<field
+				name="allow_pdf_h"
+				type="radio"
+				default="1"
+				label="COM_CONFIG_FIELD_PDF_HELP_LABEL"
+				description="COM_CONFIG_FIELD_PDF_HELP_DESC"
+				filter="integer">
+			<option
+					value="0">JNO</option>
+			<option
+					value="1">JYES</option>
+		</field>
+        <field
+			name="allow_video_h"
+			type="radio"
+			default="1"
+			label="COM_CONFIG_FIELD_VIDEO_HELP_LABEL"
+			description="COM_CONFIG_FIELD_VIDEO_HELP_DESC"
+			filter="integer">
+			<option
+				value="0">JNO</option>
+			<option
+				value="1">JYES</option>		
+		</field>
+    </fieldset>
+    <fieldset
+        name="ayudas"
+        label="CONFIG_AYUDAS_SETTINGS_LABEL">
+        <field 
+            name="a-ageneral" 
+            type="separador" 
+            class="fulltext" 
+            fielname="sepia"
+            value="JGLOBAL_ABOUT_AYUDAS_DESC" 
+            default="JGLOBAL_ABOUT_AYUDAS_TITLE"/>                           
+        <field
+            name="ayudalocal"
+            type="url"
+            size="50"
+            label="JGLOBAL_AYUDA_LOCAL_LABEL"
+            description="JGLOBAL_AYUDA_LOCAL_DESC" />
+        <field
+            name="ayudaremota"
+			type="url"
+            size="50"
+			label="JGLOBAL_AYUDA_REMOTA_LABEL"
+            description="JGLOBAL_AYUDA_REMOTA_DESC" />
+		<field
+				name="ayudapdf"
+				type="text"
+				size="50"
+				label="JGLOBAL_AYUDA_PDF_LABEL"
+				description="JGLOBAL_AYUDA_PDF_DESC" />
+        <field
+            name="ayudavideo"
+			type="text"
+            size="50"
+			label="JGLOBAL_AYUDA_VIDEO_LABEL"
+			description="JGLOBAL_AYUDA_VIDEO_DESC" />
+    </fieldset>
 	<fieldset
 		name="cookie"
 		label="CONFIG_COOKIE_SETTINGS_LABEL">

@@ -2,8 +2,8 @@
 <extension version="2.5" type="file" method="upgrade">
 	<name>jokte</name>
 	<author>Comunidad Juuntos</author>
-	<authorEmail>info@juuntos.org</authorEmail>
-	<authorUrl>www.juuntos.net</authorUrl>
+	<authorEmail>info@juuntos.net.ar</authorEmail>
+	<authorUrl>www.juuntos.net.ar</authorUrl>
 	<copyright>(Copyleft) 2014 Comunidad Juuntos</copyright>
 	<license>GNU General Public License version 3; see LICENSE.txt</license>
 	<version>1.3.5</version>
@@ -41,6 +41,6 @@
 	</fileset>
 
 	<updateservers>
-		<server type="collection" name="Jokte">http://update.jokte.org/list.xml</server>
+		<server type="collection" name="Jokte">https://act.juuntos.net.ar/list.xml</server>
 	</updateservers>
 </extension>

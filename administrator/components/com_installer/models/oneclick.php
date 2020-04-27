@@ -303,7 +303,7 @@ class InstallerModelOneClick extends JModelList
 
             // Disabling the purging of the update list, instead deleting specific row
 			if ($res) {
-				$instance->delete($ed);
+				$instance->delete($cid);
 			}
 
 			$result = $res & $result;

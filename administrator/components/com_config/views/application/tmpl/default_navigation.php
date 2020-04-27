@@ -4,6 +4,12 @@
  * @subpackage	com_config
  * @copyright	Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ * ***************************************************************************************
+ * Warning: Some creations, modifications and improved were made by the Community Juuntos
+ * for the latinamerican Project Jokte! CMS
+ * Last Modification: 24/08/2016 by Tux Merlin
+ * Version: Jokte Rayen 1.4.0
+ ***************************************************************************************
  */
 
 // No direct access
@@ -18,6 +24,7 @@ defined('_JEXEC') or die;
 				<li><a href="#" onclick="return false;" id="server"><?php echo JText::_('COM_CONFIG_SERVER'); ?></a></li>
 				<li><a href="#" onclick="return false;" id="permissions"><?php echo JText::_('COM_CONFIG_PERMISSIONS'); ?></a></li>
 				<li><a href="#" onclick="return false;" id="filters"><?php echo JText::_('COM_CONFIG_TEXT_FILTERS')?></a></li>
+                <li><a href="#" onclick="return false;" id="ayuda"><?php echo JText::_('COM_CONFIG_AYUDA')?></a></li>
 			</ul>
 			<div class="clr"></div>
 		</div>

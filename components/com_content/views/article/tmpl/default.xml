@@ -28,7 +28,6 @@
 		<!-- Basic options. -->
 		<fieldset name="basic"
 			label="COM_CONTENT_ATTRIBS_ARTICLE_SETTINGS_LABEL">
-
 		<field
 			name="show_title"
 			type="list"

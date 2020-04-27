@@ -1,0 +1,78 @@
+/**
+ * J!Dump
+ * @version      $Id$
+ * @package      jdump
+ * @copyright    Copyright (C) 2006-2011 Mathias Verraes. All rights reserved.
+ * @license      GNU/GPL
+ * @link         https://github.com/mathiasverraes/jdump
+ */
+.dumpContainer {
+	font-size:14px;
+}
+.dumpType {
+	font-size: smaller;
+	color: gray
+}
+.dumpString {
+	font-size: smaller;
+	color: gray
+}
+.dumpSource {
+	font-size: smaller;
+}
+
+.dumpCollapseAll, .dumpExpandAll, .dumpRefresh, .dumpClose, .dumpLock, .dumpLocked {
+	background-repeat: no-repeat;
+	padding-left: 20px;
+	padding-right: 16px;
+
+	color:#000;
+	font-family:arial;
+	font-size:0.8em;
+}
+
+.dumpCollapseAll {
+	background-image: url(../images/collapseall.png);
+}
+.dumpExpandAll {
+	background-image: url(../images/expandall.png);
+}
+.dumpRefresh {
+	background-image: url(../images/refresh.png);
+}
+.dumpClose {
+	background-image: url(../images/close.png);
+}
+.dumpLock {
+	background-image: url(../images/unlocked.png);
+}
+
+.dumpLocked {
+	background-image: url(../images/locked.png);
+	display: none;
+}
+
+/* Tooltips */
+.tool-tip {
+	float: left;
+	background: #ffc;
+	border: 1px solid #D4D5AA;
+	padding: 5px;
+	max-width: 200px;
+}
+
+.tool-title {
+	padding: 0;
+	margin: 0;
+	font-size: 100%;
+	font-weight: bold;
+	margin-top: -15px;
+	padding-top: 15px;
+	padding-bottom: 5px;
+	background: url(../../_system/images/selector-arrow.png) no-repeat;
+}
+
+.tool-text {
+	font-size: 100%;
+	margin: 0;
+}

@@ -70,7 +70,7 @@ abstract class JHtmlIcons
 					}
 				}
 			}
-		}
+		}                
 
 		$html[] = '<div class="icon-wrapper"' . (empty($button['id']) ? '' : (' id="' . $button['id'] . '"')) . '>';
 		$html[] = '<div class="icon">';

@@ -58,7 +58,7 @@ $cparams = JComponentHelper::getParams ('com_media');
 				$imgdefault_g 	= JURI::root().$this->params->get('gravimgdefault');
 				$imgsize_g		= $this->params->get('gravatarsize');
 				$title_g		= $this->contact->name;
-				$imgcontact		= "http://www.gravatar.com/avatar/avatar.php?gravatar_id=" . md5($this->email_g)."?d=".$imgdefault_g. "&s=" . $imgsize_g;		
+				$imgcontact		= "https://www.gravatar.com/avatar/avatar.php?gravatar_id=" . md5($this->email_g)."?d=".$imgdefault_g. "&s=" . $imgsize_g;
 			else:
 				$imgcontact 	= $this->contact->image;
  			endif; ?>			

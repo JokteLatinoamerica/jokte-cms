@@ -3,8 +3,8 @@
  * @version		
  * @package		Jokte! CMS
  * @subpackage	com_content /articulos estacado -override-
- * @Autor: Juuntos.org
- * @copyleft - Override de salida de item de destacados 
+ * @Autor:      Comunidad Juuntos
+ * @copyleft    Override de salida de item de destacados
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  * @Descripción / qué ver: Incorporación de clase a categoria de lista (links-cat) para poder darle estilo individual
  */

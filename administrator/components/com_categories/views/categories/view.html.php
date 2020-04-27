@@ -148,7 +148,6 @@ class CategoriesViewCategories extends JViewLegacy
 
 		if ($canDo->get('core.admin')) {
 			JToolBarHelper::custom('categories.rebuild', 'refresh.png', 'refresh_f2.png', 'JTOOLBAR_REBUILD', false);
-			JToolBarHelper::preferences($component);
 			JToolBarHelper::divider();
 		}
 
@@ -169,6 +168,6 @@ class CategoriesViewCategories extends JViewLegacy
 		else {
 			$url = null;
 		}
-		JToolBarHelper::help($ref_key, JComponentHelper::getParams( $component )->exists('helpURL'), $url);
+		// JToolBarHelper::help($ref_key, JComponentHelper::getParams( $component )->exists('helpURL'), $url);
 	}
 }

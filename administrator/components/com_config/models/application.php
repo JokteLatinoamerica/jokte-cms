@@ -4,6 +4,11 @@
  * @subpackage	com_config
  * @copyright	Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ * ***************************************************************************************
+ * Warning: Some creations, modifications and improved were made by the Community Juuntos
+ * for the latinamerican Project Jokte! CMS
+ * Version: Jokte Rayen 1.4.0
+ ***************************************************************************************
  */
 
 defined('_JEXEC') or die;
@@ -125,11 +130,32 @@ class ConfigModelApplication extends JModelForm
 			unset($data['rules']);
 		}
 
+        // Tux Code Improvement
+		/**
+		 * Cargo un arreglo con la configuración de la ayuda
+         * @since: 1.0 Rayen
+		 */
+		$helps = [];
+		$helps['a_foro'] = $data['allow_foro_j'];
+        $helps['a_oficial'] = $data['allow_oficial_h'];
+        $helps['a_video'] = $data['allow_video_h'];
+        $helps['a_local'] = $data['allow_local_h'];
+        $helps['a_remota'] = $data['allow_remote_h'];
+        $helps['a_pdf'] = $data['allow_pdf_h'];
+        $helps['url_local'] = $data['ayudalocal'];
+        $helps['url_remota'] = $data['ayudaremota'];
+        $helps['url_video'] = $data['ayudavideo'];
+        $helps['url_pdf'] = $data['ayudapdf'];
+
 		// Save the text filters
 		if (isset($data['filters']))
 		{
 			$registry = new JRegistry();
 			$registry->loadArray(array('filters' => $data['filters']));
+
+			// Tux Code Improvement
+			// Mezcla de arrays para parámetros
+            $registry->loadArray(array('ayudas' => $helps));
 
 			$extension = JTable::getInstance('extension');
 

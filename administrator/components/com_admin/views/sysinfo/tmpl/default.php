@@ -51,11 +51,20 @@ JHtml::_('behavior.switcher');
 
 		<div id="page-phpinfo" class="tab">
 			<div class="noshow">
-				<div class="width-100">
+				<div class="width-60">
 					<?php echo $this->loadTemplate('phpinfo'); ?>
 				</div>
 			</div>
 		</div>
+
+        <div id="page-ayuda" class="tab">
+            <div class="noshow">
+                <div class="width-100">
+                    <?php echo $this->loadTemplate('ayuda'); ?>
+                </div>
+            </div>
+        </div>
+
 	</div>
 
 	<div class="clr"></div>

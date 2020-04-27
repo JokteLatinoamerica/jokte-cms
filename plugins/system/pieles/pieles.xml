@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system">
+	<name>plg_system_pieles</name>
+	<author>Miguel Tuyaré</author>
+	<creationDate>Agosto 2014</creationDate>
+	<copyright>Copyright (C) 2012 - 2014 Comunidad Juuntos. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>miguelTuyare@gmail.com</authorEmail>
+	<authorUrl>Juuntos.net.ar</authorUrl>
+	<version>1.0</version>
+	<description>PLG_SYSTEM_PIELES_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="pieles">pieles.php</filename>
+        <filename>index.html</filename>
+        <folder>com_content</folder>
+        <folder>language</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+			    <field name="pagina" type="text"
+				    default="_TITULO_PAGINA"
+				    description="PLG_JOKTEPIEL_TITULO_PAGINA_DESC"
+				    label="PLG_JOKTEPIEL_TITULO_PAGINA_LABEL"
+			    />
+                <field name="epigrafe" type="text"
+                    default="_EPIGRAFE"
+                    description="PLG_JOKTEPIEL_EPIGRAFE_DESC"
+                    label="PLG_JOKTEPIEL_EPIGRAFE_LABEL"
+                />
+			    <field name="titulo" type="text"
+				    default="_TITULO"
+				    description="PLG_JOKTEPIEL_TITULO_DESC"
+				    label="PLG_JOKTEPIEL_TITULO_LABEL"
+			    />
+			    <field name="subtitulo" type="text"
+				    default="_SUBTITULO"
+				    description="PLG_JOKTEPIEL_SUBTITULO_DESC"
+				    label="PLG_JOKTEPIEL_SUBTITULO_LABEL"
+			    />
+			    <field name="introtext" type="text"
+				    default="_TEXTO_INTRODUCCION"
+				    description="PLG_JOKTEPIEL_TEXTOINTRODUCCION_DESC"
+				    label="PLG_JOKTEPIEL_TEXTOINTRODUCCION_LABEL"
+			    />
+			    <field name="fulltext" type="text"
+				    default="_TEXTO_COMPLETO"
+				    description="PLG_JOKTEPIEL_TEXTOCOMPLETO_DESC"
+				    label="PLG_JOKTEPIEL_TEXTOCOMPLETO_LABEL"
+			    />
+			    <field name="sociales" type="text"
+				    default="_SOCIALES"
+				    description="PLG_JOKTEPIEL_SOCIALES_DESC"
+				    label="PLG_JOKTEPIEL_SOCIALES_LABEL"
+			    />
+			    <field name="botones" type="text"
+				    default="_BOTONES"
+				    description="PLG_JOKTEPIEL_BOTONES_DESC"
+				    label="PLG_JOKTEPIEL_BOTONES_LABEL"
+			    />
+            </fieldset>
+            <fieldset name="advanced">
+                <field name="backg-image" type="media"
+                       default=""
+                       description="PLG_JOKTEPIEL_BACKIMG_DESC"
+                       label="PLG_JOKTEPIEL_BACKIMG_LABEL"
+                        />
+                <field name="background" type="color"
+                    default=""
+                    description="PLG_JOKTEPIEL_BACKCOLOR_DESC"
+                    label="PLG_JOKTEPIEL_BACKCOLOR_LABEL"
+                 />
+
+			</fieldset>
+				
+		</fields>
+	</config>
+</extension>

@@ -12,6 +12,9 @@ defined('_JEXEC') or die;
 
 // Tell the browser not to cache this page.
 JResponse::setHeader('Expires', 'Mon, 26 Jul 1997 05:00:00 GMT', true);
+// Register helper class
+JLoader::register('ConfigHelper', dirname(__FILE__) . '/helpers/config.php');
+
 
 // Execute the controller.
 $controller = JControllerLegacy::getInstance('Config');

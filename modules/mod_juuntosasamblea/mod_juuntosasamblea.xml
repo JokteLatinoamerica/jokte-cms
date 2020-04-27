@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="module" version="2.5" client="site" method="upgrade">
-	<name>Asamblea Juuntos.org</name>
+	<name>Asamblea Juuntos</name>
 	<author>Hugo Baronti</author>
 	<creationDate>Febrero 2013</creationDate>
 	<copyright>NO Copyright</copyright>
 	<license>Software de Dominio Público</license>
-	<authorEmail>info@juuntos.org</authorEmail>
-	<authorUrl>juuntos.org</authorUrl>
+	<authorEmail>info@juuntos.net.ar</authorEmail>
+	<authorUrl>juuntos.net.ar</authorUrl>
 	<version>1.0</version>
 	<description>MOD_JUUNTOSASAMBLEA_FILE_DESCRIPTION</description>
 		
@@ -24,9 +24,9 @@
 	<config>
 		<fields name="params">
 			<fieldset name="basic">
-				<field name="groupname" type="text" default="Asamblea Juuntos.org" label="GOOGLEGROUPNAMELABEL" />
+				<field name="groupname" type="text" default="Asamblea Juuntos" label="GOOGLEGROUPNAMELABEL" />
 				<field name="groupurl" type="text" default="https://groups.google.com/group/juuntos?hl=es" label="GOOGLEGROUPSURL" size="45" />
-				<field name="imageurl" type="text" default="http://juuntos.org/images/asamblea/juuntos-asamblea.png" label="GOOGLEGROUPSIMAGEURL" size="45" />
+				<field name="imageurl" type="text" default="https://www.juuntos.net.ar/images/asamblea/juuntos-asamblea.png" label="GOOGLEGROUPSIMAGEURL" size="45" />
 				<field name="moduleclass_sfx" type="text" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
 			</fieldset>
 		</fields>

@@ -559,7 +559,7 @@ class JFile
 
     /**
      * Retorna el tamaño del archivo
-     * Nuevo método API Jokte! comunidad juuntos.org
+     * Nuevo método API Jokte! Comunidad Juuntos
      *
      * @param   string  $file Ruta al archivo
      * @return  string  tamaño en bytes

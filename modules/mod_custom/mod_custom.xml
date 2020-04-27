@@ -40,6 +40,44 @@
 				<field name="backgroundimage" type="media"
 					label="MOD_CUSTOM_FIELD_BACKGROUNDIMAGE_LABEL" description="MOD_BACKGROUNDIMAGE_FIELD_LOGO_DESC" />
 			</fieldset>
+            <fieldset
+				name="ayudas">
+                <field 
+                    name="a-general" 
+                    type="separador" 
+                    class="fulltext" 
+                    fielname="sepia"
+                    value="JGLOBAL_ABOUT_AYUDAS_DESC" 
+                    default="JGLOBAL_ABOUT_AYUDAS_TITLE"/>                           
+				<field
+					name="ayudalocal"
+					type="url"
+                    size="50"
+					label="JGLOBAL_AYUDA_LOCAL_LABEL"
+					description="JGLOBAL_AYUDA_LOCAL_DESC" />
+                                
+                <field
+					name="ayudaremota"
+					type="url"
+                    size="50"
+					label="JGLOBAL_AYUDA_REMOTA_LABEL"
+					description="JGLOBAL_AYUDA_REMOTA_DESC" />
+                                
+                <field
+					name="ayudaforo"
+					type="url"
+                    size="50"
+					label="JGLOBAL_AYUDA_FORO_LABEL"
+					description="JGLOBAL_AYUDA_FORO_DESC" />
+                              
+                <field
+					name="ayudavideo"
+					type="text"
+                    size="50"
+					label="JGLOBAL_AYUDA_VIDEO_LABEL"
+					description="JGLOBAL_AYUDA_VIDEO_DESC" />
+                                
+            </fieldset>
 			<fieldset
 				name="advanced">
 				<field

@@ -1,0 +1,285 @@
+0. Metadata
+-----------
+File version:	$Id$
+Copyright:		Copyleft 2013 Jokte!. Ningún derecho reservado.
+License:		GNU General Public License version 2 or later.
+
+
+1. Derechos de autor & Exención de responsabilidad
+---------------------------
+Esta aplicación es software libre liberado bajo la GPL. Por favor,
+ver el código fuente y el archivo de la CHANGELOG
+
+
+2. Historial de cambios
+------------
+Esta es una lista no exhaustiva (pero aún así casi completa) de cambios para
+Jokte! 1.2.1, entre ellos el alfa y versiones beta.
+Nuestro agradecimiento a todas aquellas personas que han aportado informes de errores y
+correcciones de código.
+
+Leyenda:
+
+* -> Revisión de seguridad
+# -> Arreglo normal 
+$ -> Idioma corrección o cambio
++ -> Adición
+^ -> Cambiar
+- -> Eliminado
+! -> Nota
+
+19-04-2017
+ + Ayudas on line, foro, videos y personalizadas
+ # Cambios enlaces de ayuda en la instalación
+ # Ajustes en el instalador
+ # Corrección de todos los enlaces del instalador hacia el nuevo sitio
+ # Corrección año de copyright y arreglos de Juuntos
+ + Agrego enlace para explicar nuevo versionado y nombre clave
+
+19-08-2016
+ + Protección de IPs desde la configuración global
+ + Nueva plantilla para IP bloqueadas
+ + Nueva plantilla de ingreso
+ $ Nuevas línes por funcionalides agregadas
+ # Actualización de scripts para PHP 5.6
+ + Posibilidad de obligar al usuario a indicar metad escripciones y palabras claves
+ # Cambios de estilos apuntando a Jokte Rayen responsivo
+ + Manifiesto y Pacto Social Juuntos en la administración
+
+23-05-2016
+ $ Agrega botón para agregar metadescripción
+ $ Nueva funcionalidad en Mootools p/agregar contenidos de campos
+ $ Opciones de Seguridad en la Configuración General
+
+17-03-2016
+ # Eliminación de error de codificación de php
+ # Corrección simple de texto
+ $ Agrega traducciones de etiquetas del gestor de contenidos y otras faltantes
+
+19-04-2015
+ + Nuevo sistema de adjuntos
+ + Nuevas ayudas contextuales en parámetros
+ # Cambios en algunas URL por fijación del dominio de Juuntos.org
+ # Fallos menores en vista previa de artículos
+ # Fallos menores en marcadores de campos (placeholders)
+ + Nuevo formato (preparando Rayen) plantilla fuera de línea
+ # Estilizado mejorado de presentación de parámetros
+
+03-Nov-2014
+ ^ Arreglo botones componente Checkin
+ ^ Filtro URL en campos de Contacto 
+ ^ Reinicio de hits cuando se copian por lotes artículos
+ ^ Cambio en filtros para vista previa de artículos
+ # Arreglo salida HTML errores plantilla Hator
+ # Arreglo salida HTML errores plantilla de sistema
+ ^ Cambio reglas de emails en formulario de contacto
+ ^ Cambio salida mensaje de error formulario de registración
+ ^ Cambio invocación plugin usuarios en API aplicación
+ ^ Cambios en la librería table de la plataforma
+ - Eliminación línea errónea despachador de eventos
+ + Agregado campos en XML para uso de placeholders
+ ^ Cambios en la librería form de la plataforma
+ ^ Cambio en la librería behavoir de la plataforma
+ ^ Cambios en la librería emails de la plataforma. Agrego filtros
+ ^ Cambios en la librería help de la plataforma para codificación UTF-8
+ ^ Cambios en helper de la librería de instalación de extensiones de la plataforma
+ ^ Cambios importantes en la librería string de la plataforma
+ ^ Cambios en el adpatador de actualizador de extensiones para detectar versión de PHP
+ ^ Ajuste en librería user de la plataforma cuando no hay id
+ ^ Ajuste en el cargador para revisar las primeras letras de los nombres de clase
+ ^ Ajuste en el módulo buscador
+ * Ajuste en el plugin LDAP para limpiar bytes nulos de la contraseña
+ * Cambios importantes en el plugin que evita el robo de correos en contenidos
+ ^ Cambios importantes en el plugin que carga módulos en contenidos
+ ^ Ajuste importante en el plugin leer más por error de sintaxis
+ ^ Ajuste por revisión de alias en plugin creador de contactos
+ ^ Ajuste salida html de errores plantilla del sistema del frontend. Agrega filtros
+ # Limpiezas varias y arreglos de errores de ortografía en algunos archivos
+ - Eliminación del plugin Admin Bar Unlocker
+ - Eliminación de archivos de instalación para SQL y Azure
+ - Elimación y corrección de módulos de la administración
+
+18-Ago-2014
+ + Nuevo filtro para utilizar el componente de medios para gestionar diferente tipos de archivos
+ + Nuevo Imagen en el perfil de usuario
+ + Nuevo Utilización de imagen en el perfil de usuario o gravatar en artículos con enlaces
+ $ Nuevas traducciones
+
+16-Ago-2014
+ # Fallo en publicación de banners
+ - Subidas en flash
+ # Arreglo en componente Finder
+ ^ Cambios actualizador Jokte (verifica versión de PHP)
+ - Eliminado paso de instalación selección idioma. Por defecto se instala en es-LA.
+ ^ Cambios por carga sql por defecto Jokte
+ - Registro de instalación
+ + Ayuda rápida emergente durante el proceso de instalación
+
+17-may-2014
+ # Actualización API Recaptcha
+ # Cambio fechas copyright todos los archivos
+ ^ Actualización ingreso con Gmail
+ ^ Cambios en componentes, módulos y plugins y en URL amigables para sitios multidiomas
+ - Vista de instalación no utilizada (FTP, se configura luego de instalar)
+ + PHPass para autenticación
+ + Filtros para formularios y correos
+ + Filtros para codificación de caracteres
+ + Filtros para entradas en hexadecimal
+ ^ Error 404 redirecciona al index
+ ^ Correcciones en acceso a BD
+ * Seguridad en ataques temporizados
+ ^ Tratamiento especial de scripts y estilos
+ * Filtros registro de usuarios y perfiles
+ ^ Desbloqueo del módulo banners
+ + Filtros para salida de errores
+ ^ Clase inputbox
+ ^ Controlador MySQl
+ ^ Cambios en eventos onContent
+ ^ Arreglos en componente buscador (finder)
+ * Bloqueo de ejecutables en componente Media
+ + Filtro de nombres en archivos de idiomas
+ + Detección JSON
+ + Chequeo nombres de carpetas
+ ^ Ajuste en módulo Hilando Juuntos
+ ^ Soporte entre versiones
+ $ Líneas sin traducir
+ ^ Manifiesto por versionado propio de Jokte
+
+07-nov-2013
+ # Fallo al actualizar extensiones de terceros
+ # Fallo al agregar adjuntos
+ # Ajustes relativos a Joomla 2.5.14
+ ^ Cambios Módulo Hilando Juuntos (URLs por defecto)
+
+26-abr-2013
+ + Ajustes relativos a Joomla 2.5.10/2.5.11
+ + Agregado en Gestor de Módulo el nombre de la carpeta del módulo.
+ - Eliminado carpetas SQLSRV 
+ $ Agregada etiquetas faltantes en el Gestor de Plantillas
+ $ Agregada etiqueta por nueva funcionalidad en el Gestor de módulos.
+
+31-mar-2013
+ + Soporte para subtiulos en los artículos
+ + Agregado soporte para el sistema de comentarios Disqus
+ + Agregado soporte para Gravatar en contenidos
+ + Agregado botones para compartir contenidos con redes sociales (Facebook, Twitter y Google+)
+ + Agregado minisistema para etiquetas metakey al pie de los artículos enlazando búsquedas
+ + Configuración y opciones nuevas para Gravatar, Disqus, Redes Sociales y etiquetas
+ # Se agregaron cabeceras de advertencias en todos los archivos adaptados/modificados para Jokte!
+ * Parcheado componente de contactos en el backend
+ # Actualización del año de copyright en todos los archivos
+ # Correcciones en plugin para ingreso con Gmail
+ # Correcciones en plugin pagebreak
+ # Modificaciones para soportar todo lo nuevo en la plantilla Jokte Antu
+ + Nuevo sistema de ayudas propio disponible también on line o desde el backend.
+ # Mejoras en el sistema de actualización de Jokte!
+ + Varios cambios en librerías Help de la Plataforma
+ + Actualización de Simplepie a la versión 1.3+
+ # Módulos Hilando Juuntos y Novedades de Jokte corregidos
+ # Registre su copia de Jokte! mejorado
+ # Correcciones varias de errores strict en el CMS y en Joomla Platform
+ $ Correcciones en archivos de idioma
+ # Mejora en la vista de listados de artículos (muestra subtítulos y epígrafe en ventana modal)
+ # Acceso al backend mejorado
+ # Instalación forzosa en es-LA y se define como lenguaje por defecto
+ + Minisistema de descargas en los artículos (permite adjuntar hasta 3 archivos)
+ + Agregada opción nueva para el módulo Quién está en línea
+ + Agregado nuevo campo para parámetros en las extensiones que permite agregar ayuda con pieles 
+ 
+03-Ene-2013
+ ^ Nueva presentación de Epígrafe o Copete.Cambio en la salida HTML Jokte Antu
+ - Borrado de archivos de idioma que no corresponden
+ # Por idioma por defecto es-LA
+ ^ Nueva columna en el Actualizador de extensiones instaladas
+ ^ Agregado campo epígrafe para redacción de artículos
+ ^ Agregado opción en XML global para mostrar o no el campo epígrafe para redacción de articulos
+    
+30-Nov-2012
+ ^ Error en SQL reparado (cache cleaner)  
+
+28-Nov-2012
+ # Actualización archivos
+ - Se quitaron líneas de los archivos de idioma que ya que no se usan más
+ - Borrando archivos que no se usarán más
+ 
+27-Nov-2012
+ # Actualización archivos
+ - Eliminación de archivos SQL que no se usan más
+ - Eliminación de archivos de idiomas de plantillas que no se usan más
+ # Actualización archivos
+ + Actualización por mejoras en extensiones de la administración
+ + Actualización necesaria para el versionado de Jokte!
+ + Actualización por mejoras en extensiones de la administración
+ + Actualización por mejoras en extensiones de la administración
+ + Actualización necesaria para el versionado de Jokte! paralelo al de Joomla
+ # Cambio por fecha de publicación (publish_up)
+ * Quitado comportamiento no frames
+ + Mejora en Contactos por incorporación del uso de Gravatar
+
+17-Nov-2012
+ + Nueva salida html actualizador de schemas de base de datos para versiones Jokte!
+ + Nueva vista actualizador de schemas de base de datos para ve… …
+ + Nuevo modelo para los SQL de actualización de schemas de Jokte!
+ - Borrado de los SQL de actualización de schemas de Joomla
+ - Borrado de los SQL de actualización de schemas de Joomla
+ - Borrado de los SQL de actualización de schemas de Joomla
+ ^ Cabecera XML instalador actualizador Jokte!
+ + Nuevo modelo en español para el versionado de Jokte!
+ ^ Cambio de versionado (evaluar borrado definitivo)
+ ^ Cambios por versionado de Jokte!
+ ^ Cambios para actualización on line de Jokte!
+ ^ Rest para prueba por el original 
+
+15-Nov-2012
+ - Eliminado componente actualizador de Joomla
+ + Nuevo componente actualizador de Jokte
+ + Archivos de idioma del actualizador Jokte
+ ^ URL de actualizaciones
+ ^ Modelo de actualización Jokte!
+ ^ Paquete SQL de instalación nuevo por cambio de componente actualizador de Jokte
+ ^ Cambio de plugin de actualización por versionado de Jokte!
+ ^ Línea versionado de Jokte!
+ ^ línea para versionado de Jokte (se mantiene el de Joomla por compatibilidad con extensiones)
+ + Clase para versionado de Jokte!
+ ^ Versionado de Joomla (se mantiene por compatiblidad extensiones)
+ + Archivo de idioma es-LA actualizador Jokte!
+ - Borrado archivo de idioma es-LA actualizador Joomla
+
+07-Nov-2012
+ ^ Cambio de redacción en artículo diferencias entre Joomla y Jokte
+
+17-Oct-2012
+ # Arreglos varios por actualización base Joomla
+ ! Cambio de versión Jokte v1.1.5 - No se liberó
+
+10-Oct-2012
+ - Eliminado plugin Googlemaps que estaba pre instalado
+ - Eliminado plugin Ipfloating que estaba pre instalado
+ ! Cambio de versión Jokte v1.1.4 - No se liberó
+ 
+
+09-Oct-2012
+ # Fix varios
+ ! Cambio de versión Jokte v1.1.2 - No se liberó
+
+30-Sep-2012
+ # Fix varios
+ ! Cambio de versión Jokte v1.1.1 
+
+17-Sep-2012
+ ^ Instalación simplificada en tres pasos
+ $ Actualización del paquete de idiomas es-LA
+ # Plantilla Jokte Antu correcciones
+ ! Jokte v1.1.0-RC
+
+30-Jul-2012
+ * Actualización a la última versión de Joomla 2.5.6
+ $ Cambio del paquete de idiomas por defecto a es-LA
+ - Eliminación de la sección languages de com_installer 
+ + Creación de funcionalidad para instalar extensiones con 1 clic desde la administración
+ + Creación de funcionalidad para el registro de instalaciones Jokte
+ ^ Cambio de los contenidos de ejemplo
+ ! Jokte v1.0RC1
+
+02-Mar-2012 Matias Aguirre
+ + Creacion de CHANGELOG

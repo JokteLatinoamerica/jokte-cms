@@ -83,10 +83,5 @@ class ContentViewFeatured extends JViewLegacy
 			JToolBarHelper::trash('articles.trash');
 		}
 
-		if ($canDo->get('core.admin')) {
-			JToolBarHelper::preferences('com_content');
-			JToolBarHelper::divider();
-		}
-		JToolBarHelper::help('JHELP_CONTENT_FEATURED_ARTICLES');
 	}
 }

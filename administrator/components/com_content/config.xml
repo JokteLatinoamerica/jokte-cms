@@ -539,6 +539,274 @@
 		
 	</fieldset>
 	
+	<fieldset name="pieles">
+		<field
+			name="a-pieles"
+			type="separador"
+			class="fulltext"
+			fielname="sepia"
+			value="JGLOBAL_SEPARADOR_PIELES_DESC"
+			default="JGLOBAL_SEPARADOR_PIELES_TITLE"
+			/>
+		
+		<field
+			name="show_piel"
+			type="list"
+			label="JGLOBAL_SHOW_PIEL_LABEL"
+			description="JGLOBAL_SHOW_PIEL_DESC">
+			<option
+				value="0">JNO</option>
+			<option
+				value="1">JYES</option>
+		</field>
+		
+		<field
+			name="piel_folder"
+			type="folderlist"
+			default=""
+			label="JGLOBAL_PIEL_FOLDER_LABEL"
+			description="JGLOBAL_PIEL_FOLDER_DESC"
+			directory="pieles/"
+			filter=""
+			exclude=""
+			stripext="" />
+		
+		<field
+			name="a-pieles-const"
+			type="separador"
+			class="fulltext"
+			fielname="sepia"
+			value="JGLOBAL_SEPARADOR_PIELES_CONST_DESC"
+			default="JGLOBAL_SEPARADOR_PIELES_CONST"
+			/>
+	
+		<field 
+			name="pagina" 
+			type="text"
+			default="_TITULO_PAGINA"
+			description="JGLOBAL_JOKTEPIEL_TITULO_PAGINA_DESC"
+			label="JGLOBAL_JOKTEPIEL_TITULO_PAGINA_LABEL"
+		/>
+		
+		<field 
+			name="p_epigrafe" 
+			type="text"
+			default="_EPIGRAFE"
+			description="JGLOBAL_JOKTEPIEL_EPIGRAFE_DESC"
+			label="JGLOBAL_JOKTEPIEL_EPIGRAFE_LABEL"
+		/>
+		
+		<field 
+			name="p_titulo" 
+			type="text"
+			default="_TITULO"
+			description="JGLOBAL_JOKTEPIEL_TITULO_DESC"
+			label="JGLOBAL_JOKTEPIEL_TITULO_LABEL"
+		/>
+		
+		<field 
+			name="p_subtitulo" 
+			type="text"
+			default="_SUBTITULO"
+			description="JGLOBAL_JOKTEPIEL_SUBTITULO_DESC"
+			label="JGLOBAL_JOKTEPIEL_SUBTITULO_LABEL"
+		/>
+		
+		<field 
+			name="p_introtext" 
+			type="text"
+			default="_TEXTO_INTRODUCCION"
+			description="JGLOBAL_JOKTEPIEL_TEXTOINTRODUCCION_DESC"
+			label="JGLOBAL_JOKTEPIEL_TEXTOINTRODUCCION_LABEL"
+		/>
+		
+		<field 
+			name="p_fulltext" 
+			type="text"
+			default="_TEXTO_COMPLETO"
+			description="JGLOBAL_JOKTEPIEL_TEXTOCOMPLETO_DESC"
+			label="JGLOBAL_JOKTEPIEL_TEXTOCOMPLETO_LABEL"
+		/>
+		
+		<field 
+			name="p_sociales" 
+			type="text"
+			default="_SOCIALES"
+			description="JGLOBAL_JOKTEPIEL_SOCIALES_DESC"
+			label="JGLOBAL_JOKTEPIEL_SOCIALES_LABEL"
+		/>
+		
+		<field 
+			name="p_botones" 
+			type="text"
+			default="_BOTONES"
+			description="JGLOBAL_JOKTEPIEL_BOTONES_DESC"
+			label="JGLOBAL_JOKTEPIEL_BOTONES_LABEL"
+		/>
+		
+		<field 
+			name="p_autor" 
+			type="text"
+			default="_AUTOR"
+			description="JGLOBAL_JOKTEPIEL_AUTOR_DESC"
+			label="JGLOBAL_JOKTEPIEL_AUTOR_LABEL"
+		/>
+		
+		<field 
+			name="p_autor_avatar" 
+			type="text"
+			default="_AVATAR_AUTOR"
+			description="JGLOBAL_JOKTEPIEL_AUTOR_AVATAR_DESC"
+			label="JGLOBAL_JOKTEPIEL_AUTOR_AVATAR_LABEL"
+		/>
+		
+		<field 
+			name="p_categoria" 
+			type="text"
+			default="_CATEGORIA"
+			description="JGLOBAL_JOKTEPIEL_CATEGORIA_DESC"
+			label="JGLOBAL_JOKTEPIEL_CATEGORIA_LABEL"
+		/>
+		
+		<field 
+			name="p_subcategoria" 
+			type="text"
+			default="_SUBCATEGORIA"
+			description="JGLOBAL_JOKTEPIEL_SUBCATEGORIA_DESC"
+			label="JGLOBAL_JOKTEPIEL_SUBCATEGORIA_LABEL"
+		/>
+		
+		<field 
+			name="p_fecha_creacion" 
+			type="text"
+			default="_FECHA_CREACION"
+			description="JGLOBAL_JOKTEPIEL_FECHA_CREACION_DESC"
+			label="JGLOBAL_JOKTEPIEL_FECHA_CREACION_LABEL"
+		/>
+		
+		<field 
+			name="p_fecha_modificacion" 
+			type="text"
+			default="_FECHA_MODIFICACION"
+			description="JGLOBAL_JOKTEPIEL_FECHA_MODIFICACION_DESC"
+			label="JGLOBAL_JOKTEPIEL_FECHA_MODIFICACION_LABEL"
+		/>
+		
+		<field 
+			name="p_fecha_publicacion" 
+			type="text"
+			default="_FECHA_PUBLICACION"
+			description="JGLOBAL_JOKTEPIEL_FECHA_PUBLICACION_DESC"
+			label="JGLOBAL_JOKTEPIEL_FECHA_PUBLICACION_LABEL"
+		/>
+		
+		<field 
+			name="p_vistos" 
+			type="text"
+			default="_VISTOS"
+			description="JGLOBAL_JOKTEPIEL_VISTOS_DESC"
+			label="JGLOBAL_JOKTEPIEL_VISTOS_LABEL"
+		/>
+		
+		<field 
+			name="p_enlaces" 
+			type="text"
+			default="_ENLACES"
+			description="JGLOBAL_JOKTEPIEL_ENLACES_DESC"
+			label="JGLOBAL_JOKTEPIEL_ENLACES_LABEL"
+		/>
+		
+		<field 
+			name="p_imagenes" 
+			type="text"
+			default="_IMAGENES"
+			description="JGLOBAL_JOKTEPIEL_IMAGENES_DESC"
+			label="JGLOBAL_JOKTEPIEL_IMAGENES_LABEL"
+		/>
+		
+		<field 
+			name="p_adjuntos" 
+			type="text"
+			default="_ADJUNTOS"
+			description="JGLOBAL_JOKTEPIEL_ADJUNTOS_DESC"
+			label="JGLOBAL_JOKTEPIEL_ADJUNTOS_LABEL"
+		/>
+		
+		<field 
+			name="p_tabla_contenidos" 
+			type="text"
+			default="_TABLA_CONTENIDOS"
+			description="JGLOBAL_JOKTEPIEL_TABLACONTENIDOS_DESC"
+			label="JGLOBAL_JOKTEPIEL_TABLACONTENIDOS_LABEL"
+		/>
+		
+		<field 
+			name="p_etiquetas" 
+			type="text"
+			default="_ETIQUETAS"
+			description="JGLOBAL_JOKTEPIEL_ETIQUETAS_DESC"
+			label="JGLOBAL_JOKTEPIEL_ETIQUETAS_LABEL"
+		/>
+		
+		<field 
+			name="p_comentarios" 
+			type="text"
+			default="_COMENTARIOS"
+			description="JGLOBAL_JOKTEPIEL_ADJUNTOS_DESC"
+			label="JGLOBAL_JOKTEPIEL_ADJUNTOS_LABEL"
+		/>
+				
+		<field 
+			name="p_plugines_at" 
+			type="text"
+			default="_PLUGINES_ANTES_TEXTO"
+			description="JGLOBAL_JOKTEPIEL_PLUGINESAT_DESC"
+			label="JGLOBAL_JOKTEPIEL_PLUGINESAT_LABEL"
+		/>
+		
+		<field 
+			name="p_plugines_dt" 
+			type="text"
+			default="_PLUGINES_DESPUES_TEXTO"
+			description="JGLOBAL_JOKTEPIEL_PLUGINESDT_DESC"
+			label="JGLOBAL_JOKTEPIEL_PLUGINESDT_LABEL"
+			/>
+		
+		<field
+			name="a-pieles-estilos"
+			type="separador"
+			class="fulltext"
+			fielname="sepia"
+			value="JGLOBAL_SEPARADOR_PIELES_ESTILOS_DESC"
+			default="JGLOBAL_SEPARADOR_PIELES_ESTILOS"
+		/>
+		
+		<field 
+			name="p_fuente" 
+			type="fuentes"
+			default=""
+			description="JGLOBAL_JOKTEPIEL_FUENTES_DESC"
+			label="JGLOBAL_JOKTEPIEL_FUENTES_LABEL"
+			/>
+		
+		<field 
+			name="p_backg-image" 
+			type="media"
+			default=""
+			description="JGLOBAL_JOKTEPIEL_BACKIMG_DESC"
+			label="JGLOBAL_JOKTEPIEL_BACKIMG_LABEL"
+		/>
+		
+		<field 
+			name="p_background" 
+			type="color"
+			default=""
+			description="JGLOBAL_JOKTEPIEL_BACKCOLOR_DESC"
+			label="JGLOBAL_JOKTEPIEL_BACKCOLOR_LABEL"
+		/>
+			
+	</fieldset>
+	
 	<fieldset name="socialnetwork" label="COM_CONTENT_SOCIAL_LAYOUT"
 		description="COM_CONTENT_CONFIG_SOCIAL_LAYOUT">
 		

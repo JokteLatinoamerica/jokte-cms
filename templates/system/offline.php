@@ -21,7 +21,7 @@ $app = JFactory::getApplication();
 <body>
 <jdoc:include type="message" />
 	<div class="joktetop">
-		<a href="http://www.jokte.org" target="_blank" title="Proyecto Jokte!">
+		<a href="http://www.juuntos.net.ar" target="_blank" title="Proyecto Jokte!">
 			<img src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/images/logo.png" alt="<?php echo $app->getCfg('sitename'); ?>" title="<?php echo $app->getCfg('sitename'); ?>" />
 		</a>
 	</div>
@@ -68,7 +68,7 @@ $app = JFactory::getApplication();
 		<img src="<?php echo $this->baseurl.'/templates/'.$this->template.'/images/back-jeyuu.png' ?>" alt="jeyuu" title="Jokte! Jeyuu" />
 	</div>
 	<div class="joktepie">
-		<a href="http://www.juuntos.org" title="Visitar la Comunidad Latinoamericana Juuntos" target="_blank">
+		<a href="https://www.juuntos.net.ar" title="Visitar la Comunidad Latinoamericana Juuntos" target="_blank">
 			<img src="<?php echo $this->baseurl.'/templates/'.$this->template.'/images/juuntos-logo.png' ?>" alt="juuntos-logo" title="Comunidad Juuntos Latioamérica" />
 		</a> 
 	</div>

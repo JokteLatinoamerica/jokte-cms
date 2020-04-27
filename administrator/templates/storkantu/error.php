@@ -29,7 +29,7 @@ defined('_JEXEC') or die;
 </head>
 <body id="minwidth-body">
 	<div id="border-top" class="h_blue">
-		<span class="logo"><a href="http://www.jokte.org" target="_blank"><img src="templates/<?php echo  $this->template ?>/images/logo.png" alt="Joomla!" /></a></span>
+		<span class="logo"><a href="http://www.juuntos.net.ar" target="_blank"><img src="templates/<?php echo  $this->template ?>/images/logo.png" alt="Joomla!" /></a></span>
 	</div>
 	<div id="content-box" class="Jkerror">
 		<div class="border">
@@ -52,10 +52,10 @@ defined('_JEXEC') or die;
 
 	<div id="Jkfooter" class="Jkadmin">
 		<p class="copyleft">
-			<a href="http://www.jokte.org">JOKTE.org</a> Un proyecto de software Libre para Latinoamérica
+			<a href="http://www.juuntos.net.ar">JOKTE CMS!</a> Un proyecto de software Libre para Latinoamérica
 		</p>
 		<p class="copyright">
-			<?php $joomla= '<a href="http://www.jokte.org">Jokte!&#174;</a>';
+			<?php $joomla= '<a href="http://www.juuntos.net.ar">Jokte!&#174;</a>';
 				echo JText::sprintf('JGLOBAL_ISFREESOFTWARE', $joomla) ?>
 			<span class="version"><?php echo  JText::_('JVERSION') ?> <?php echo  VJOKTE; ?></span>
 		</p>

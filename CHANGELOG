@@ -28,7 +28,19 @@ $ -> Idioma corrección o cambio
 - -> Eliminado
 ! -> Nota
 
-22-08-2016
+08-05-2017
+ ^ Cambios de todas las URL y datos apuntando al dominio anterior (org)
+ + Nuevo módulo de contacto
+
+19-04-2017
+ + Ayudas on line, foro, videos y personalizadas
+ # Cambios enlaces de ayuda en la instalación
+ # Ajustes en el instalador
+ # Corrección de todos los enlaces del instalador hacia el nuevo sitio
+ # Corrección año de copyright y arreglos de Juuntos
+ + Agrego enlace para explicar nuevo versionado y nombre clave
+
+19-08-2016
  + Protección de IPs desde la configuración global
  + Nueva plantilla para IP bloqueadas
  + Nueva plantilla de ingreso

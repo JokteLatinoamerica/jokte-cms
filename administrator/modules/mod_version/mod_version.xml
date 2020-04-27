@@ -30,13 +30,13 @@
 				<field
 					name="format"
 					type="list"
-					default="short"
+					default="corta"
 					label="MOD_VERSION_FORMAT_LABEL"
 					description="MOD_VERSION_FORMAT_DESC">
 					<option
-						value="short">MOD_VERSION_FORMAT_SHORT</option>
+						value="corta">MOD_VERSION_FORMAT_SHORT</option>
 					<option
-						value="long">MOD_VERSION_FORMAT_LONG</option>
+						value="larga">MOD_VERSION_FORMAT_LONG</option>
 				</field>
 				<field
 					name="product"

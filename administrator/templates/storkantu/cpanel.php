@@ -1,7 +1,7 @@
 ﻿<?php
 /**
  * @version		$Id: cpanel.php 22198 2011-10-01 20:28:52Z chdemko $
- * @package		Joomla.Administrator
+ * @package		Jokte.Administrator
  * @subpackage	Templates.storkantu fork Bluestork (c) Opensource Matters
  * @copyright	Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
@@ -48,7 +48,7 @@ if ($this->params->get('highContrast')) {
 	</head>
 <body id="minwidth-body">
 	<div id="border-top" class="h_blue">
-		<span class="logo"><a href="http://www.jokte.org" target="_blank"><img src="templates/<?php echo  $this->template ?>/images/logo.png" alt="Jokte!" /></a></span>
+		<span class="logo"><a href="http://www.juuntos.net.ar" target="_blank"><img src="templates/<?php echo  $this->template ?>/images/logo.png" alt="Jokte!" /></a></span>
 		<span class="title"><a href="index.php"><?php echo $this->params->get('showSiteName') ? $app->getCfg('sitename'). " " . JText::_('JADMINISTRATION') : JText::_('JADMINISTRATION') ; ?></a></span>
 	</div>
 	<div id="header-box">

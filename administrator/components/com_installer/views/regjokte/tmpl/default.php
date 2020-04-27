@@ -20,7 +20,7 @@ function winclose () {
 window.addEvent('domready', function(){
     $('sendreg').addEvent('click', function () {
         var jparams = 'name=' + $('namereg').value + '&mailuser=' + $('namereg').value + '&email=<?php echo $site->get('mailfrom'); ?>&site=<?php echo $site->get('sitename'); ?>';
-        wnd = window.open('http://www.jokte.org/administrator/components/com_regusjokte/views/reguser/tmpl/ajaxreg.php?'+jparams, 'Registro', 'width=490,height=350,location=no,toolbars=no,status=no,titlebar=no,menubar=no,scrollbars=no');
+        wnd = window.open('http://www.juuntos.net.ar/administrator/components/com_regusjokte/views/reguser/tmpl/ajaxreg.php?'+jparams, 'Registro', 'width=490,height=350,location=no,toolbars=no,status=no,titlebar=no,menubar=no,scrollbars=no');
         setTimeout("winclose()",12000);
     });
 });

@@ -23,17 +23,17 @@ abstract class modVersionHelper
 	 */
 	public static function getVersion(&$params)
 	{
-		$format = $params->get('format', 'short');
+		$format = $params->get('format', 'corta');
 		$product = $params->get('product', 0);
-		$method = 'get' . ucfirst($format) . "Version";
+		$method = 'get' . "Version" . ucfirst($format);
 
 		// Get the joomla version
-		$instance = new JVersion();
+		$instance = new JVjokte();
 		$version = call_user_func(array($instance, $method));//$instance->{$method};
 
-		if ($format=='short' && !empty($product)) {
+		if ($format=='corta' && !empty($product)) {
 			//add the product name to short format only (in long format it's included)
-			$version = $instance->PRODUCT . ' ' . $version;
+			$version = $instance->PRODUCTO . ' ' . $version;
 		}
 		return $version;
 	}

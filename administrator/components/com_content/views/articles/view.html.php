@@ -7,6 +7,7 @@
  ***************************************************************************************
  * Warning: Some modifications and improved were made by the Community Juuntos for
  * the latinamerican Project Jokte! CMS
+ * Last Modification: 24/08/2016
  ***************************************************************************************
  */
 
@@ -27,8 +28,10 @@ class ContentViewArticles extends JViewLegacy
 
 	/**
 	 * Display the view
-	 *
+     * @param   $tpl = Template
 	 * @return	void
+     * @since: 24/08/2016
+     *
 	 */
 	public function display($tpl = null)
 	{
@@ -76,8 +79,10 @@ class ContentViewArticles extends JViewLegacy
 
 	/**
 	 * Add the page title and toolbar.
-	 *
-	 * @since	1.6
+     * ***********************************************************
+     * Jokte: No more option component in popup
+     * @since	1.4 - Rayen
+     * ***********************************************************
 	 */
 	protected function addToolbar()
 	{
@@ -111,12 +116,5 @@ class ContentViewArticles extends JViewLegacy
 			JToolBarHelper::trash('articles.trash');
 			JToolBarHelper::divider();
 		}
-
-		if ($canDo->get('core.admin')) {			
-			JToolBarHelper::preferences('com_content', JText::_('AYUDA_GENERAL_COM_CONTENT'));
-			JToolBarHelper::divider();
-		}
-
-		JToolBarHelper::help('JHELP_CONTENT_ARTICLE_MANAGER');
 	}
 }

@@ -39,6 +39,8 @@ class ConfigViewApplication extends JViewLegacy
 
 		// Get the params for com_users.
 		$usersParams = JComponentHelper::getParams('com_users');
+        $component    = JComponentHelper::getComponent('com_config');
+        $configParams = JComponentHelper::getParams('com_config');
 
 		// Get the params for com_media.
 		$mediaParams = JComponentHelper::getParams('com_media');
@@ -51,8 +53,10 @@ class ConfigViewApplication extends JViewLegacy
 		$this->assignRef('ftp',		$ftp);
 		$this->assignRef('usersParams', $usersParams);
 		$this->assignRef('mediaParams', $mediaParams);
+        $this->assignRef('configParams', $configParams);
+        $this->assignRef('component',	$component);
 
-		$this->addToolbar();
+		$this->addToolbar($configParams);
 		parent::display($tpl);
 	}
 
@@ -61,14 +65,17 @@ class ConfigViewApplication extends JViewLegacy
 	 *
 	 * @since	1.6
 	 */
-	protected function addToolbar()
+	protected function addToolbar($params)
 	{
 		JToolBarHelper::title(JText::_('COM_CONFIG_GLOBAL_CONFIGURATION'), 'config.png');
 		JToolBarHelper::apply('application.apply');
 		JToolBarHelper::save('application.save');
 		JToolBarHelper::divider();
 		JToolBarHelper::cancel('application.cancel');
-		JToolBarHelper::divider();
-		JToolBarHelper::help('JHELP_SITE_GLOBAL_CONFIGURATION');
+		if ($params->get('ayudas')->a_oficial)
+        {
+            JToolBarHelper::divider();
+            JToolBarHelper::help('JHELP_SITE_GLOBAL_CONFIGURATION');
+        }
 	}
 }

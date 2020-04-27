@@ -12,7 +12,7 @@ jimport('joomla.form.formfield');
 class JFormFieldSeparador extends JFormField
 {
 	/**
-	 * Element name	
+	 * Element name
 	 * @access	protected
 	 * @var		string
 	 */
@@ -41,7 +41,7 @@ class JFormFieldSeparador extends JFormField
 		// Ruta para skins
 		$rute 		= '../media/separadores/';
 		$urlback	= $rute.'back-tit-'.$color.'.png';
-		
+        
 		// Ruta logo 
 		$urllogo	= '../images/'.$logo;
 		
@@ -50,20 +50,27 @@ class JFormFieldSeparador extends JFormField
 		switch ($class->data($class))
 		{
 			case "textdesc":
-				$html .='<p class="separador-textdesc">'.JText::_($value).'</p>';
+				$html .='<div class="separador-main"><p class="separador-textdesc">'.JText::_($value).'</p></div>';
 				break;
 			case "title":
-				$html .='<p class="separador-title" style="background: url("'.$urlback.'")repeat-x;">'.JText::_($title).'</p>';
+				$html .='<div class="separador-main"><p class="separador-title" style="background: url("'.$urlback.'")repeat-x;">'.JText::_($title).'</p></div>';
 				break;
 			case "fulltext":
-				$html .='<p class="separador-full-title" style="background: url('.$urlback.') repeat-x;">.: '.JText::_($title).' :.</p>';
-				$html .='<p class="separador-full-textdesc">'.JText::_($value).'</p>';
+                if ($logo) {
+                    $html .='<div class="separador-main" style="height:100px">';
+                    $html .='<img src="'.$urllogo.'" with="100px" style="float:left" alt="'.JText::_($title).'" title="'.JText::_($title).'" />';
+                    $html .='<p class="separador-full-title">.: '.JText::_($title).' :.</p>';
+                    $html .='<p class="separador-full-textdesc">'.JText::_($value).'</p></div>';                
+                }else{
+                    $html .='<div class="separador-main"><p class="separador-full-title">.: '.JText::_($title).' :.</p>';
+                    $html .='<p class="separador-full-textdesc">'.JText::_($value).'</p></div>';
+                }
 				break;
 			case "about":
-				$html .='<p class="separador-about">';
-				$html .='<img src="'.$urllogo.'" alt="" title="Jokte! Extension" class="separador-img" />';
+				$html .='<div class="separador-main"><p class="separador-about">';
+				$html .='<img src="'.$urllogo.'" alt="extension-logo" title="Jokte! Extension" class="separador-img" />';
 				$html .= JText::_($leyend);
-				$html .='</p>';
+				$html .='</p></div>';
 		}		
 		return $html;
 	}

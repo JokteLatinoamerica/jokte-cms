@@ -1,7 +1,7 @@
 <?php
 /**
  * @version		Hilos Juuntos v1 - 11:54 martes, 14 de febrero de 2014
- * @copyleft	por Miguel Tuyaré para la Comunidad Juuntos.org
+ * @copyleft	Comunidad Juuntos
  * @licencia	GNU General Public License version 2 or later; see LICENSE.txt
  */
 defined('_JEXEC') or die;

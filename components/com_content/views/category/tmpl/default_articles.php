@@ -14,7 +14,7 @@ JHtml::_('behavior.tooltip');
 JHtml::_('behavior.framework');
 
 // Create some shortcuts.
-$params		= &$this->item->params;
+$params		= &$this->params;
 $n			= count($this->items);
 $listOrder	= $this->escape($this->state->get('list.ordering'));
 $listDirn	= $this->escape($this->state->get('list.direction'));

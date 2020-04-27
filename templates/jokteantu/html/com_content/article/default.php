@@ -1,5 +1,5 @@
 <?php
-/**	
+/**
  * @package     Jokte.Site
  * @subpackage	jokteantu
  * @author 	    Equipo de desarrollo juuntos.
@@ -24,15 +24,15 @@ $user		= JFactory::getUser();
 	</h1>
 <?php endif; ?>
 
-<?php 
-// Nuevo Jokte v1.2.2 
+<?php
+// Nuevo Jokte v1.2.2
 if ($params->get('show_copete')) :
 	if (in_array('article', $params->get('show_copete_view'))) :
 		if ($this->item->copete != Null): ?>
 		<h4><?php echo $this->item->copete; ?></h4>
-	<?php 
-		endif; 
-	endif; 
+	<?php
+		endif;
+	endif;
 endif;
 ?>
 
@@ -60,15 +60,15 @@ endif;
 	</h2>
 <?php endif; ?>
 
-<?php 
+<?php
 	// Nuevo Jokte v1.2.2
-	if ($params->get('show_subtitle')) : 
+	if ($params->get('show_subtitle')) :
 		if (in_array('article', $params->get('show_subtitle_view'))) :
 		?>
 		<div class="subtitulos">
 			<h3><?php echo $this->escape($this->item->subtitle); ?></h3>
-		</div>	
-<?php 	endif; 
+		</div>
+<?php 	endif;
 	endif;
 ?>
 
@@ -102,11 +102,12 @@ endif;
 	</ul>
 <?php endif; ?>
 
-<?php 
-	if (in_array('article', $params->get('show_socialbuttons'))) :
-		if ($params->get('position_socialbuttons') == 'top') : ?>
-		<?php echo $this->loadTemplate('social'); ?>
-<?php endif; 
+<?php
+	if (!is_null($params->get('show_socialbuttons')))
+		if (in_array('article', $params->get('show_socialbuttons'))) :
+			if ($params->get('position_socialbuttons') == 'top') : ?>
+				<?php echo $this->loadTemplate('social'); ?>
+<?php endif;
 	endif;
 ?>
 
@@ -187,30 +188,32 @@ endif; ?>
 	<?php echo $this->item->toc; ?>
 <?php endif; ?>
 <?php if ($params->get('access-view')):?>
-	<?php	
-	if ($params->get('show_avatar') <> '0') :
-	  if (in_array('article', $params->get('show_avatar_view'))) :
-		echo JHtml::_('utiles.avatar',$this->item, $params); 
-	  endif; 
-	endif;
+	<?php
+	if (!is_null($params->get('show_avatar')))
+		if ($params->get('show_avatar') <> '0') :
+	  	if (in_array('article', $params->get('show_avatar_view'))) :
+				echo JHtml::_('utiles.avatar',$this->item, $params);
+	  	endif;
+		endif;
 	?>
 	<?php echo $this->item->text; ?>
-	
-	<?php 
+
+	<?php
 	// Nuevo Jokte v1.2.2
-	if (in_array('article', $params->get('show_socialbuttons'))) :
-		if ($params->get('position_socialbuttons') == 'bottom') : 
-			echo $this->loadTemplate('social');
-		endif; 
-	endif;
+	if (!is_null($params->get('show_socialbuttons'))) 
+		if (in_array('article', $params->get('show_socialbuttons'))) :
+			if ($params->get('position_socialbuttons') == 'bottom') :
+				echo $this->loadTemplate('social');
+			endif;
+		endif;
 	?>
-	
+
 	<?php // Nuevo Jokte v1.2.2 ?>
 	<?php if ($this->item->params->get('show_attachments') == '1') : ?>
 		<?php if(isset($this->item->attachments) AND (!empty($this->item->attachments))) : ?>
-			<?php  
+			<?php
 				// Cargo los archivos
-				$files = json_decode($this->item->attachments);				
+				$files = json_decode($this->item->attachments);
 			?>
 				<div id="attachments">
 					<table class="table">
@@ -224,7 +227,7 @@ endif; ?>
 						<tbody>
 							<?php
 							$xf = 0;
-							foreach ($files as $file) : 
+							foreach ($files as $file) :
 								if (!empty($file) || $file != "") :
 									// Extraigo el el nombre de archivo
 									$fileName = JFile::getName($file);
@@ -237,11 +240,11 @@ endif; ?>
 								<td><?php echo $fileName ?></td>
 								<td style="text-align:center">
 									<?php if ($this->item->params->get('attachments_antileech') == '1') : ?>
-										<a href="<?php echo JRoute::_('index.php?task=download&filename='. $fileName) ?>" 
+										<a href="<?php echo JRoute::_('index.php?task=download&filename='. $fileName) ?>"
 											title="<?php echo JText::_('CLICK HERE TO DOWNLOADS');?>">
 											<?php echo JHtml::_('image', 'media/mime-icon-16/'.$fileExtension.'.png', JText::sprintf('COM_MEDIA_IMAGE_TITLE', $fileName), array('height' => 16, 'width' => 16), true); ?>
 										</a>
-												
+
 									<?php else: ?>
 										<a class="btn btn-small" href="<?php echo $file ?>">
 											<?php echo JHtml::_('image', 'media/mime-icon-16/'.$fileExtension.'.png', JText::sprintf('COM_MEDIA_IMAGE_TITLE', $fileName), array('height' => 16, 'width' => 16), true); ?>
@@ -251,16 +254,16 @@ endif; ?>
 								<td>
 									<?php echo $size.' Kb'; ?></a>
 								</td>
-							</tr> 
-							<?php 
+							</tr>
+							<?php
 								endif;
 								$xf = 1;
-							endforeach; ?> 
+							endforeach; ?>
 						</tbody>
 					</table>
 				</div>
-			<?php endif; ?> 
-	<?php endif; ?>  
+			<?php endif; ?>
+	<?php endif; ?>
 	<br />
 	<?php //optional teaser intro text for guests ?>
 <?php elseif ($params->get('show_noauth') == true and  $user->get('guest') ) : ?>
@@ -292,21 +295,21 @@ endif; ?>
 <?php echo $this->item->event->afterDisplayContent; ?>
 </div>
 <?php // Nuevo Jokte v1.2.2 ?>
-<?php 
-	if ($params->get('show_simpletags')) : 
-		if (in_array('article', $params->get('show_simpletags_view'))) :		
+<?php
+	if ($params->get('show_simpletags')) :
+		if (in_array('article', $params->get('show_simpletags_view'))) :
 		$tags = JHtml::_('utiles.simpletags', $this->item->metakey);
 		?>
 		<div class="etiquetas">
-			<span class="tagslabel"><?php echo JText::_('COM_CONTENT_LABEL_TAGS').': '; ?></span> 
+			<span class="tagslabel"><?php echo JText::_('COM_CONTENT_LABEL_TAGS').': '; ?></span>
 			<?php foreach ($tags as $etiqueta): ?>
 				<span class="tag"><?php echo $etiqueta; ?></span>
-			<?php endforeach; ?>	
+			<?php endforeach; ?>
 		</div>
 		<br />
 <?php 	endif;
-	endif; 
-if ($params->get('show_disqus')) : 
+	endif;
+if ($params->get('show_disqus')) :
 	echo JHtml::_('utiles.disqus', $this->item,$params);
 endif;
 ?>

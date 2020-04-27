@@ -79,9 +79,14 @@ $this->document->setBuffer($this->loadTemplate('navigation'), 'modules', 'submen
 			<div class="noshow">
 				<?php echo $this->loadTemplate('filters'); ?>
 			</div>
-		</div>
+		</div>                                           
+        <div id="page-ayuda" class="tab">
+			<div class="noshow">
+				<?php echo $this->loadTemplate('ayuda'); ?>
+			</div>
+		</div>                                           
 		<input type="hidden" name="task" value="" />
-		<?php echo JHtml::_('form.token'); ?>
+		<?php echo JHtml::_('form.token'); ?>                
 	</div>
 	<div class="clr"></div>
 </form>

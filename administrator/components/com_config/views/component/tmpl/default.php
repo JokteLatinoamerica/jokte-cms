@@ -2,7 +2,7 @@
 /**
  * @package		Joomla.Administrator
  * @subpackage	com_config
- * @copyright	Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
+ * @copyright	Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -37,9 +37,7 @@ JHtml::_('behavior.formvalidation');
 			<?php echo JText::_($this->component->option.'_configuration') ?>
 		</div>
 	</fieldset>
-	<?php if ($this->ayuda) : ?>
-		<div class="ayudaConfig"><?php echo base64_decode($this->ayuda); ?></div>
-	<?php endif;?>
+
 	<?php
 	echo JHtml::_('tabs.start', 'config-tabs-'.$this->component->option.'_configuration', array('useCookie'=>1));
 		$fieldSets = $this->form->getFieldsets();

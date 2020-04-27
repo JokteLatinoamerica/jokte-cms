@@ -339,7 +339,9 @@ class JRegistry
 			}
 
 			// Get the old value if exists so we can return it
-			$result = $node->$nodes[$i] = $value;
+			// Corregido compatibilidad PHP 7.4
+			$result = $node->{$nodes[$i]} = $value;
+
 		}
 
 		return $result;

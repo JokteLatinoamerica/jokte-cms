@@ -60,7 +60,7 @@ class JDocument extends JObject
 	 * @var    string
 	 * @since  11.1
 	 */
-	public $language = 'en-gb';
+	public $language = 'es-LA';
 
 	/**
 	 * Contains the document direction setting

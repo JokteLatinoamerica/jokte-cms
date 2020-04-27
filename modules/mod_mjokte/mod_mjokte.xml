@@ -2,12 +2,12 @@
 <!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/module-install.dtd">
 <install type="module" version="1.0" client="site">
 	<name>JOKTE! Anuncio </name>
-	<author>Juuntos.org</author>
+	<author>Comunidad Juuntos</author>
 	<creationDate>Marzo 2013</creationDate>
-	<copyright>Copyleft 2013. El único derecho reservado es el derecho a ejercer nuestra libertad.</copyright>
+	<copyright>Copyleft 2013 - 2017. El único derecho reservado es el derecho a ejercer nuestra libertad.</copyright>
 	<license>GPL</license>
-	<authorEmail>info@juuntos.org</authorEmail>
-	<authorUrl>www.juuntos.org</authorUrl>
+	<authorEmail>info@juuntos.net.ar</authorEmail>
+	<authorUrl>www.juuntos.net.ar</authorUrl>
 	<version>1.0</version>
 	<description>Muestra un pequeño banner y enlace a JOKTE! CMS</description>
 	<files>

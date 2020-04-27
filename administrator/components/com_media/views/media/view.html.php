@@ -110,6 +110,7 @@ class MediaViewMedia extends JViewLegacy
 		if ($user->authorise('core.admin', 'com_media'))
 		{
 			JToolBarHelper::preferences('com_media', 450, 800, 'JToolbar_Options', '', 'window.location.reload()');
+            // public static function preferences($component, $ayuda = '', $height = '550', $width = '875', $alt = 'JToolbar_Options', $path = '', $onClose = '')
 			JToolBarHelper::divider();
 		}
 		JToolBarHelper::help('JHELP_CONTENT_MEDIA_MANAGER');

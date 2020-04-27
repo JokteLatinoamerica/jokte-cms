@@ -2,7 +2,7 @@
 <form>
 	<fieldset addfieldpath="/administrator/components/com_categories/models/fields">
 		<field name="id"
-			type="text"
+			type="contact"
 			label="JGLOBAL_FIELD_ID_LABEL"
 			description="JGLOBAL_FIELD_ID_DESC"
 			size="10"

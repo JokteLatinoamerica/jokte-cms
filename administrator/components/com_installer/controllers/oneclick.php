@@ -194,7 +194,7 @@ class InstallerControllerOneClick extends JControllerAdmin
         // Find updates
         // Check for request forgeries
         JRequest::checkToken() or jexit(JText::_('JINVALID_TOKEN'));
-        $model = $this->getModel('install');
+        $model = $this->getModel('oneclick');
         $model->purge();
         $result = $model->findUpdates();
 
@@ -203,6 +203,7 @@ class InstallerControllerOneClick extends JControllerAdmin
         $db = JFactory::getDBO();
         $updates = $model->getUpdates();
         $extensions = $model->getExtensions();
+        dump($extensions);
         $installed = array();
         foreach ($updates as $update) {
             if ($update->extension_id)

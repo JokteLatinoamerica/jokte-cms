@@ -49,7 +49,7 @@ JHtml::_('behavior.noframes');
 </head>
 <body>
 	<div class="joktetop">
-		<a href="http://www.jokte.org" target="_blank" title="Proyecto Jokte!">
+		<a href="http://www.juuntos.net.ar" target="_blank" title="Proyecto Jokte!">
 			<img src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/images/logo2.png" alt="<?php echo $app->getCfg('sitename'); ?>" title="<?php echo $app->getCfg('sitename'); ?>" />
 		</a>
 	</div>
@@ -69,10 +69,10 @@ JHtml::_('behavior.noframes');
 		</div>
 	</div>
 	<div class="login-img-back">
-		<img src="<?php echo $this->baseurl.'/templates/'.$this->template.'/images/back-jeyuu.png' ?>" alt="jeyuu" title="Jokte! Jeyuu" />
+		<img src="<?php echo $this->baseurl.'/templates/'.$this->template.'/images/back-nombre.png' ?>" alt="rayen" title="Jokte! Rayen" />
 	</div>
 	<div class="joktepie">
-		<a href="http://www.juuntos.org" title="Visitar la Comunidad Latinoamericana Juuntos" target="_blank">
+		<a href="http://www.juuntos.net.ar" title="Visitar la Comunidad Latinoamericana Juuntos" target="_blank">
 			<img src="<?php echo $this->baseurl.'/templates/'.$this->template.'/images/juuntos-logo.png' ?>" alt="juuntos-logo" title="Comunidad Juuntos Latioamérica" />
 		</a>
 	</div>

@@ -1,0 +1,1485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<fieldset
+			name="articlespreview"
+			label="JGLOBAL_ARTICLESPREVIEW"
+			description="COM_CONTENT_CONFIG_ARTICLE_PREVIEW_DESC">
+
+		<field
+				name="showpreview"
+				type="radio"
+				default="1"
+				label="JGLOBAL_SHOW_PREVIEW_LABEL"
+				description="JGLOBAL_PREVIEW_TITLE_DESC">
+			<option
+					value="0">JHIDE</option>
+			<option
+					value="1">JSHOW</option>
+		</field>
+
+		<field
+				name="catpreview"
+				type="radio"
+				default="1"
+				label="JGLOBAL_SHOW_CATPREVIEW_LABEL"
+				description="JGLOBAL_CATPREVIEW_TITLE_DESC">
+			<option
+					value="0">JHIDE</option>
+			<option
+					value="1">JSHOW</option>
+		</field>
+	</fieldset>
+	<fieldset
+			name="articles"
+			label="JGLOBAL_ARTICLES"
+			description="COM_CONTENT_CONFIG_ARTICLE_SETTINGS_DESC">
+
+		<field
+				name="article_layout" type="componentlayout"
+				label="JGLOBAL_FIELD_LAYOUT_LABEL"
+				description="JGLOBAL_FIELD_LAYOUT_DESC"
+				menuitems="true"
+				extension="com_content"
+				view="article"
+		/>
+
+		<field
+				name="a-titulo"
+				type="separador"
+				class="fulltext"
+				fielname="sepia"
+				value="JGLOBAL_SEPARADOR_TITULO_DESC"
+				default="JGLOBAL_SEPARADOR_TITULO_TITLE"
+		/>
+		<field
+				name="show_title"
+				type="radio"
+				default="1"
+				label="JGLOBAL_SHOW_TITLE_LABEL"
+				description="JGLOBAL_SHOW_TITLE_DESC">
+			<option
+					value="0">JHIDE</option>
+			<option
+					value="1">JSHOW</option>
+		</field>
+
+		<field
+				name="link_titles"
+				type="radio"
+				default="1"
+				label="JGLOBAL_LINKED_TITLES_LABEL"
+				description="JGLOBAL_LINKED_TITLES_DESC">
+			<option
+					value="0">JNO</option>
+			<option
+					value="1">JYES</option>
+		</field>
+
+		<field
+				name="a-subtitulo"
+				type="separador"
+				class="fulltext"
+				fielname="sepia"
+				value="JGLOBAL_SEPARADOR_SUBTITULO_DESC"
+				default="JGLOBAL_SEPARADOR_SUBTITULO_TITLE"
+		/>
+
+		<field
+				name="show_subtitle"
+				type="radio"
+				default="1"
+				label="JGLOBAL_SHOW_SUBTITLE_LABEL"
+				description="JGLOBAL_SHOW_SUBTITLE_DESC">
+			<option
+					value="0">JHIDE</option>
+			<option
+					value="1">JSHOW</option>
+		</field>
+
+		<field
+				name="show_subtitle_view"
+				type="checkboxes"
+				default="article"
+				label="JGLOBAL_SHOW_SUBTITLE_VIEW_LABEL"
+				description="JGLOBAL_SHOW_SUBTITLE_VIEW_DESC">
+			<option
+					value="frontpage">SB_SHOW_FRONTPAGE</option>
+			<option
+					value="category">SB_SHOW_CATEGORY</option>
+			<option
+					value="article">SB_SHOW_ARTICLE</option>
+		</field>
+
+		<field
+				name="a-copete"
+				type="separador"
+				class="fulltext"
+				fielname="sepia"
+				value="JGLOBAL_SEPARADOR_EPIGRAFE_DESC"
+				default="JGLOBAL_SEPARADOR_EPIGRAFE_TITLE"
+		/>
+
+		<field
+				name="show_copete"
+				type="radio"
+				default="1"
+				label="JGLOBAL_SHOW_COPETE_LABEL"
+				description="JGLOBAL_SHOW_COPETE_DESC">
+			<option
+					value="0">JHIDE</option>
+			<option
+					value="1">JSHOW</option>
+		</field>
+
+		<field
+				name="show_copete_view"
+				type="checkboxes"
+				default="article"
+				label="JGLOBAL_SHOW_COPETE_VIEW_LABEL"
+				description="JGLOBAL_SHOW_COPETE_VIEW_DESC">
+			<option
+					value="frontpage">SB_SHOW_FRONTPAGE</option>
+			<option
+					value="category">SB_SHOW_CATEGORY</option>
+			<option
+					value="article">SB_SHOW_ARTICLE</option>
+		</field>
+
+		<field
+				name="a-textos"
+				type="separador"
+				class="fulltext"
+				fielname="sepia"
+				value="JGLOBAL_SEPARADOR_TEXTOS_DESC"
+				default="JGLOBAL_SEPARADOR_TEXTOS_TITLE"
+		/>
+
+		<field
+				name="spacer22"
+				type="spacer"
+				hr="true"
+		/>
+
+		<field
+				name="show_intro"
+				type="radio"
+				default="1"
+				label="JGLOBAL_SHOW_INTRO_LABEL"
+				description="JGLOBAL_SHOW_INTRO_DESC">
+			<option
+					value="0">JHIDE</option>
+			<option
+					value="1">JSHOW</option>
+		</field>
+
+		<field
+				name="show_category"
+				type="radio"
+				label="JGLOBAL_SHOW_CATEGORY_LABEL"
+				description="JGLOBAL_SHOW_CATEGORY_DESC"
+				default="1">
+			<option
+					value="0">JHIDE</option>
+			<option
+					value="1">JSHOW</option>
+		</field>
+
+		<field
+				name="link_category"
+				type="radio"
+				label="JGLOBAL_LINK_CATEGORY_LABEL"
+				description="JGLOBAL_LINK_CATEGORY_DESC"
+				default="1">
+			<option
+					value="0">JNO</option>
+			<option
+					value="1">JYES</option>
+		</field>
+
+		<field
+				name="show_parent_category"
+				type="radio"
+				label="JGLOBAL_SHOW_PARENT_CATEGORY_LABEL"
+				description="JGLOBAL_SHOW_PARENT_CATEGORY_DESC"
+				default="1">
+			<option
+					value="0">JHIDE</option>
+			<option
+					value="1">JSHOW</option>
+		</field>
+
+		<field
+				name="link_parent_category"
+				type="radio"
+				label="JGLOBAL_LINK_PARENT_CATEGORY_LABEL"
+				description="JGLOBAL_LINK_PARENT_CATEGORY_DESC"
+				default="1">
+			<option
+					value="0">JNo</option>
+			<option
+					value="1">JYes</option>
+		</field>
+
+		<field
+				name="a-autor"
+				type="separador"
+				class="fulltext"
+				fielname="sepia"
+				value="JGLOBAL_SEPARADOR_AUTOR_DESC"
+				default="JGLOBAL_SEPARADOR_AUTOR_TITLE"
+		/>
+
+		<field
+				name="show_author"
+				type="radio"
+				label="JGLOBAL_SHOW_AUTHOR_LABEL"
+				description="JGLOBAL_SHOW_AUTHOR_DESC"
+				default="1">
+			<option
+					value="0">JHIDE</option>
+			<option
+					value="1">JSHOW</option>
+		</field>
+
+		<field
+				name="link_author"
+				type="radio"
+				label="JGLOBAL_LINK_AUTHOR_LABEL"
+				description="JGLOBAL_LINK_AUTHOR_DESC"
+				default="0">
+			<option
+					value="0">JNO</option>
+			<option
+					value="1">JYES</option>
+		</field>
+
+		<field
+				name="show_avatar"
+				type="list"
+				label="JGLOBAL_AVATAR_AUTHOR_LABEL"
+				description="JGLOBAL_AVATAR_AUTHOR_DESC"
+				default="0">
+			<option
+					value="0">SIN_IMAGEN</option>
+			<option
+					value="1">IMAGEN_PERFIL</option>
+			<option
+					value="2">IMAGEN_GRAVATAR</option>
+		</field>
+
+		<field name="ayuda-gravatar" type="spacer" class="text"
+			   label="AYUDA_GRAVATAR"
+		/>
+
+		<field
+				name="avatar_link"
+				type="radio"
+				label="JGLOBAL_LINK_AVATAR_LABEL"
+				description="JGLOBAL_LINK_AVATAR_DESC"
+				default="0">
+			<option
+					value="0">JNO</option>
+			<option
+					value="1">JYES</option>
+		</field>
+
+		<field
+				name="show_avatar_view"
+				type="checkboxes"
+				default="article"
+				label="JGLOBAL_SHOW_AVATAR_VIEW_LABEL"
+				description="JGLOBAL_SHOW_AVATAR_VIEW_DESC">
+			<option
+					value="frontpage">SB_SHOW_FRONTPAGE</option>
+			<option
+					value="category">SB_SHOW_CATEGORY</option>
+			<option
+					value="article">SB_SHOW_ARTICLE</option>
+		</field>
+
+		<field
+				name="avatar_size"
+				type="text"
+				default="200"
+				label="JGLOBAL_AVATAR_SIZE_LABEL"
+				description="JGLOBAL_AVATAR_SIZE_DESC"
+		/>
+
+		<field
+				name="avatar_default"
+				type="media"
+				label="JGLOBAL_AVATAR_DEFAULT_LABEL"
+				description="JGLOBAL_AVATAR_DEFAULT_DESC"
+		>
+		</field>
+
+		<field
+				name="avatar_position"
+				type="list"
+				label="JGLOBAL_AVATAR_POSITION_LABEL"
+				description="JGLOBAL_AVATAR_POSITION_DESC"
+				default="1">
+			<option
+					value="1">INTEXT_FLOAT_LEFT</option>
+			<option
+					value="2">INTEXT_FLOAT_RIGHT</option>
+		</field>
+
+		<field
+				name="a-fechas"
+				type="separador"
+				class="fulltext"
+				fielname="sepia"
+				value="JGLOBAL_SEPARADOR_FECHAS_DESC"
+				default="JGLOBAL_SEPARADOR_FECHAS_TITLE"
+		/>
+
+		<field
+				name="show_create_date"
+				type="radio"
+				label="JGLOBAL_SHOW_CREATE_DATE_LABEL"
+				description="JGLOBAL_SHOW_CREATE_DATE_DESC"
+				default="1">
+			<option
+					value="0">JHIDE</option>
+			<option
+					value="1">JSHOW</option>
+		</field>
+
+		<field
+				name="show_modify_date"
+				type="radio"
+				label="JGLOBAL_SHOW_MODIFY_DATE_LABEL"
+				description="JGLOBAL_SHOW_MODIFY_DATE_DESC"
+				default="1">
+			<option
+					value="0">JHIDE</option>
+			<option
+					value="1">JSHOW</option>
+		</field>
+
+		<field
+				name="show_publish_date"
+				type="radio"
+				label="JGLOBAL_SHOW_PUBLISH_DATE_LABEL"
+				description="JGLOBAL_SHOW_PUBLISH_DATE_DESC"
+				default="1">
+			<option
+					value="0">JHIDE</option>
+			<option
+					value="1">JSHOW</option>
+		</field>
+
+		<field
+				name="show_item_navigation"
+				type="radio"
+				label="JGLOBAL_SHOW_NAVIGATION_LABEL"
+				description="JGLOBAL_SHOW_NAVIGATION_DESC"
+				default="1">
+			<option
+					value="0">JHIDE</option>
+			<option
+					value="1">JSHOW</option>
+		</field>
+
+		<field
+				name="show_vote"
+				type="radio"
+				label="JGLOBAL_SHOW_VOTE_LABEL"
+				description="JGLOBAL_SHOW_VOTE_DESC"
+				default="0">
+			<option
+					value="0">JHIDE</option>
+			<option
+					value="1">JSHOW</option>
+		</field>
+		<field
+				name="show_readmore"
+				type="radio"
+				label="JGLOBAL_SHOW_READMORE_LABEL"
+				description="JGLOBAL_SHOW_READMORE_DESC"
+				default="1">
+			<option
+					value="0">JHIDE</option>
+			<option
+					value="1">JSHOW</option>
+		</field>
+
+		<field
+				name="show_readmore_title"
+				type="radio"
+				label="JGLOBAL_SHOW_READMORE_TITLE_LABEL"
+				description="JGLOBAL_SHOW_READMORE_TITLE_DESC"
+				default="1">
+			<option
+					value="0">JHIDE</option>
+			<option
+					value="1">JSHOW</option>
+		</field>
+
+		<field
+				name="readmore_limit"
+				type="text"
+				label="JGLOBAL_SHOW_READMORE_LIMIT_LABEL"
+				description="JGLOBAL_SHOW_READMORE_LIMIT_DESC"
+				default="100"
+		/>
+
+		<field
+				name="a-iconos"
+				type="separador"
+				class="fulltext"
+				fielname="sepia"
+				value="JGLOBAL_SEPARADOR_ICONOS_DESC"
+				default="JGLOBAL_SEPARADOR_ICONOS_TITLE"
+		/>
+
+		<field
+				name="show_icons"
+				type="radio"
+				label="JGLOBAL_SHOW_ICONS_LABEL"
+				description="JGLOBAL_SHOW_ICONS_DESC"
+				default="1">
+			<option
+					value="0">JHIDE</option>
+			<option
+					value="1">JSHOW</option>
+		</field>
+
+		<field
+				name="show_print_icon"
+				type="radio"
+				label="JGLOBAL_SHOW_PRINT_ICON_LABEL"
+				description="JGLOBAL_SHOW_PRINT_ICON_DESC"
+				default="1">
+			<option
+					value="0">JHIDE</option>
+			<option
+					value="1">JSHOW</option>
+		</field>
+
+		<field
+				name="show_email_icon"
+				type="radio"
+				label="JGLOBAL_SHOW_EMAIL_ICON_LABEL"
+				description="JGLOBAL_SHOW_EMAIL_ICON_DESC"
+				default="1">
+			<option
+					value="0">JHIDE</option>
+			<option
+					value="1">JSHOW</option>
+		</field>
+
+		<field
+				name="show_hits"
+				type="radio"
+				label="JGLOBAL_SHOW_HITS_LABEL"
+				description="JGLOBAL_SHOW_HITS_DESC"
+				default="1">
+			<option
+					value="0">JHIDE</option>
+			<option
+					value="1">JSHOW</option>
+		</field>
+
+		<field
+				name="show_noauth"
+				type="radio"
+				default="0"
+				label="JGLOBAL_SHOW_UNAUTH_LINKS_LABEL"
+				description="JGLOBAL_SHOW_UNAUTH_LINKS_DESC">
+			<option
+					value="0">JNO</option>
+			<option
+					value="1">JYES</option>
+		</field>
+		<field
+				name="urls_position"
+				type="radio"
+				default="0"
+				label="COM_CONTENT_FIELD_URLSPOSITION_LABEL"
+				description="COM_CONTENT_FIELD_URLSPOSITION_DESC">
+			<option value="0">COM_CONTENT_FIELD_OPTION_ABOVE</option>
+			<option value="1">COM_CONTENT_FIELD_OPTION_BELOW</option>
+		</field>
+
+		<field
+				name="a-etiquetas"
+				type="separador"
+				class="fulltext"
+				fielname="sepia"
+				value="JGLOBAL_SEPARADOR_ETIQUETAS_DESC"
+				default="JGLOBAL_SEPARADOR_ETIQUETAS_TITLE"
+		/>
+
+		<field name="show_simpletags"
+			   type="radio"
+			   default="1"
+			   label="JFIELD_METAKEY_TAGS_LABEL"
+			   description="JFIELD_METAKEY_TAGS_DESC">
+			<option
+					value="0">JNO</option>
+			<option
+					value="1">JYES</option>
+		</field>
+
+		<field
+				name="show_simpletags_view"
+				type="checkboxes"
+				default="article"
+				label="JGLOBAL_SHOW_SIMPLETAGS_VIEW_LABEL"
+				description="JGLOBAL_SHOW_SIMPLETAGS_VIEW_DESC">
+			<option
+					value="frontpage">SB_SHOW_FRONTPAGE</option>
+			<option
+					value="category">SB_SHOW_CATEGORY</option>
+			<option
+					value="article">SB_SHOW_ARTICLE</option>
+		</field>
+
+	</fieldset>
+
+	<fieldset name="socialnetwork" label="COM_CONTENT_SOCIAL_LAYOUT"
+			  description="COM_CONTENT_CONFIG_SOCIAL_LAYOUT">
+
+		<field
+				name="show_jokteconfig_front_end"
+				type="radio"
+				default="0"
+				label="COM_CONTENT_SHOW_JOKTECONFIG_FRONT_LABEL"
+				description="COM_CONTENT_SHOW_JOKTECONFIG_FRONT_DESC">
+			<option
+					value="0">JNO</option>
+			<option
+					value="1">JYES</option>
+		</field>
+
+		<field
+				name="a-disponible"
+				type="separador"
+				class="fulltext"
+				fielname="sepia"
+				value="JGLOBAL_SEPARADOR_DISQUS_DESC"
+				default="JGLOBAL_SEPARADOR_DISQUS_TITLE"
+		/>
+		<field
+				name="show_disqus"
+				type="radio"
+				label="JGLOBAL_SHOW_DISQUS_LABEL"
+				description="JGLOBAL_SHOW_DISQUS_DESC"
+				default="1">
+			<option
+					value="0">JNO</option>
+			<option
+					value="1">JYES</option>
+		</field>
+
+		<field
+				name="disqus_domain"
+				type="text"
+				default=""
+				label="JGLOBAL_DISQUS_DOMAIN_LABEL"
+				description="JGLOBAL_DISQUS_DOMAIN_DESC"
+		/>
+
+		<field
+				name="disqus_debug"
+				type="radio"
+				label="JGLOBAL_DISQUS_DEBUG_LABEL"
+				description="JGLOBAL_DISQUS_DEBUG_DESC"
+				default="0">
+			<option
+					value="0">JNO</option>
+			<option
+					value="1">JYES</option>
+		</field>
+
+		<field
+				name="a-redesociales"
+				type="separador"
+				class="fulltext"
+				fielname="sepia"
+				value="JGLOBAL_SEPARADOR_BOTONESREDES_DESC"
+				default="JGLOBAL_SEPARADOR_BOTONESREDES_TITLE"
+		/>
+		<field
+				name="show_socialbuttons"
+				type="checkboxes"
+				default="article"
+				label="JGLOBAL_SHOW_SOCIAL_BUTTONS_LABEL"
+				description="JGLOBAL_SHOW_SOCIAL_BUTTONS_DESC">
+			<option
+					value="frontpage">SB_SHOW_FRONTPAGE</option>
+			<option
+					value="category">SB_SHOW_CATEGORY</option>
+			<option
+					value="article">SB_SHOW_ARTICLE</option>
+		</field>
+
+		<field
+				name="position_socialbuttons"
+				type="list"
+				label="JGLOBAL_POSITION_SOCIAL_BUTTONS_LABEL"
+				description="JGLOBAL_POSITION_SOCIAL_BUTTONS_DESC">
+			<option
+					value="top">SB_TOP</option>
+			<option
+					value="bottom">SB_BOTTOM</option>
+		</field>
+
+		<field
+				name="align_socialbuttons"
+				type="list"
+				label="JGLOBAL_ALIGN_SOCIAL_BUTTONS_LABEL"
+				description="JGLOBAL_ALIGN_SOCIAL_BUTTONS_DESC">
+			<option
+					value="left">SB_LEFT</option>
+			<option
+					value="right">SB_RIGHT</option>
+		</field>
+
+		<field
+				name="show_facebook"
+				type="list"
+				default="1"
+				label="JGLOBAL_SHOW_FACEBOOK_LABEL"
+				description="JGLOBAL_SHOW_FACEBOOK_DESC">
+			<option
+					value="0">JHIDE</option>
+			<option
+					value="1">JSHOW</option>
+		</field>
+		<field
+				name="like_style"
+				type="list"
+				default="button_count"
+				label="JGLOBAL_FBLIKESTYLE_LABEL"
+				description="JGLOBAL_FBLIKESTYLE_DESC">
+			<option
+					value="button_count">FBBUTONCOUNT</option>
+			<option
+					value="standard">FBSTANDARD</option>
+		</field>
+		<field
+				name="like_width"
+				type="text"
+				size="4"
+				default="110"
+				label="JGLOBAL_FBLIKEWIDTH_LABEL"
+				description="JGLOBAL_FBLIKEWIDTH_DESC"
+		/>
+		<field
+				name="like_height"
+				type="text"
+				size="4"
+				default="20"
+				label="JGLOBAL_FBLIKEHEIGHT_LABEL"
+				description="JGLOBAL_FBLIKEHEIGHT_DESC"
+		/>
+		<field
+				name="like_verb"
+				type="list"
+				default="like"
+				label="JGLOBAL_FBLIKETEXT_LABEL"
+				description="JGLOBAL_FBLIKETEXT_DESC">
+			<option
+					value="like">FBLIKE</option>
+			<option
+					value="recommend">FBRECOMM</option>
+		</field>
+		<field
+				name="like_color_scheme"
+				type="list"
+				default="light"
+				label="JGLOBAL_FBSCHEME_LABEL"
+				description="JGLOBAL_FBSCHEME_DESC">
+			<option
+					value="light">FBSCHEMELIGHT</option>
+			<option
+					value="dark">FBSCHEMEDARK</option>
+		</field>
+
+		<field
+				name="show_twitter"
+				type="list"
+				default="1"
+				label="JGLOBAL_SHOW_TWEETER_LABEL"
+				description="JGLOBAL_SHOW_TWEETER_DESC">
+			<option
+					value="0">JHIDE</option>
+			<option
+					value="1">JSHOW</option>
+		</field>
+
+		<field
+				name="twitter_account"
+				type="text"
+				size="20"
+				default=""
+				label="JGLOBAL_TWITACCOUNT_LABEL"
+				description="JGLOBAL_TWITACCOUNT_DESC"
+		/>
+		<field
+				name="twitter_account2"
+				type="text"
+				size="20"
+				default=""
+				label="JGLOBAL_TWITRELACC_LABEL"
+				description="JGLOBAL_TWITRELACC_DESC"
+		/>
+		<field
+				name="count"
+				type="list"
+				default="horizontal"
+				label="JGLOBAL_TWITBUTTONSTYLE_LABEL"
+				description="JGLOBAL_TWITBUTTONSTYLE_DESC">
+			<option
+					value="horizontal">TWITHORCOUNT</option>
+			<option
+					value="vertical">TWITVERCOUNT</option>
+			<option
+					value="none">TWITNOCOUNT</option>
+		</field>
+		<field
+				name="count-width"
+				type="list"
+				default="horizontal"
+				label="JGLOBAL_TWITMATHWITH_LABEL"
+				description="JGLOBAL_TWITMATHWITH_LABEL" >
+			<option
+					value="110">TWITHORZ</option>
+			<option
+					value="55">TWITVER</option>
+			<option
+					value="55">TWITNOCOUNTW</option>
+		</field>
+
+		<field
+				name="show_one"
+				type="list"
+				default="1"
+				label="JGLOBAL_SHOW_ONE_LABEL"
+				description="JGLOBAL_SHOW_ONE_DESC">
+			<option	value="0">JHIDE</option>
+			<option	value="1">JSHOW</option>
+		</field>
+	</fieldset>
+
+	<fieldset name="attachments" label="COM_CONTENT_ATTACHMENT_LAYOUT"
+			  description="COM_CONTENT_CONFIG_ATTACHMENT_LAYOUT">
+
+		<field
+				name="show_attachments"
+				type="radio"
+				label="JGLOBAL_SHOW_ATTACHMENTS_LABEL"
+				description="JGLOBAL_SHOW_ATTACHMENTS_DESC"
+				default="0">
+			<option
+					value="0">JHIDE</option>
+			<option
+					value="1">JSHOW</option>
+		</field>
+
+		<field
+				name="show_attachments_front_end"
+				type="radio"
+				default="0"
+				label="COM_CONTENT_SHOW_ATTACHMENTS_FRONT_LABEL"
+				description="COM_CONTENT_SHOW_ATTACHMENTS_FRONT_DESC">
+			<option
+					value="0">JNO</option>
+			<option
+					value="1">JYES</option>
+		</field>
+
+		<field
+				name="show_attachments_back_end"
+				type="radio"
+				default="0"
+				label="COM_CONTENT_SHOW_ATTACHMENTS_BACK_LABEL"
+				description="COM_CONTENT_SHOW_ATTACHMENTS_BACK_DESC">
+			<option
+					value="0">JNO</option>
+			<option
+					value="1">JYES</option>
+		</field>
+
+		<field name="list_show_attachments"
+			   type="radio" default="0"
+			   label="JGLOBAL_LIST_ATTACHMENTS_LABEL"
+			   description="JGLOBAL_LIST_ATTACHMENTS_DESC">
+			<option
+					value="0">JHIDE</option>
+			<option
+					value="1">JSHOW</option>
+		</field>
+
+		<field name="attachments_antileech"
+			   type="radio" default="1"
+			   label="JGLOBAL_ATTACHMENTS_ANTILEECH_LABEL"
+			   description="JGLOBAL_ATTACHMENTS_ANTILEECH_DESC">
+			<option
+					value="0">JHIDE</option>
+			<option
+					value="1">JSHOW</option>
+		</field>
+
+	</fieldset>
+
+	<fieldset name="editinglayout" label="COM_CONTENT_EDITING_LAYOUT"
+			  description="COM_CONTENT_CONFIG_EDITOR_LAYOUT">
+		<field
+				name="a-forzarseo"
+				type="separador"
+				class="fulltext"
+				fielname="sepia"
+				value="JGLOBAL_SEPARADOR_FORZARSEO_DESC"
+				default="JGLOBAL_SEPARADOR_FORZARSEO_TITLE"
+		/>
+		<field
+				name="forzar_seo"
+				type="radio"
+				default="1"
+				label="COM_CONTENT_FORZAR_SEO_OPTIONS_LABEL"
+				description="COM_CONTENT_FORZAR_SEO_OPTIONS_DESC"
+		>
+			<option
+					value="0">JNO</option>
+			<option
+					value="1">JYES</option>
+		</field>
+		<field
+				name="a-otros"
+				type="separador"
+				class="fulltext"
+				fielname="sepia"
+				value="JGLOBAL_SEPARADOR_OTROS_DESC"
+				default="JGLOBAL_SEPARADOR_OTROS_TITLE"
+		/>
+		<field
+				name="show_publishing_options"
+				type="radio"
+				default="1"
+				label="COM_CONTENT_SHOW_PUBLISHING_OPTIONS_LABEL"
+				description="COM_CONTENT_SHOW_PUBLISHING_OPTIONS_DESC"
+		>
+			<option
+					value="0">JNO</option>
+			<option
+					value="1">JYES</option>
+		</field>
+		<field
+				name="show_article_options"
+				type="radio"
+				default="1"
+				label="COM_CONTENT_SHOW_ARTICLE_OPTIONS_LABEL"
+				description="COM_CONTENT_SHOW_ARTICLE_OPTIONS_DESC"
+		>
+			<option
+					value="0">JNO</option>
+			<option
+					value="1">JYES</option>
+		</field>
+		<field
+				name="show_urls_images_frontend"
+				type="radio"
+				default="0"
+				label="COM_CONTENT_SHOW_IMAGES_URLS_FRONT_LABEL"
+				description="COM_CONTENT_SHOW_IMAGES_URLS_FRONT_DESC"
+		>
+			<option
+					value="0">JNO</option>
+			<option
+					value="1">JYES</option>
+		</field>
+		<field
+				name="show_urls_images_backend"
+				type="radio"
+				default="0"
+				label="COM_CONTENT_SHOW_IMAGES_URLS_BACK_LABEL"
+				description="COM_CONTENT_SHOW_IMAGES_URLS_BACK_DESC"
+		>
+			<option
+					value="0">JNO</option>
+			<option
+					value="1">JYES</option>
+		</field>
+		<field
+				name="spacer3"
+				type="spacer"
+				hr="true"
+		/>
+		<field
+				name="targeta"
+				type="list"
+				label="COM_CONTENT_URL_FIELD_A_BROWSERNAV_LABEL"
+				description="COM_CONTENT_URL_FIELD_BROWSERNAV_DESC"
+				default="Parent"
+				filter="int"
+				class="inputbox">
+			<option value="0">JBROWSERTARGET_PARENT</option>
+			<option value="1">JBROWSERTARGET_NEW</option>
+			<option value="2">JBROWSERTARGET_POPUP</option>
+			<option value="3">JBROWSERTARGET_MODAL</option>
+		</field>
+		<field
+				name="targetb"
+				type="list"
+				label="COM_CONTENT_URL_FIELD_B_BROWSERNAV_LABEL"
+				description="COM_CONTENT_URL_FIELD_BROWSERNAV_DESC"
+				default="Parent"
+				filter="int"
+				class="inputbox">
+			<option value="0">JBROWSERTARGET_PARENT</option>
+			<option value="1">JBROWSERTARGET_NEW</option>
+			<option value="2">JBROWSERTARGET_POPUP</option>
+			<option value="3">JBROWSERTARGET_MODAL</option>
+		</field>
+		<field
+				name="targetc"
+				type="list"
+				label="COM_CONTENT_URL_FIELD_C_BROWSERNAV_LABEL"
+				description="COM_CONTENT_URL_FIELD_BROWSERNAV_DESC"
+				default="Parent"
+				filter="int"
+				class="inputbox">
+			<option value="0">JBROWSERTARGET_PARENT</option>
+			<option value="1">JBROWSERTARGET_NEW</option>
+			<option value="2">JBROWSERTARGET_POPUP</option>
+			<option value="3">JBROWSERTARGET_MODAL</option>
+		</field>
+		<field
+				name="spacer4"
+				type="spacer"
+				hr="true"
+		/>
+
+		<field
+				name="float_intro"
+				type="list"
+				label="COM_CONTENT_FLOAT_INTRO_LABEL"
+				description="COM_CONTENT_FLOAT_DESC">
+			<option value="right">COM_CONTENT_RIGHT</option>
+			<option value="left">COM_CONTENT_LEFT</option>
+			<option value="none">COM_CONTENT_NONE</option>
+		</field>
+		<field
+				name="float_fulltext"
+				type="list"
+				label="COM_CONTENT_FLOAT_FULLTEXT_LABEL"
+				description="COM_CONTENT_FLOAT_DESC">
+			<option value="right">COM_CONTENT_RIGHT</option>
+			<option value="left">COM_CONTENT_LEFT</option>
+			<option value="none">COM_CONTENT_NONE</option>
+		</field>
+
+	</fieldset>
+
+	<fieldset name="category"
+			  label="JCATEGORY"
+			  description="COM_CONTENT_CONFIG_CATEGORY_SETTINGS_DESC"
+	>
+
+		<field
+				name="category_layout" type="componentlayout"
+				label="JGLOBAL_FIELD_LAYOUT_LABEL"
+				description="JGLOBAL_FIELD_LAYOUT_DESC"
+				menuitems="true"
+				extension="com_content"
+				view="category"
+		/>
+		<field name="show_category_heading_title_text" type="radio"
+			   label="JGLOBAL_SHOW_CATEGORY_HEADING_TITLE_TEXT_LABEL"
+			   description="JGLOBAL_SHOW_CATEGORY_HEADING_TITLE_TEXT_DESC"
+			   default="1">
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+		<field name="show_category_title" type="radio"
+			   label="JGLOBAL_SHOW_CATEGORY_TITLE"
+			   description="JGLOBAL_SHOW_CATEGORY_TITLE_DESC"
+			   default="1"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_description"
+			   type="radio"
+			   default="1"
+			   label="JGLOBAL_SHOW_CATEGORY_DESCRIPTION_LABEL"
+			   description="JGLOBAL_SHOW_CATEGORY_DESCRIPTION_DESC">
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_description_image"
+			   type="radio"
+			   default="0"
+			   label="JGLOBAL_SHOW_CATEGORY_IMAGE_LABEL"
+			   description="JGLOBAL_SHOW_CATEGORY_IMAGE_DESC">
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="maxLevel" type="list"
+			   description="JGLOBAL_MAXIMUM_CATEGORY_LEVELS_DESC"
+			   label="JGLOBAL_MAXIMUM_CATEGORY_LEVELS_LABEL"
+			   default="-1"
+		>
+			<option value="0">JNONE</option>
+			<option value="-1">JALL</option>
+			<option value="1">J1</option>
+			<option value="2">J2</option>
+			<option value="3">J3</option>
+			<option value="4">J4</option>
+			<option value="5">J5</option>
+		</field>
+
+		<field name="show_empty_categories" type="radio"
+			   label="JGLOBAL_SHOW_EMPTY_CATEGORIES_LABEL"
+			   description="COM_CONTENT_SHOW_EMPTY_CATEGORIES_DESC"
+			   default="0"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_no_articles" type="radio"
+			   label="COM_CONTENT_NO_ARTICLES_LABEL"
+			   description="COM_CONTENT_NO_ARTICLES_DESC"
+			   default="1"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_subcat_desc" type="radio"
+
+			   label="JGLOBAL_SHOW_SUBCATEGORIES_DESCRIPTION_LABEL"
+			   description="JGLOBAL_SHOW_SUBCATEGORIES_DESCRIPTION_DESC"
+			   default="1"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_cat_num_articles" type="radio"
+			   label="COM_CONTENT_NUMBER_CATEGORY_ITEMS_LABEL"
+			   description="COM_CONTENT_NUMBER_CATEGORY_ITEMS_DESC"
+			   default="1"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+	</fieldset>
+
+	<fieldset name="categories"
+			  label="JCATEGORIES"
+			  description="COM_CONTENT_CONFIG_CATEGORIES_SETTINGS_DESC"
+	>
+		<field name="show_base_description" type="radio"
+			   default="1"
+			   label="JGLOBAL_FIELD_SHOW_BASE_DESCRIPTION_LABEL"
+			   description="JGLOBAL_FIELD_SHOW_BASE_DESCRIPTION_DESC"
+		>
+
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="maxLevelcat" type="list"
+			   default="-1"
+			   description="JGLOBAL_MAXIMUM_CATEGORY_LEVELS_DESC"
+			   label="JGLOBAL_MAXIMUM_CATEGORY_LEVELS_LABEL"
+		>
+			<option value="-1">JALL</option>
+			<option value="1">J1</option>
+			<option value="2">J2</option>
+			<option value="3">J3</option>
+			<option value="4">J4</option>
+			<option value="5">J5</option>
+		</field>
+
+		<field name="show_empty_categories_cat" type="radio"
+			   default="0"
+			   label="JGLOBAL_SHOW_EMPTY_CATEGORIES_LABEL"
+			   description="COM_CONTENT_SHOW_EMPTY_CATEGORIES_DESC"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_subcat_desc_cat" type="radio"
+			   default="1"
+			   label="JGLOBAL_SHOW_SUBCATEGORIES_DESCRIPTION_LABEL"
+			   description="JGLOBAL_SHOW_SUBCATEGORIES_DESCRIPTION_DESC"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_cat_num_articles_cat" type="radio"
+			   default="1"
+			   label="COM_CONTENT_NUMBER_CATEGORY_ITEMS_LABEL"
+			   description="COM_CONTENT_NUMBER_CATEGORY_ITEMS_DESC"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+	</fieldset>
+
+	<fieldset name="blog_default_parameters"
+			  label="COM_CONTENT_CONFIG_BLOG_SETTINGS_LABEL"
+			  description="COM_CONTENT_CONFIG_BLOG_SETTINGS_DESC"
+	>
+
+		<field name="num_leading_articles"
+			   type="text"
+			   default="1"
+			   label="JGLOBAL_NUM_LEADING_ARTICLES_LABEL"
+			   description="JGLOBAL_NUM_LEADING_ARTICLES_DESC">
+		</field>
+
+		<field name="num_intro_articles"
+			   type="text"
+			   default="4"
+			   label="JGLOBAL_NUM_INTRO_ARTICLES_LABEL"
+			   description="JGLOBAL_NUM_INTRO_ARTICLES_DESC">
+		</field>
+
+		<field name="num_columns"
+			   type="text"
+			   default="2"
+			   label="JGLOBAL_NUM_COLUMNS_LABEL"
+			   description="JGLOBAL_NUM_COLUMNS_DESC">
+		</field>
+
+		<field name="num_links"
+			   type="text"
+			   default="4"
+			   label="JGLOBAL_NUM_LINKS_LABEL"
+			   description="JGLOBAL_NUM_LINKS_DESC">
+		</field>
+
+		<field name="multi_column_order"
+			   type="radio"
+			   default="0"
+			   label="JGLOBAL_MULTI_COLUMN_ORDER_LABEL"
+			   description="JGLOBAL_MULTI_COLUMN_ORDER_DESC">
+			<option
+					value="0">JGLOBAL_DOWN</option>
+			<option
+					value="1">JGLOBAL_ACROSS</option>
+		</field>
+
+		<field name="spacer1"
+			   type="spacer"
+			   hr="true"
+		/>
+		<field name="subcategories" type="spacer" class="spacer"
+			   label="JGLOBAL_SUBSLIDER_BLOG_EXTENDED_LABEL"
+		/>
+
+		<field name="show_subcategory_content" type="list"
+			   default="0"
+			   description="JGLOBAL_SHOW_SUBCATEGORY_CONTENT_DESC"
+			   label="JGLOBAL_SHOW_SUBCATEGORY_CONTENT_LABEL"
+		>
+			<option value="0">JNONE</option>
+			<option value="-1">JALL</option>
+			<option value="1">J1</option>
+			<option value="2">J2</option>
+			<option value="3">J3</option>
+			<option value="4">J4</option>
+			<option value="5">J5</option>
+		</field>
+	</fieldset>
+
+	<fieldset name="list_default_parameters"
+			  label="JGLOBAL_LIST_LAYOUT_OPTIONS"
+			  description="COM_CONTENT_CONFIG_LIST_SETTINGS_DESC"
+	>
+
+		<field name="show_pagination_limit"
+			   type="radio" default="1"
+			   label="JGLOBAL_DISPLAY_SELECT_LABEL"
+			   description="JGLOBAL_DISPLAY_SELECT_DESC">
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="filter_field"
+			   type="list"
+			   default="hide"
+			   label="JGLOBAL_FILTER_FIELD_LABEL"
+			   description="JGLOBAL_FILTER_FIELD_DESC">
+			<option value="hide">JHIDE</option>
+			<option value="title">JGLOBAL_TITLE</option>
+			<option value="author">JAUTHOR</option>
+			<option value="hits">JGLOBAL_HITS</option>
+		</field>
+
+		<field name="show_headings"
+			   type="radio"
+			   default="1"
+			   label="JGLOBAL_SHOW_HEADINGS_LABEL"
+			   description="JGLOBAL_SHOW_HEADINGS_DESC">
+			<option
+					value="0">JHIDE</option>
+			<option
+					value="1">JSHOW</option>
+		</field>
+
+
+
+		<field name="list_show_date"
+			   type="list"
+			   default="0"
+			   label="JGLOBAL_SHOW_DATE_LABEL"
+			   description="JGLOBAL_SHOW_DATE_DESC">
+			<option value="0">JHIDE</option>
+			<option value="created">JGLOBAL_CREATED</option>
+			<option value="modified">JGLOBAL_MODIFIED</option>
+			<option value="published">JPUBLISHED</option>
+		</field>
+
+		<field name="date_format"
+			   type="text"
+			   size="15"
+			   label="JGLOBAL_DATE_FORMAT_LABEL"
+			   description="JGLOBAL_DATE_FORMAT_DESC" />
+
+		<field name="list_show_hits"
+			   type="radio" default="1"
+			   label="JGLOBAL_LIST_HITS_LABEL"
+			   description="JGLOBAL_LIST_HITS_DESC">
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="list_show_author"
+			   type="radio" default="1"
+			   label="JGLOBAL_LIST_AUTHOR_LABEL"
+			   description="JGLOBAL_LIST_AUTHOR_DESC">
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+	</fieldset>
+
+	<fieldset name="shared"
+			  label="COM_CONTENT_SHARED_LABEL"
+			  description="COM_CONTENT_SHARED_DESC"
+	>
+		<field name="orderby_pri"
+			   type="list"
+			   default="none"
+			   label="JGLOBAL_CATEGORY_ORDER_LABEL"
+			   description="JGLOBAL_CATEGORY_ORDER_DESC">
+			<option
+					value="none">JGLOBAL_NO_ORDER</option>
+			<option
+					value="alpha">JGLOBAL_TITLE_ALPHABETICAL</option>
+			<option
+					value="ralpha">JGLOBAL_TITLE_REVERSE_ALPHABETICAL</option>
+			<option
+					value="order">JGLOBAL_CATEGORY_MANAGER_ORDER</option>
+		</field>
+
+		<field name="orderby_sec"
+			   type="list"
+			   default="rdate"
+			   label="JGLOBAL_Article_Order_Label"
+			   description="JGLOBAL_Article_Order_Desc">
+			<option
+					value="rdate">JGLOBAL_MOST_RECENT_FIRST</option>
+			<option
+					value="date">JGLOBAL_OLDEST_FIRST</option>
+			<option
+					value="alpha">JGLOBAL_TITLE_ALPHABETICAL</option>
+			<option
+					value="ralpha">JGLOBAL_TITLE_REVERSE_ALPHABETICAL</option>
+			<option
+					value="author">JGLOBAL_AUTHOR_ALPHABETICAL</option>
+			<option
+					value="rauthor">JGLOBAL_AUTHOR_REVERSE_ALPHABETICAL</option>
+			<option
+					value="hits">JGLOBAL_MOST_HITS</option>
+			<option
+					value="rhits">JGLOBAL_LEAST_HITS</option>
+			<option
+					value="order">JGLOBAL_ARTICLE_MANAGER_ORDER</option>
+		</field>
+
+		<field name="order_date" type="list"
+			   default="published"
+			   description="JGLOBAL_ORDERING_DATE_DESC"
+			   label="JGLOBAL_ORDERING_DATE_LABEL"
+		>
+
+			<option value="created">JGLOBAL_CREATED</option>
+			<option value="modified">JGLOBAL_MODIFIED</option>
+			<option value="published">JPUBLISHED</option>
+		</field>
+
+		<field name="show_pagination"
+			   type="list"
+			   default="2"
+			   label="JGLOBAL_Pagination_Label"
+			   description="JGLOBAL_Pagination_Desc">
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+			<option value="2">JGLOBAL_AUTO</option>
+		</field>
+
+		<field name="show_pagination_results"
+			   type="radio"
+			   default="1"
+			   label="JGLOBAL_PAGINATION_RESULTS_LABEL"
+			   description="JGLOBAL_PAGINATION_RESULTS_DESC">
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+	</fieldset>
+
+	<fieldset name="integration"
+			  label="JGLOBAL_INTEGRATION_LABEL"
+			  description="COM_CONTENT_CONFIG_INTEGRATION_SETTINGS_DESC"
+	>
+
+		<field
+				name="show_feed_link"
+				type="radio"
+				default="1"
+				label="JGLOBAL_SHOW_FEED_LINK_LABEL"
+				description="JGLOBAL_SHOW_FEED_LINK_DESC">
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field
+				name="feed_summary"
+				type="radio"
+				label="JGLOBAL_FEED_SUMMARY_LABEL"
+				description="JGLOBAL_FEED_SUMMARY_DESC"
+				default="0">
+			<option
+					value="0">JGLOBAL_INTRO_TEXT</option>
+			<option
+					value="1">JGLOBAL_FULL_TEXT</option>
+		</field>
+
+		<field
+				name="feed_show_readmore"
+				type="radio"
+				label="JGLOBAL_FEED_SHOW_READMORE_LABEL"
+				description="JGLOBAL_FEED_SHOW_READMORE_DESC"
+				default="0">
+			<option
+					value="0">JHIDE</option>
+			<option
+					value="1">JSHOW</option>
+		</field>
+
+	</fieldset>
+
+	<fieldset
+			name="permissions"
+			label="JCONFIG_PERMISSIONS_LABEL"
+			description="JCONFIG_PERMISSIONS_DESC"
+	>
+
+		<field
+				name="rules"
+				type="rules"
+				label="JCONFIG_PERMISSIONS_LABEL"
+				class="inputbox"
+				validate="rules"
+				filter="rules"
+				component="com_content"
+				section="component" />
+	</fieldset>
+
+	<fieldset
+			name="configayuda"
+			label="JGLOBAL_CONFIG_AYUDA_LABEL"
+			description="JGLOBAL_CONFIG_AYUDA_DESC"
+	>
+        <field
+                name="a-ayudaremota"
+                type="separador"
+                class="fulltext"
+                fielname="sepia"
+                value="JGLOBAL_SEPARADOR_AYUDA_REMOTA_DESC"
+                default="JGLOBAL_SEPARADOR_AYUDA_REMOTA_TITLE"
+        />
+        <field
+                name="ayudaremota"
+                type="url"
+                default=""
+                size="50"
+                label="COM_CONTENT_AYUDA_REMOTA_LABEL"
+                description="COM_CONTENT_AYUDA_REMOTA_DESC"
+        />
+        <field name="ayudaremota_usar"
+               type="radio" default="0"
+               label="JGLOBAL_AYUDA_USAR_LABEL"
+               description="JGLOBAL_AYUDA_USAR_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+        </field>
+
+        <field
+                name="a-ayudalocal"
+                type="separador"
+                class="fulltext"
+                fielname="sepia"
+                value="JGLOBAL_SEPARADOR_AYUDA_LOCAL_DESC"
+                default="JGLOBAL_SEPARADOR_AYUDA_LOCAL_TITLE"
+        />
+        <field
+                name="ayudalocal"
+                type="text"
+                default="gestor_de_contenidos.html"
+                size="50"
+                label="COM_CONTENT_AYUDA_LOCAL_LABEL"
+                description="COM_CONTENT_AYUDA_LOCAL_DESC"
+                readonly="true"
+        />
+        <field name="ayudalocal_usar"
+               type="radio" default="0"
+               label="JGLOBAL_AYUDA_USAR_LABEL"
+               description="JGLOBAL_AYUDA_USAR_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+        </field>
+
+        <field
+                name="a-ayudaforo"
+                type="separador"
+                class="fulltext"
+                fielname="sepia"
+                value="JGLOBAL_SEPARADOR_AYUDA_FORO_DESC"
+                default="JGLOBAL_SEPARADOR_AYUDA_FORO_TITLE"
+        />
+        <field
+                name="ayudaforo"
+                type="url"
+                default="http://www.juuntos.net.ar/soporte/foro.html"
+                size="50"
+                label="COM_CONTENT_AYUDA_FORO_LABEL"
+                description="COM_CONTENT_AYUDA_FORO_DESC"
+                readonly="true"
+        />
+        <field name="ayudarforo_usar"
+               type="radio" default="0"
+               label="JGLOBAL_AYUDA_USAR_LABEL"
+               description="JGLOBAL_AYUDA_USAR_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYes</option>
+        </field>
+	</fieldset>
+</config>

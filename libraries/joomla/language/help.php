@@ -172,7 +172,7 @@ class JHelp
 		if (!$xml)
 		{
 			$option['text'] = 'Ayuda Jokte en Español';
-			$option['value'] = 'http://ayuda.jokte.org';
+			$option['value'] = 'http://ay.juuntos.net.ar';
 			$list[] = $option;
 		}
 		else

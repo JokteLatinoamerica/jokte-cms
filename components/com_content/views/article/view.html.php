@@ -110,8 +110,18 @@ class ContentViewArticle extends JViewLegacy
 				return;
 		}
 
-		if ($item->params->get('show_intro', '1') == '1') {
-			$item->text = $item->introtext . ' ' . $item->fulltext;
+        /*
+         * Chequeo si el artículo tiene asignada una piel y si plugin de pieles está activo
+         * Desde Jokte Rayen 1.4
+         */
+        if ($item->params->get('show_piel') == '1'){
+            if (!JPluginHelper::isEnabled('system', 'pieles')) {
+                JError::raiseNotice(100, JText::_('JERROR_SKIN_NOT_ACTIVE'));
+            }
+        }
+
+		if ($item->params->get('show_intro', '1')=='1') {
+			$item->text = $item->introtext.' '.$item->fulltext;
 		}
 		elseif ($item->fulltext) {
 			$item->text = $item->fulltext;

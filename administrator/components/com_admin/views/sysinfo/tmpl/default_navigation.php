@@ -33,6 +33,7 @@ defined('_JEXEC') or die;
 					<a href="#" onclick="return false;" id="phpinfo">
 						<?php echo JText::_('COM_ADMIN_PHP_INFORMATION'); ?></a>
 				</li>
+                <li><a href="#" onclick="return false;" id="ayuda"><?php echo JText::_('COM_CONFIG_AYUDA')?></a></li>
 			</ul>
 			<div class="clr"></div>
 		</div>

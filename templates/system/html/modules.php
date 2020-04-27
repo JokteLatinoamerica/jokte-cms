@@ -4,7 +4,7 @@
  *Chromes predeterminados jokte! jxhtml,_menu
  * @package     Jokte.Site
  * @subpackage	jokteantu
- * @author 	juuntos.org
+ * @author 	    Comunidad Juuntos
  * @copyright   Copyleft.
  * @license     GNU General Public License version 3 or later; see LICENSE.txt
  * ******************************************************************************

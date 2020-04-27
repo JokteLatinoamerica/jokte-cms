@@ -9,12 +9,25 @@
 // No direct access
 defined('_JEXEC') or die;
 ?>
-<div class="width-100">
-	<fieldset class="adminform">
-		<legend><?php echo JText::_('COM_CONFIG_SYSTEM_SETTINGS'); ?></legend>
+<div class="width-100">	
+    <fieldset class="adminform">
+		<legend><?php echo JText::_('CONFIG_HELPERBACKEND_SETTINGS_LABEL'); ?></legend>
 		<ul class="adminformlist">
 			<?php
-			foreach ($this->form->getFieldset('system') as $field):
+			foreach ($this->form->getFieldset('helps') as $field):
+			?>
+				<li><?php echo $field->label; ?>
+				<?php echo $field->input; ?></li>
+			<?php
+			endforeach;
+			?>
+			</ul>
+	</fieldset>
+    <fieldset class="adminform">
+		<legend><?php echo JText::_('COM_MODULES_AYUDAS_FIELDSET_LABEL'); ?></legend>
+		<ul class="adminformlist">
+			<?php
+			foreach ($this->form->getFieldset('ayudas') as $field):
 			?>
 				<li><?php echo $field->label; ?>
 				<?php echo $field->input; ?></li>

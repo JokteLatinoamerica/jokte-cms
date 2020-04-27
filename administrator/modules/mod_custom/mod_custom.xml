@@ -37,7 +37,7 @@
 						value="1">JYES</option>
 				</field>
 			</fieldset>
-			<fieldset
+                        <fieldset
 				name="advanced">
 				<field
 					name="layout"

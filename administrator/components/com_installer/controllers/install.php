@@ -200,6 +200,8 @@ class InstallerControllerInstall extends JControllerLegacy {
         $model->purge();
         $result = $model->findUpdates();
 
+        dump($result);
+
         // Workaround for removing extentions that are already installed without
         // overwriting the Platform. Major breech of MVC but I can live with myself for the time being.
         $db = JFactory::getDBO();

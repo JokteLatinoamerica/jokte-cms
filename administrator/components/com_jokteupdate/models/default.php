@@ -34,12 +34,12 @@ class JokteupdateModelDefault extends JModelLegacy
 		{
 			// Soporte largo - Recomendado"
 			case 'lts':
-				$updateURL = 'http://update.jokte.org/core/list.xml';
+				$updateURL = 'https://act.juuntos.net.ar/core/list.xml';
 				break;
 
 			// "Testing"
 			case 'testing':
-				$updateURL = 'http://update.jokte.org/core/list_test.xml';
+				$updateURL = 'https://act.juuntos.net.ar/core/list_test.xml';
 				break;
 
 			// "Personalizado"
@@ -149,6 +149,8 @@ class JokteupdateModelDefault extends JModelLegacy
 		jimport('joomla.updater.update');
 		$update = new JUpdate;
 		$update->loadFromXML($updateObject->detailsurl);
+		
+		//var_dump($update);	
 		
 		// Paso el objeto a actualizar
 		if($ret['latest'] == VJOKTE) {

@@ -489,6 +489,25 @@
 		</fieldset>
 		
 		<fieldset name="basic-limited" label="COM_CONTENT_ATTRIBS_FIELDSET_LABEL">
+            <field
+                name="show_piel"
+                type="list"
+                label="JGLOBAL_SHOW_PIEL_LABEL"
+                description="JGLOBAL_SHOW_PIEL_DESC">
+                    <option value="">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+            </field>
+            <field
+                name="piel_folder"
+                type="folderlist"
+                default=""
+                label="JGLOBAL_PIEL_FOLDER_LABEL"
+                description="JGLOBAL_PIEL_FOLDER_DESC"
+                directory="pieles/"
+                filter=""
+                exclude=""
+                stripext="" />
 			<field
 				name="show_title"
 				type="hidden"
@@ -915,19 +934,7 @@
 				<option value="0">JNO</option>
 				<option value="1">JYES</option>
 		</field>
-		
-		<field name="robots"
-			type="list"
-			label="JFIELD_METADATA_ROBOTS_LABEL"
-			description="JFIELD_METADATA_ROBOTS_DESC"
-			>
-				<option value="">JGLOBAL_USE_GLOBAL</option>
-				<option value="index, follow">JGLOBAL_INDEX_FOLLOW</option>
-				<option value="noindex, follow">JGLOBAL_NOINDEX_FOLLOW</option>
-				<option value="index, nofollow">JGLOBAL_INDEX_NOFOLLOW</option>
-				<option value="noindex, nofollow">JGLOBAL_NOINDEX_NOFOLLOW</option>
-		</field>
-		
+        		
 		<field name="author" type="text"
 			label="JAUTHOR" description="JFIELD_METADATA_AUTHOR_DESC"
 			size="20" />
@@ -940,5 +947,37 @@
 			label="COM_CONTENT_FIELD_XREFERENCE_LABEL"
 			description="COM_CONTENT_FIELD_XREFERENCE_DESC"
 			class="inputbox" size="20" />
+         <field 
+            name="a-ageneral" 
+            type="separador" 
+            class="fulltext"             
+            value="JGLOBAL_ABOUT_PROTECTIONS_DESC" 
+            default="JGLOBAL_ABOUT_PROTECTIONS_TITLE"/>   
+        <field name="robots"
+			type="list"
+			label="JFIELD_METADATA_ROBOTS_LABEL"
+			description="JFIELD_METADATA_ROBOTS_DESC"
+			>
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="index, follow">JGLOBAL_INDEX_FOLLOW</option>
+				<option value="noindex, follow">JGLOBAL_NOINDEX_FOLLOW</option>
+				<option value="index, nofollow">JGLOBAL_INDEX_NOFOLLOW</option>
+				<option value="noindex, nofollow">JGLOBAL_NOINDEX_NOFOLLOW</option>
+		</field>
+        
+        <field name="clickjack"
+			type="list"
+			label="JFIELD_METADATA_CLICKJACKING_LABEL"
+			description="JFIELD_METADATA_CLICKJACKING_DESC"
+			>
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="ALLOW">JGLOBAL_PERMITIR</option>
+				<option value="SAMEORIGIN">JGLOBAL_SAMEORIGIN</option>
+				<option value="DENY">JGLOBAL_DENY</option>
+				<option value="ALLOW-FROM">JGLOBAL_ALLOWFROM</option>				
+		</field>
+        <field name="clickjack_uri" type="text"
+			label="JCLICKJACK" description="JFIELD_METADATA_CLICKJACK_DESC"
+			size="50" />
 	</fields>
 </form>

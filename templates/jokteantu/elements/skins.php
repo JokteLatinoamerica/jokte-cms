@@ -1,10 +1,10 @@
 <?php 
 /**
-* @version		1.0.0
-* @package		Complemento Jokte!
-* @subpackage	jokteantu
-* @author 	    Equipo de desarrollo juuntos.
-* @copyleft    (comparte igual)  Jokte!
+* @version	   1.0.0
+* @package	   Complemento Jokte Antu Template
+* @subpackage  jokteantu
+* @author 	   Equipo de desarrollo juuntos.
+* @copyright   (comparte igual)  Jokte!
 * @license     GNU General Public License version 3 o superior.
 */
 defined('_JEXEC') or die('Restricted access');
@@ -19,6 +19,7 @@ class JFormFieldSkins extends JFormField
 	 * Element  Sistema de skins	
 	 * @access	protected
 	 * @var		string
+	 * @since	2013
 	 */
 	protected $type 	= 'Skins';	
 	
@@ -30,10 +31,11 @@ class JFormFieldSkins extends JFormField
 					}";
 		$doc->addScriptDeclaration($preview);				
 		
-		$options = (array) $this->getOptions();		
+		$options = (array) $this->getOptions();
 		$selected = $this->value;				
 		$html  = JHtml::_('select.genericlist', $options, 'jform[params][skincss]','onchange=doPreview(this.value)', 'value', 'text', $selected);
-		$html .= '<div><img id="preview" src="'.JURI::root().'/templates/jokteantu/css/skins/'.$selected.'/previewSkin.png" /></div>';		
+        $html .= '<div><img id="preview" src="'.JURI::root().'/templates/jokteantu/css/skins/'.$selected.'/previewSkin.png" /></div>';
+        dump($html);
 		return $html;
 	}
 

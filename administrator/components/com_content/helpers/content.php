@@ -42,6 +42,16 @@ class ContentHelper
 			'index.php?option=com_content&view=featured',
 			$vName == 'featured'
 		);
+        JSubMenuHelper::addEntry(
+			JText::_('COM_CONTENT_SUBMENU_CONFIGURATION'),
+			'index.php?option=com_content&view=config',
+			$vName == 'config'
+		);
+        JSubMenuHelper::addEntry(
+			JText::_('COM_CONTENT_SUBMENU_AYUDA'),
+			'index.php?option=com_content&view=ayuda',
+			$vName == 'ayuda'
+		);
 	}
 
 	/**

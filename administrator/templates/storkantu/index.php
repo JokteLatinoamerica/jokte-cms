@@ -50,7 +50,7 @@ if ($this->params->get('highContrast')) {
 </head>
 <body id="minwidth-body">
 	<div id="border-top" class="h_blue">
-		<span class="logo"><a href="http://www.jokte.org" target="_blank"><img src="templates/<?php echo  $this->template ?>/images/logo.png" alt="Jokte!" /></a></span>
+		<span class="logo"><a href="http://www.juuntos.net.ar" target="_blank"><img src="templates/<?php echo  $this->template ?>/images/logo.png" alt="Jokte!" /></a></span>
 		<span class="title"><a href="index.php"><?php echo $this->params->get('showSiteName') ? $app->getCfg('sitename'). " " . JText::_('JADMINISTRATION') : JText::_('JADMINISTRATION') ; ?></a></span>
 	</div>
 	<div id="header-box">

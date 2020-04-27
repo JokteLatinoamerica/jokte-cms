@@ -6,10 +6,10 @@
 	<name>mod_hilandojuuntos</name>
 	<author>Comunidad Juuntos</author>
 	<creationDate>Febrero 2012</creationDate>
-	<copyright>Copyleft - Comunidad Juuntos.org</copyright>
+	<copyright>Copyleft - Comunidad Juuntos</copyright>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
 	<authorEmail>developer@tuxmerlin.com.ar</authorEmail>
-	<authorUrl>www.juuntos.org</authorUrl>
+	<authorUrl>www.juuntos.net.ar</authorUrl>
 	<version>1.0.1</version>
 	<description>MOD_HILANDOJUUNTOS_XML_DESCRIPTION</description>
 	<files>
@@ -43,7 +43,7 @@
 					name="rssurl0"
 					type="text"
 					size="50"
-					default="http://www.jokte.org/noticias.feed?type=rss"
+					default="http://www.juuntos.net.ar/noticias.feed?type=rss"
 					label="MOD_HILANDOJUUNTOS_FIELD_RSSURL_LABEL"
 					description="MOD_HILANDOJUUNTOS_FIELD_RSSURL_DESC" />						
 				<field type="spacer" name="myspacer" hr="true" />

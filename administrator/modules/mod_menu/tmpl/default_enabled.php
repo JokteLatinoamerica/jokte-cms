@@ -359,7 +359,7 @@ if ($showhelp == 1)
 	);
 
 	$menu->addChild(
-		new JMenuNode(JText::_('MOD_MENU_AYUDA_FORO_JUUNTOS'), 'http://www.jokte.org/soporte/foro.html', 'class:help-forum', false, '_blank')
+		new JMenuNode(JText::_('MOD_MENU_AYUDA_FORO_JUUNTOS'), 'http://www.juuntos.net.ar/soporte/foro.html', 'class:help-forum', false, '_blank')
 	);
 	$menu->addChild(
 		new JMenuNode(JText::_('MOD_MENU_AYUDA_DOCUMENTACION'), 'http://jdoc.juuntos.net', 'class:help-docs', false, '_blank')
@@ -373,10 +373,10 @@ if ($showhelp == 1)
 		new JMenuNode(JText::_('MOD_MENU_HELP_EXTENSIONS'), 'http://extensiones.juuntos.net', 'class:help-jed', false, '_blank')
 	);*/
 	$menu->addChild(
-		new JMenuNode(JText::_('MOD_MENU_AYUDA_PACTO'), 'http://juuntos.org/comunidad-juuntos/nuestro-pacto-social.html', 'class:help-jed', false, '_blank')
+		new JMenuNode(JText::_('MOD_MENU_AYUDA_PACTO'), 'https://www.juuntos.net.ar/comunidad-juuntos/nuestro-pacto-social.html', 'class:help-jed', false, '_blank')
 	);
 	$menu->addChild(
-		new JMenuNode(JText::_('MOD_MENU_JUUNTOS_UNIRSE'), 'http://juuntos.org/comunidad-juuntos/index.php?option=com_breezingforms&view=form&Itemid=154', 'class:help-jed', false, '_blank')
+		new JMenuNode(JText::_('MOD_MENU_JUUNTOS_UNIRSE'), 'https://www.juuntos.net.ar/comunidad-juuntos/index.php?option=com_breezingforms&view=form&Itemid=154', 'class:help-jed', false, '_blank')
 	);
 	$menu->getParent();
 	$menu->getParent();

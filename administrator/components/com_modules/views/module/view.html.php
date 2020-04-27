@@ -1,9 +1,16 @@
 <?php
 /**
  * @package		Joomla.Administrator
- * @subpackage	com_modules
- * @copyright	Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
+ * @subpackage  com_modules
+ * @copyright   Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
+ *              Copyright (c) 2015 - 2016 - Miguel Tuyaré
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ * ***************************************************************************************
+ * Warning: Some creations, modifications and improved were made by the Community Juuntos
+ * for the latinamerican Project Jokte! CMS
+ * Last Modification: 24/08/2016 by Tux Merlin
+ * Version: Jokte Rayen 1.4.0
+ ***************************************************************************************
  */
 
 defined('_JEXEC') or die;
@@ -21,6 +28,7 @@ class ModulesViewModule extends JViewLegacy
 	protected $form;
 	protected $item;
 	protected $state;
+    protected $params;
 
 	/**
 	 * Display the view
@@ -29,19 +37,24 @@ class ModulesViewModule extends JViewLegacy
 	{
 		$this->form		= $this->get('Form');
 		$this->item		= $this->get('Item');
-		$this->state	= $this->get('State');
+		$this->state    = $this->get('State');
 
 		// Check for errors.
 		if (count($errors = $this->get('Errors'))) {
 			JError::raiseError(500, implode("\n", $errors));
 			return false;
 		}
-
-		$this->addToolbar();
-		parent::display($tpl);
+        
+        $component	 = JComponentHelper::getComponent('com_modules');
+        $params = JArrayHelper::toObject($this->item->params);
+        
+       	$this->addToolbar();
+        $this->assignRef('component', $component);
+        $this->assignRef('params', $params);
+        parent::display($tpl);
 	}
-
-	/**
+        
+   /**
 	 * Add the page title and toolbar.
 	 *
 	 * @since	1.6
@@ -88,6 +101,5 @@ class ModulesViewModule extends JViewLegacy
 		else {
 			$url = null;
 		}
-		JToolBarHelper::help($help->key, false, $url);
 	}
 }

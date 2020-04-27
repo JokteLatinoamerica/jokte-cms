@@ -1,8 +1,8 @@
 TRUNCATE TABLE `#__update_sites`;
 INSERT INTO `#__update_sites` (`update_site_id`,`name`,`type`,`location`,`enabled`,`last_check_timestamp`) VALUES 
-(1, 'Jokte CMS Latam', 'collection', 'http://update.jokte.org/core/list.xml', 1, 0),
-(2, 'Jokte Extensiones Latam', 'collection', 'http://update.jokte.org/list.xml', 1, 0),
-(3, 'Traducciones Jokte  Latam', 'collection', 'http://update.jokte.org/lenguajes/translationlist.xml', 1, 0);
+(1, 'Jokte CMS Latam', 'collection', 'https://act.juuntos.net.ar/core/list.xml', 1, 0),
+(2, 'Jokte Extensiones Latam', 'collection', 'https://act.juuntos.net.ar/list.xml', 1, 0),
+(3, 'Traducciones Jokte  Latam', 'collection', 'https://act.juuntos.net.ar/lenguajes/translationlist.xml', 1, 0);
 
 TRUNCATE TABLE `#__update_sites_extensions`;
 INSERT INTO `#__update_sites_extensions` (`update_site_id`, `extension_id`) VALUES

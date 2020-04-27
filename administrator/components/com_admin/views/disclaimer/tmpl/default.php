@@ -37,7 +37,7 @@ $options = array(
                     <?php echo JHtml::_('tabs.start', 'tab_group_id', $options); ?>
 
                     <?php echo JHtml::_('tabs.panel', JText::_('ACERCA_DE_JOKTE'), 'panel_1_id'); ?>
-                    <p><strong>Jokte! CMS</strong> es un <a href="https://es.wikipedia.org/wiki/Bifurcaci%C3%B3n_(desarrollo_de_software)" target="_blank">fork o bifurcación</a> del CMS <strong>Joomla!™</strong> surgido por una iniciativa de la <a href="http://www.juuntos.org" target="_blank"><strong>Comunidad Juuntos</strong> </a>quienes, ejerciendo la licencia GNU/GPL que posee este último, decidieron relanzar un nuevo proyecto enfocado en <em>América Latina y el Caribe</em>.</p>
+                    <p><strong>Jokte! CMS</strong> es un <a href="https://es.wikipedia.org/wiki/Bifurcaci%C3%B3n_(desarrollo_de_software)" target="_blank">fork o bifurcación</a> del CMS <strong>Joomla!™</strong> surgido por una iniciativa de la <a href="https://www.juuntos.net.ar" target="_blank"><strong>Comunidad Juuntos</strong> </a>quienes, ejerciendo la licencia GNU/GPL que posee este último, decidieron relanzar un nuevo proyecto enfocado en <em>América Latina y el Caribe</em>.</p>
                     <p><strong>Jokte! CMS</strong> es un <em>"<strong>C</strong>ontenedor <strong>M</strong>ultimedia <strong>S</strong>istematizado</em>", un software de entorno que permite desarrollar páginas web para la internet o para intranets de un modo rápido, amigable y seguro.</p>
 
                     <?php echo JHtml::_('tabs.panel', JText::_('ACERCA_DE_LICENCIAS'), 'panel_2_id'); ?>
@@ -60,10 +60,10 @@ $options = array(
                     <p style="text-align: justify;">Por este motivo, y en base al derecho que nos concede la <em>GNU/GPL</em>, hemos comenzado el desarrollo de la plataforma “Jokte!", que se basa y es completamente compatible con Joomla!®, pero con una imagen corporativa licenciada bajo Copyleft. Una nueva “marca” que cualquier desarrollador podrá utilizar libremente en sus proyectos personales, comunitarios y comerciales.</p>
                     <p style="text-align: justify;">Juuntos se compromete, ante los usuarios de “Jokte!” y de toda la comunidad, a dar soporte, mantener actualizado su versionado y realizar los desarrollos específicos que sean requeridos por la propia comunidad de usuarios.</p>
                     <p style="text-align: justify;">Para hacer más tangible nuestro compromiso con la Comunidad, hemos redactado un “Pacto Social” en el que definimos las bases y conceptos que guiarán el desarrollo de nuestra Comunidad.</p>
-                    <p style="text-align: justify;">Invitamos a desarrolladores y usuarios de América Latina y el mundo a integrarse a la comunidad Juuntos.org</p>
+                    <p style="text-align: justify;">Invitamos a desarrolladores y usuarios de América Latina y el mundo a integrarse a la comunidad Juuntos</p>
 
                     <?php echo JHtml::_('tabs.panel', JText::_('ACERCA_DE_PACTO'), 'panel_4_id'); ?>
-                    <p style="text-align: justify;">El grupo Fundador y Coordinador de la Comunidad Juuntos.org, ha creado este contrato social, que es una declaración de intenciones y un conjunto de principios que suscribimos y nos comprometemos a respetar ante la comunidad latinoamericana y mundial.</p>
+                    <p style="text-align: justify;">El grupo Fundador y Coordinador de la Comunidad Juuntos, ha creado este contrato social, que es una declaración de intenciones y un conjunto de principios que suscribimos y nos comprometemos a respetar ante la comunidad latinoamericana y mundial.</p>
                     <p style="text-align: justify;"><strong> </strong></p>
                     <p style="text-align: justify;"><span style="font-size: 12pt;"><strong>Contrato Social entre Personas, Colectivos y Comunidades participantes en Juuntos.</strong></span></p>
                     <p style="text-align: justify;"> </p>

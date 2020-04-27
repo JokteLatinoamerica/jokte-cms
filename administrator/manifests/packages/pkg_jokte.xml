@@ -5,13 +5,13 @@
 	<version>1.3.0</version>
 	<description>PKG_JOKTE_XML_DESCRIPTION</description>
 	<creationDate>2012</creationDate>
-	<copyright>Copyright (C) 2012 - 2014 Open Source Matters and Comunidad Juuntos. All rights reserved.</copyright>
+	<copyright>Copyright (C) 2012 - 2017 Comunidad Juuntos. All rights reserved.</copyright>
 	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
 	<author>Comunidad Juuntos</author>
-	<authorEmail>admin@jokte.org</authorEmail>
-	<authorUrl>http://www.jokte.org</authorUrl>
+	<authorEmail>info@juuntos.net.ar</authorEmail>
+	<authorUrl>http://www.juuntos.net.ar</authorUrl>
 	<packager>Jokte!</packager>
-	<packagerurl>http://www.jokte.org</packagerurl>
-	<update>http://update.jokte.org/packages/jokte</update>
+	<packagerurl>http://www.juuntos.net.ar</packagerurl>
+	<update>https://act.juuntos.net.ar/packages/jokte</update>
 	<files />
 </extension>
